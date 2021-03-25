@@ -10,7 +10,7 @@
         styleClass="p-datatable-striped"
         [loading]="loading"
         [filterDelay]="0" 
-        [globalFilterFields]="['id','nomeFantasia','telefone','email','cep','cidade','estado']">
+        [globalFilterFields]="['id','nomeFantasia','responsavel','telefone','email','cep','cidade','estado']">
         <ng-template pTemplate="caption">
             <div class="table-header">           
                 <span class="p-input-icon-left  p-ml-auto">
@@ -23,6 +23,7 @@
             <tr>
                 <th pSortableColumn="id" class="th-id">ID <p-sortIcon field="id"></p-sortIcon></th>
                 <th pSortableColumn="nomeFantasia" class="th-nomeFantasia">Nome <p-sortIcon field="nomeFantasia"></p-sortIcon></th>
+                <th pSortableColumn="responsavel" class="th-responsavel">Responsável <p-sortIcon field="responsavel"></p-sortIcon></th>
                 <th pSortableColumn="telefoneCel"  class="th-telefoneCel">Telefone <p-sortIcon field="telefoneCel"></p-sortIcon></th>
                 <th pSortableColumn="email" class="th-email">E-mail <p-sortIcon field="email"></p-sortIcon></th>
                 <th pSortableColumn="cep"  class="th-cep">CEP <p-sortIcon field="cep"></p-sortIcon></th>
@@ -34,22 +35,21 @@
         <ng-template pTemplate="body" let-administrador>
             <tr>
                 <td class="th-id">{{administrador.id}}</td>
-                
                 <td class="th-nomeFantasia">{{administrador.nomeFantasia}}</td>
-                
-                <td class="th-telefoneCel">{{administrador.telefone}}</td>
+                <td class="th-responsavel">{{administrador.responsavel}}</td>
+                <td class="th-telefoneCel">{{administrador.telefoneCel}}</td>
                 <td class="th-email">{{administrador.email}}</td>
                 <td class="th-cep">{{administrador.cep}}</td>
                 <td class="th-cidade">{{administrador.cidade}}</td>
                 <td class="th-estado">{{administrador.estado}}</td>
                 <td class="deletar-atualizar">
                     <p-button 
-                        routerLink="/administrador/{{administrador.id}}" 
+                        routerLink="/clientes/cadastro/{{administrador.id}}" 
                         class="espaco" 
                         [title] = "'Editar Cliente ' + administrador.nomeFantasia" 
                         icon="pi pi-pencil"></p-button>
 
-                    <p-button 
+                    <p-button
                         (click)="excluir(administrador.id)" 
                         [title] = "'Excluir Cliente ' + administrador.nomeFantasia" 
                         icon="pi pi-trash"></p-button>
@@ -57,7 +57,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="paginatorleft">
-            <p-button type="button" routerLink="/administrador">Novo Cliente</p-button>
+            <p-button type="button" routerLink="/clientes/cadastro">Novo Cliente</p-button>
         </ng-template>
     </p-table>
 </div>

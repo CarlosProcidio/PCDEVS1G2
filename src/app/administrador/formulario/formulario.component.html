@@ -1,0 +1,236 @@
+<div class="container mt-5 mb-5 pt-5" style="position: relative;">
+
+    <form (ngSubmit)="cadastrarOuAtualizar()">
+     <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
+     <div class="form-row">
+         <input type="hidden"
+             name="id" 
+             [(ngModel)]="administradorGeral.id">
+
+             <!-- formControlName="nome"  -->
+         <div class="form-group col-md-5">
+             <label for="razaoSocial">RAZÃO SOCIAL</label>
+             <input 
+                 name="razaoSocial" 
+                 type="text"
+                 class="form-control" 
+                 [(ngModel)]="administradorGeral.razaoSocial">
+         </div>
+
+         <div class="form-group col-md-3">
+             <label for="cnpj">CNPJ</label>
+             <input 
+                 name="cnpj" 
+                 type="text" 
+                 class="form-control" 
+                 [(ngModel)]="administradorGeral.cnpj">
+         </div>
+         <div class="form-group col-md-4">
+            <label for="nomeFantasia">NOME FANTASIA</label>
+            <input 
+                name="nomeFantasia" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.nomeFantasia">
+        </div>
+     </div>
+
+     <div class="form-row">
+         <div class="form-group col-md-4">
+            <label for="email">EMAIL</label>
+            <input 
+                name="email" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.email">
+         </div>
+         <div class="form-group col-md-4">
+            <label for="logomarca">LOGOMARCA</label>
+            <input 
+                name="logomarca" 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="administradorGeral.logomarca">
+         </div>
+         <div class="form-group col-md-4">
+            <label for="site">SITE</label>
+            <input 
+                name="site" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.site">
+         </div>
+     </div>
+ 
+     <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="telefoneFixo">TELEFONE (FIXO)</label>
+            <p-inputMask 
+                styleClass="form-control" 
+                name="telefoneFixo" 
+                placeholder="(99) 9999-9999"
+                [(ngModel)]="administradorGeral.telefoneFixo" 
+                mask="(99) 9999-9999"> 
+            </p-inputMask>
+         </div>
+        <div class="form-group col-md-2">
+            <label for="telefoneCel">TELEFONE (CELULAR)</label>
+            <p-inputMask 
+                styleClass="form-control" 
+                name="telefoneCel" 
+                placeholder="(99) 99999-9999"
+                [(ngModel)]="administradorGeral.telefoneCel" 
+                mask="(99) 99999-9999">
+            </p-inputMask>
+        </div>
+        <div class="form-group col-md-3">
+            <label for="responsavel">RESPONSAVEL</label>
+            <input 
+                name="responsavel" 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="administradorGeral.responsavel">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="descricao">DESCRIÇÃO DO NEGÓCIO</label>
+            <input 
+                name="descricao" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.descricao">
+        </div>
+        <div class="form-group col-md-2">
+             <label for="categoria">CATEGORIA</label>
+             <p-dropdown
+                [options]="categorias" 
+                [(ngModel)]="administradorGeral.categoria" 
+                name="categ"
+                optionValue="categ"
+                optionLabel="nome">
+             </p-dropdown>
+        </div>
+     </div>
+
+     <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="cep">CEP</label>
+            <p-inputMask 
+                styleClass="form-control" 
+                name="cep" 
+                placeholder="99999-999"
+                [(ngModel)]="administradorGeral.cep" 
+                mask="99999-999"
+                (keydown) = "buscarCep(administradorGeral.cep)">
+            </p-inputMask>
+        </div>
+        <div class="form-group col-md-5">
+            <label for="logradouro">Logradouro</label>
+            <input
+                type="text"
+                class="form-control"
+                name="logradouro"
+                [(ngModel)]="administradorGeral.logradouro">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="numero">Número</label>
+            <input 
+                type="text" 
+                class="form-control" 
+                name="numero" 
+                [(ngModel)]="administradorGeral.numero">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="complemento">Complemento</label>
+            <input 
+                name="complemento" 
+                type="text" 
+                class="form-control"
+                [(ngModel)]="administradorGeral.complemento">
+        </div>
+     </div>
+
+     <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="bairro">BAIRRO</label>
+            <input 
+                name="bairro" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.bairro">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="cidade">CIDADE</label>
+            <input 
+                name="cidade" 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="administradorGeral.cidade">
+        </div>
+        <div class="form-group col-md-2">
+        <label for="estado">ESTADO</label>
+        <input 
+            name="estado" 
+            type="text"
+            class="form-control" 
+            [(ngModel)]="administradorGeral.estado">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="mapa">MAPA</label>
+            <input 
+                name="mapa" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.mapa">
+        </div>
+     </div>
+
+     <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="referencia">REFERÊNCIA</label>
+            <input 
+                name="referencia" 
+                type="text"
+                class="form-control" 
+                [(ngModel)]="administradorGeral.referencia">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="distancia">DISTÂNCIA CENTRO</label>
+            <input 
+                name="distancia" 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="administradorGeral.distancia">
+        </div>
+        <div class="form-group col-md-4">
+        <label for="horario">HORÁRIO FUNCIONAMENTO</label>
+        <input 
+            name="horario" 
+            type="text"
+            class="form-control" 
+            [(ngModel)]="administradorGeral.horario">
+        </div>
+     </div>
+
+
+     <div class="form-group">
+         <label for="razaoSocial">FOTOS DO NEGÓCIO</label>
+         <p-fileUpload 
+             #upload 
+             name="demo[]" 
+             chooseLabel="Adicionar foto..." 
+             [showUploadButton]="false"
+             [showCancelButton]="false" 
+             [multiple]="false" 
+             accept="image/*">
+         </p-fileUpload>
+     </div>
+     
+     <button 
+            type="submit" 
+            class="btn"
+            [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ? "Cadastrar" : "Atualizar" }}
+     </button>
+     <br><br>
+     <a routerLink="clientes">Voltar para a pesquisa</a>
+    </form>
+</div>

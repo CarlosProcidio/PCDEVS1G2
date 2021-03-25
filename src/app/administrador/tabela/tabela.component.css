@@ -1,0 +1,43 @@
+.deletar-atualizar {
+    width: 120px;
+    text-align: center;
+  }
+  
+.espaco {
+  margin-right: 10px;
+}
+
+.th-id {
+  width: 60px;
+  text-align: center !important;
+}
+
+.th-nomeFantasia {
+  width: 120px;
+  text-align: center !important;
+}
+
+.th-email {
+  width: 220px;
+  text-align: center !important;
+}
+.th-telefoneCel {
+  width: 160px;
+  text-align: center !important;
+}
+
+.th-cep {
+  width: 120px;
+  text-align: center !important;
+}
+
+.th-cidade {
+  width: 120px;
+  text-align: center !important;
+}
+
+
+.th-estado {
+  width: 120px;
+  text-align: center !important;
+}

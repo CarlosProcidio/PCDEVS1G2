@@ -1,0 +1,65 @@
+<div class="container mt-5 mb-5">
+    <p-table #dt
+        [value]="administradores"
+        [responsive]="true"
+        [paginator]="true" 
+        [rows]="10" 
+        [showCurrentPageReport]="true" 
+        currentPageReportTemplate="Mostrando {first} até {last} de {totalRecords} registros" 
+        [rowsPerPageOptions]="[5,10,25,50]"
+        styleClass="p-datatable-striped"
+        [loading]="loading"
+        [filterDelay]="0" 
+        [globalFilterFields]="['id','nomeFantasia','telefone','email','cep','cidade','estado']">
+        <ng-template pTemplate="caption">
+            <div class="table-header">           
+                <span class="p-input-icon-left  p-ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input #pesquisa pInputText type="text" (input)="dt.filterGlobal(pesquisa.value, 'contains')" placeholder="Pesquisar" />
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="id" class="th-id">ID <p-sortIcon field="id"></p-sortIcon></th>
+                <th pSortableColumn="nomeFantasia" class="th-nomeFantasia">Nome <p-sortIcon field="nomeFantasia"></p-sortIcon></th>
+                <th pSortableColumn="telefoneCel"  class="th-telefoneCel">Telefone <p-sortIcon field="telefoneCel"></p-sortIcon></th>
+                <th pSortableColumn="email" class="th-email">E-mail <p-sortIcon field="email"></p-sortIcon></th>
+                <th pSortableColumn="cep"  class="th-cep">CEP <p-sortIcon field="cep"></p-sortIcon></th>
+                <th pSortableColumn="cidade"  class="th-cidade">Cidade <p-sortIcon field="cidade"></p-sortIcon></th>
+                <th pSortableColumn="estado"  class="th-estado">Estado <p-sortIcon field="estado"></p-sortIcon></th>
+                <th class="deletar-atualizar"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-administrador>
+            <tr>
+                <td class="th-id">{{administrador.id}}</td>
+                
+                <td class="th-nomeFantasia">{{administrador.nomeFantasia}}</td>
+                
+                <td class="th-telefoneCel">{{administrador.telefone}}</td>
+                <td class="th-email">{{administrador.email}}</td>
+                <td class="th-cep">{{administrador.cep}}</td>
+                <td class="th-cidade">{{administrador.cidade}}</td>
+                <td class="th-estado">{{administrador.estado}}</td>
+                <td class="deletar-atualizar">
+                    <p-button 
+                        routerLink="/administrador/{{administrador.id}}" 
+                        class="espaco" 
+                        [title] = "'Editar Cliente ' + administrador.nomeFantasia" 
+                        icon="pi pi-pencil"></p-button>
+
+                    <p-button 
+                        (click)="excluir(administrador.id)" 
+                        [title] = "'Excluir Cliente ' + administrador.nomeFantasia" 
+                        icon="pi pi-trash"></p-button>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" routerLink="/administrador">Novo Cliente</p-button>
+        </ng-template>
+    </p-table>
+</div>
+
+

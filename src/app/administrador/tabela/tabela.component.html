@@ -22,7 +22,7 @@
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="id" class="th-id">ID <p-sortIcon field="id"></p-sortIcon></th>
-                <th pSortableColumn="nomeFantasia" class="th-nomeFantasia">Nome <p-sortIcon field="nomeFantasia"></p-sortIcon></th>
+                <th pSortableColumn="nomeFantasia" class="th-nomeFantasia">Lugar <p-sortIcon field="nomeFantasia"></p-sortIcon></th>
                 <th pSortableColumn="responsavel" class="th-responsavel">Responsável <p-sortIcon field="responsavel"></p-sortIcon></th>
                 <th pSortableColumn="telefoneCel"  class="th-telefoneCel">Telefone <p-sortIcon field="telefoneCel"></p-sortIcon></th>
                 <th pSortableColumn="email" class="th-email">E-mail <p-sortIcon field="email"></p-sortIcon></th>
@@ -49,7 +49,7 @@
                         [title] = "'Editar Cliente ' + administrador.nomeFantasia" 
                         icon="pi pi-pencil"></p-button>
 
-                    <p-button
+                    <p-button class="p-button"
                         (click)="excluir(administrador.id)" 
                         [title] = "'Excluir Cliente ' + administrador.nomeFantasia" 
                         icon="pi pi-trash"></p-button>

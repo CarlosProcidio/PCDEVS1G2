@@ -1,1 +1,108 @@
 <p>prefeitura works!</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="background">
+      <div class="water"></div>
+    </div>
+    <svg>
+      <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+        <feTurbulence id="sea-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+        <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+        <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" keyTimes="0;0.5;1"
+          values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite" />
+      </filter>
+    </svg>
+    <div class="card-deck">
+      <div class="card" style="width: 18rem;">
+        <img src="pousada do saci.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Pousada do Saci</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="praia do cachorro.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Praia do Cachorro</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="bar do nemo.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Bar do Nemo</h5>
+          <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-head">
+          <img src="ferira de artesanato.jpg" class="card-img-top" alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Feirinha de Artesanato</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="card-deck2">
+      <div class="card" style="width: 18rem;">
+        <div class="card-head">
+          <img src="passeio de escuna.jpg" class="card-img-top" alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Passeio de Escuna</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-head">
+          <img src="hotel serramar.jpg" class="card-img-top" alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Hotel Serramar</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-head">
+          <img src="tainha na telha.jpg" class="card-img-top" alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Tainha na Telha</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-head">
+          <img src="festival de camarão.jpg" class="card-img-top" alt="">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Festival do Camarão</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a href="#" class="btn btn-primary">Leia mais...</a>
+        </div>
+      </div>
+</body>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</html>

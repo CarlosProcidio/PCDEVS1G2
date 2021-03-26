@@ -93,7 +93,7 @@ export class FormularioComponent implements OnInit {
       });
   */    
       
-      this.codigoCliente = this.route.snapshot.params['codigo'];
+      this.codigoCliente = this.route.snapshot.params['id'];
       this.title.setTitle('Novo cliente');
   
       if (this.codigoCliente) {

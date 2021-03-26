@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'clientes/cadastro' , component:FormularioComponent },
+  { path: 'clientes/cadastro/:id' , component:FormularioComponent },
   { path: 'clientes' , component:TabelaComponent }
 ];
 

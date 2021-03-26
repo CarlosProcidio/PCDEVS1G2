@@ -1,4 +1,3 @@
-import { FooterComponent } from './header/footer/footer.component';
 import { AdministradorModule } from './administrador/administrador.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
@@ -22,9 +21,10 @@ import { AppRoutes } from './app.routing';
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [					
 
     AppComponent,
     PrefeituraComponent,
@@ -33,7 +33,8 @@ import { HeaderComponent } from './header/header.component';
     PrincipalComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+      FooterComponent
    ],
   imports: [
     BrowserModule,

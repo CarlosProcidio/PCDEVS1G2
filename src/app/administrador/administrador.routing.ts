@@ -5,7 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'clientes/cadastro' , component:FormularioComponent },
   { path: 'clientes/cadastro/:id' , component:FormularioComponent },
-  { path: 'clientes' , component:TabelaComponent }
+  { path: 'clientes' , component:TabelaComponent },
+  { path: 'listar/administrador' , component:TabelaComponent },
+  { path: 'administradores/:id' , component:TabelaComponent }
+
+  
 ];
 
 export const AdministradorRoutes = RouterModule.forChild(routes);

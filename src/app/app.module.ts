@@ -33,9 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     PrincipalComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
-      FooterComponent
-   ],
+    FooterComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,

@@ -20,17 +20,21 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { AppRoutes } from './app.routing';
 import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [			
+  declarations: [					
 
     AppComponent,
     PrefeituraComponent,
     HotelComponent,
     ClienteComponent,
     PrincipalComponent,
-    HomeComponent
-   ],
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,

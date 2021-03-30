@@ -1,5 +1,5 @@
-<div class="container mt-5 mb-5 pt-5" style="position: relative;">
-
+<div class="container mt-2 mb-5 pt-5" style="position: relative;">
+<h3>Cadastro de Clientes</h3>
     <form (ngSubmit)="cadastrarOuAtualizar()">
      <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
      <div class="form-row">
@@ -92,8 +92,9 @@
                 class="form-control" 
                 [(ngModel)]="administradorGeral.descricao">
         </div>
+        
         <div class="form-group col-md-4">
-            <label for="categoria">CATEGORIA</label>
+            <label for="categorias">Categoria</label>
             <p-dropdown
             styleClass="form-control" 
             [options]="categorias" 
@@ -104,6 +105,29 @@
             </p-dropdown> 
         </div>
     </div>
+    
+    <!-- <div class="form-group col-md-4">
+        <label for="categorias">Categoria</label>
+        <p-dropdown
+        styleClass="form-control" 
+        placeholder="Escolha a Categoria:"
+        [options]="categorias" 
+        [group]="true"
+        [(ngModel)]="administradorGeral.categoria" 
+        name="categ"
+        optionValue="categ"
+        optionLabel="nome">
+        <ng-template let-group pTemplate="group">
+            <span style="margin-left:.25em">{{group.label}}</span>
+        </ng-template>
+        </p-dropdown> 
+    </div>
+</div> -->
+
+
+
+
+
 
 
      <div class="form-row">
@@ -242,6 +266,6 @@
             [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ? "Cadastrar" : "Atualizar" }}
      </button>
      <br><br>
-     <a routerLink="clientes">Voltar para a pesquisa</a>
+     <a routerLink="/clientes">Voltar para a pesquisa</a>
     </form>
 </div>

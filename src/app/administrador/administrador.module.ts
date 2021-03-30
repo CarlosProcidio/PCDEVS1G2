@@ -1,3 +1,4 @@
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { FormularioComponent } from './formulario/formulario.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,6 +22,7 @@ import {ToastModule} from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -38,6 +40,7 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     MessagesModule,
     MessageModule,
     ToastModule,
+    ConfirmDialogModule,
     AdministradorRoutes
   ],
   declarations: [

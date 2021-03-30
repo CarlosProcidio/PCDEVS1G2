@@ -8,7 +8,8 @@ import { AdministradorService } from '../administrador.service';
 @Component({
   selector: 'app-tabela',
   templateUrl: './tabela.component.html',
-  styleUrls: ['./tabela.component.css']
+  styleUrls: ['./tabela.component.css'],
+  providers: [ConfirmationService,MessageService]
 })
 export class TabelaComponent implements OnInit {
   
@@ -36,6 +37,7 @@ export class TabelaComponent implements OnInit {
     });  
   }
   excluir(id: number){
+    console.log('aqui')
     this.confirmarService.confirm({
       message: 'Tem certeza que deseja excluir este cliente?',
       accept: () => {

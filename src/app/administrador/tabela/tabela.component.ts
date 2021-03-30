@@ -37,7 +37,6 @@ export class TabelaComponent implements OnInit {
     });  
   }
   excluir(id: number){
-    console.log('aqui')
     this.confirmarService.confirm({
       message: 'Tem certeza que deseja excluir este cliente?',
       accept: () => {

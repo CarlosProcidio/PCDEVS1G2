@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { AdministradorService } from '../administrador.service';
-import {MessageService} from 'primeng/api';
+import {MessageService, SelectItemGroup} from 'primeng/api';
 
 
 interface Categoria {
@@ -50,59 +50,17 @@ export class FormularioComponent implements OnInit {
   
   operacao: boolean = true;
   
-  categorias: Categoria[] = [
-      {nome: 'Serviços...', categ: ' '},
-      {nome: 'GASTRONOMIA', categ: 'GASTRONOMIA'},
-      {nome: 'HOSPEDAGEM', categ: 'HOSPEDAGEM'},
-      {nome: 'PASSEIOS/ROTEIROS', categ: 'PASSEIOS/ROTEIROS'}
-    ];
+  escolheServico: string;
 
-//   categorias:  [  
-//   {
-//     label: 'GASTRONOMIA' , 
-//     items: [
-//         {label: 'Bares/Lanches', value: 'Bares/Lanches'},
-//         {label: 'Cafés/Docerias', value: 'Cafés/Docerias'},
-//         {label: 'Cozinha Brasileira', value: 'Cozinha Brasileira'},
-//         {label: 'Cozinha Internacional', value: 'Cozinha Internacional'},
-//         {label: 'Pizzarias', value: 'Pizzarias  '},
-//         {label: 'Quiosques', value: 'Quiosques'},
-//         {label: 'Demais Segmentos', value: 'Demais Segmentos'}
-//     ]
-//   },
-//   {
-//     label: 'HOSPEDAGEM' , 
-//     items: [
-//         {label: 'Hotéis', value: 'Hotéis'},
-//         {label: 'Hotéis Fazenda', value: 'Hotéis Fazenda'},
-//         {label: 'Motéis', value: 'Motéis'},
-//         {label: 'Pousadas', value: 'Pousadas'},
-//         {label: 'Resorts', value: 'Resorts'},
-//         {label: 'Campings', value: 'Campings'}
-//     ]
-//   },
-//   {
-//     label: 'O QUE FAZER' , 
-//     items: [
-//         {label: 'Compras', value: 'Compras'},
-//         {label: 'Cultura', value: 'Cultura'},
-//         {label: 'Lazer', value: 'Lazer'},
-//         {label: 'Agências de Turismo', value: 'Agências de Turismo'}
-//     ]
-//   },
-//   {
-//     label: 'ROTEIROS' , 
-//     items: [
-//         {label: 'Aventuras', value: 'Aventuras'},
-//         {label: 'Destilarias', value: 'Destilarias'},
-//         {label: 'Equestres', value: 'Equestres'},
-//         {label: 'Flores e Frutas', value: 'Flores e Frutas'},
-//         {label: 'Pesqueiros', value: 'Pesqueiros'},
-//         {label: 'Religioso', value: 'Religioso'},
-//         {label: 'Rural', value: 'Rural'}
-//     ]
-//   }
-// ];
+  grupoCategoria: SelectItemGroup[];
+
+
+  // categorias: Categoria[] = [
+  //     {nome: 'Serviços...', categ: ' '},
+  //     {nome: 'GASTRONOMIA', categ: 'GASTRONOMIA'},
+  //     {nome: 'HOSPEDAGEM', categ: 'HOSPEDAGEM'},
+  //     {nome: 'PASSEIOS/ROTEIROS', categ: 'PASSEIOS/ROTEIROS'}
+  //   ];
 
   constructor(
     private service: AdministradorService,
@@ -112,7 +70,63 @@ export class FormularioComponent implements OnInit {
     private router: Router,
     private viacepService: ViacepService
 //    private formBuilder: FormBuilder
-    ) { }
+    ) {
+
+  this.grupoCategoria = [
+  {
+    label: 'GASTRONOMIA' ,  value: 'ga', 
+    items: [
+        {label: 'Bares/Lanches', value: 'Bares/Lanches'},
+        {label: 'Cafés/Docerias', value: 'Cafés/Docerias'},
+        {label: 'Cozinha Brasileira', value: 'Cozinha Brasileira'},
+        {label: 'Cozinha Internacional', value: 'Cozinha Internacional'},
+        {label: 'Pizzarias', value: 'Pizzarias  '},
+        {label: 'Quiosques', value: 'Quiosques'},
+        {label: 'Demais Segmentos', value: 'Demais Segmentos'}
+    ]
+  },
+  {
+    label: 'HOSPEDAGEM' ,  value: 'ho', 
+    items: [
+        {label: 'Hotéis', value: 'Hotéis'},
+        {label: 'Hotéis Fazenda', value: 'Hotéis Fazenda'},
+        {label: 'Motéis', value: 'Motéis'},
+        {label: 'Pousadas', value: 'Pousadas'},
+        {label: 'Resorts', value: 'Resorts'},
+        {label: 'Campings', value: 'Campings'}
+    ]
+  },
+  {
+    label: 'O QUE FAZER' ,  value: 'oq', 
+    items: [
+        {label: 'Compras', value: 'Compras'},
+        {label: 'Cultura', value: 'Cultura'},
+        {label: 'Lazer', value: 'Lazer'},
+        {label: 'Agências de Turismo', value: 'Agências de Turismo'}
+    ]
+  },
+  {
+    label: 'ROTEIROS' ,  value: 'ro', 
+    items: [
+        {label: 'Aventuras', value: 'Aventuras'},
+        {label: 'Destilarias', value: 'Destilarias'},
+        {label: 'Equestres', value: 'Equestres'},
+        {label: 'Flores e Frutas', value: 'Flores e Frutas'},
+        {label: 'Pesqueiros', value: 'Pesqueiros'},
+        {label: 'Religioso', value: 'Religioso'},
+        {label: 'Rural', value: 'Rural'}
+    ]
+  },
+  {
+    label: 'PREFEITURA' ,  value: 'pr', 
+    items: [
+        {label: 'Público', value: 'Público'}
+    ]
+  }
+];
+
+
+     }
     
 
     ngOnInit(): void {

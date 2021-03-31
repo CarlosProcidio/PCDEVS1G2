@@ -4,3 +4,8 @@ h3   {text-align: center;
       border-bottom: 2px solid rgb(68, 68, 68);
       padding: 1px;   
       padding-bottom:10px;   }  
+
+
+.alinha {
+      vertical-align:text-top;
+}      

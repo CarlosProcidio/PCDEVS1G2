@@ -94,41 +94,23 @@
         </div>
         
         <div class="form-group col-md-4">
-            <label for="categorias">Categoria</label>
+            <label for="categorias">CATEGORIA</label>
             <p-dropdown
-            styleClass="form-control" 
-            [options]="categorias" 
-            [(ngModel)]="administradorGeral.categoria" 
-            name="categ"
-            optionValue="categ"
-            optionLabel="nome">
-            </p-dropdown> 
+                class="alinha"
+                styleClass="form-control" 
+                [options]="grupoCategoria" 
+                [(ngModel)]="escolheServico" 
+                placeholder="Escolha o Tipo de Serviço" 
+                [group]="true">
+                <ng-template let-group pTemplate="group">
+                    <div class="p-d-flex p-ai-center">
+                         <span>{{group.label}}</span>
+                    </div>
+                </ng-template>
+            </p-dropdown>
+
         </div>
     </div>
-    
-    <!-- <div class="form-group col-md-4">
-        <label for="categorias">Categoria</label>
-        <p-dropdown
-        styleClass="form-control" 
-        placeholder="Escolha a Categoria:"
-        [options]="categorias" 
-        [group]="true"
-        [(ngModel)]="administradorGeral.categoria" 
-        name="categ"
-        optionValue="categ"
-        optionLabel="nome">
-        <ng-template let-group pTemplate="group">
-            <span style="margin-left:.25em">{{group.label}}</span>
-        </ng-template>
-        </p-dropdown> 
-    </div>
-</div> -->
-
-
-
-
-
-
 
      <div class="form-row">
         <div class="form-group col-md-2">

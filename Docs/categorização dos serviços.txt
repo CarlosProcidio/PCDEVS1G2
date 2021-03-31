@@ -6,257 +6,404 @@ categorServico = {
 	'Roteiros'   : ['Aventuras','Destilarias','Equestres','Flores e Frutas','Pesqueiros','Religioso','Rural']
      }
 
-categChechbox = {
-    'HOSPEDAGEM': [
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Cadeirante',
-        'icone': 'fa-wheelchair'
-      },
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Def.Auditivo',
-        'icone': 'fa-deaf'
-      },
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Def.Visual',
-        'icone': 'fa-blind'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-amex'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-diners-club'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-mastercard'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-visa'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartão genérico',
-        'icone': 'fa-money-check'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Dinheiro',
-        'icone': 'fa-dollar-sign'
-      },
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Adega de Vinho',
-        'icone': 'fa-wine-bottle'
-      },      
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Bar',
-        'icone': 'fa-cocktail'
-      },      
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Café da manhã incluso',
-        'icone': 'fa-coffee'
-      },      
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Restaurante',
-        'icone': 'fa-utensils'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Aceita-se pets',
-        'icone': 'fa-paw'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Ar-condicionado',
-        'icone': 'fa-snowflake'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Carregador de malas',
-        'icone': 'fa-luggage-cart'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'espaço saúde',
-        'icone': 'fa-spa'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Estacionamento',
-        'icone': 'fa-parking'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Frigobar',
-        'icone': 'fa-refrigerator'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Não fumante',
-        'icone': 'fa-smoking-ban'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Piscina',
-        'icone': 'fa-swimming-pool'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Salão fitness',
-        'icone': 'fa-dumbbell'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Serviço de quarto',
-        'icone': 'fa-concierge-bell'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Wifi',
-        'icone': 'fa-wifi'
-      },     
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Facebook',
-        'icone': 'fa-facebook-square'
-      }, 
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Instagram',
-        'icone': 'fa-instagram'
-      }, 
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Site',
-        'icone': 'fa-globe'
-      }, 
-      { 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-        'nome': 'Estrelas',
-        'icone': 'fa-star'
-      }
-    ],
-    'GASTRONOMIA': [
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Cadeirante',
-        'icone': 'fa-wheelchair'
-      },
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Def.Auditivo',
-        'icone': 'fa-deaf'
-      },
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Def.Visual',
-        'icone': 'fa-blind'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-amex'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-diners-club'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-mastercard'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-visa'
-      },
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Adega de Vinho',
-        'icone': 'fa-wine-bottle'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Aceita-se pets',
-        'icone': 'fa-paw'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Ar-condicionado',
-        'icone': 'fa-snowflake'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Estacionamento',
-        'icone': 'fa-parking'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Wifi',
-        'icone': 'fa-wifi'
-      },     
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Facebook',
-        'icone': 'fa-facebook-square'
-      }, 
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Instagram',
-        'icone': 'fa-instagram'
-      }, 
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Site',
-        'icone': 'fa-globe'
-      }, 
-      { 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-        'nome': 'Cifrão',
-        'icone': 'fa-dollar-sign'
-      }
-    ],
-    'PASSEIOS/ROTEIROS': [
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Cadeirante',
-        'icone': 'fa-wheelchair'
-      },
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Def.Auditivo',
-        'icone': 'fa-deaf'
-      },
-      { 'tipo': 'ACESSIBILIDADE:',
-        'nome': 'Def.Visual',
-        'icone': 'fa-blind'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-amex'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-diners-club'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-mastercard'
-      },
-      { 'tipo': 'ACEITA CARTÕES:',
-        'nome': 'Cartões de crédito',
-        'icone': 'fa-cc-visa'
-      },
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Bar',
-        'icone': 'fa-cocktail'
-      },      
-      { 'tipo': 'ALIMENTAÇÃO:',
-        'nome': 'Restaurante',
-        'icone': 'fa-utensils'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Aceita-se pets',
-        'icone': 'fa-paw'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Ar-condicionado',
-        'icone': 'fa-snowflake'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Estacionamento',
-        'icone': 'fa-parking'
-      },      
-      { 'tipo': 'CONVENIÊNCIAS:',
-        'nome': 'Wifi',
-        'icone': 'fa-wifi'
-      },     
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Facebook',
-        'icone': 'fa-facebook-square'
-      }, 
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Instagram',
-        'icone': 'fa-instagram'
-      }, 
-      { 'tipo:' 'REDES SOCIAIS:',
-        'nome': 'Site',
-        'icone': 'fa-globe'
-      }, 
-      { 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-        'nome': 'Positivo',
-        'icone': 'fa-thumbs-up'
-      }
+  this.grupoCategoria = [
+  {
+    label: 'GASTRONOMIA' ,  value: 'ga', 
+    items: [
+        {label: 'Bares/Lanches', value: 'Bares/Lanches'},
+        {label: 'Cafés/Docerias', value: 'Cafés/Docerias'},
+        {label: 'Cozinha Brasileira', value: 'Cozinha Brasileira'},
+        {label: 'Cozinha Internacional', value: 'Cozinha Internacional'},
+        {label: 'Pizzarias', value: 'Pizzarias  '},
+        {label: 'Quiosques', value: 'Quiosques'},
+        {label: 'Demais Segmentos', value: 'Demais Segmentos'}
     ]
-  };
+  },
+  {
+    label: 'HOSPEDAGEM' ,  value: 'ho', 
+    items: [
+        {label: 'Hotéis', value: 'Hotéis'},
+        {label: 'Hotéis Fazenda', value: 'Hotéis Fazenda'},
+        {label: 'Motéis', value: 'Motéis'},
+        {label: 'Pousadas', value: 'Pousadas'},
+        {label: 'Resorts', value: 'Resorts'},
+        {label: 'Campings', value: 'Campings'}
+    ]
+  },
+  {
+    label: 'O QUE FAZER' ,  value: 'oq', 
+    items: [
+        {label: 'Compras', value: 'Compras'},
+        {label: 'Cultura', value: 'Cultura'},
+        {label: 'Lazer', value: 'Lazer'},
+        {label: 'Agências de Turismo', value: 'Agências de Turismo'}
+    ]
+  },
+  {
+    label: 'ROTEIROS' ,  value: 'ro', 
+    items: [
+        {label: 'Aventuras', value: 'Aventuras'},
+        {label: 'Destilarias', value: 'Destilarias'},
+        {label: 'Equestres', value: 'Equestres'},
+        {label: 'Flores e Frutas', value: 'Flores e Frutas'},
+        {label: 'Pesqueiros', value: 'Pesqueiros'},
+        {label: 'Religioso', value: 'Religioso'},
+        {label: 'Rural', value: 'Rural'}
+    ]
+  },
+  {
+    label: 'PREFEITURA' ,  value: 'pr', 
+    items: [
+        {label: 'Público', value: 'Público'}
+    ]
+  }
+];
+
+
+chk = [
+      {'HOSPEDAGEM','ACESSIBILIDADE','Def.Auditivo','fa-deaf'},
+      {'HOSPEDAGEM','ACEITA CARTÕES:','Cartões de crédito','fa-cc-amex'},
+      {'GASTRONOMIA','ACESSIBILIDADE','Def.Auditivo','fa-deaf'],
+      {'GASTRONOMIA','ALIMENTAÇÃO:','Adega de Vinho','fa-wine-bottle'},
+      {'PASSEIOS','ALIMENTAÇÃO:','Restaurante','fa-utensils'},
+      {'PASSEIOS','CONVENIÊNCIAS:','Aceita-se pets','fa-paw'}...
+      ]
+
+categChechbox = [
+	{
+	label: 'HOSPEDAGEM' , value = 'hosp' ,
+	items: [
+      		{ 'tipo': 'ACESSIBILIDADE:',
+        	  'nome': 'Cadeirante',
+        	  'icone': 'fa-wheelchair'
+      		},
+     		{ 'tipo': 'ACESSIBILIDADE:',
+        	  'nome': 'Def.Auditivo',
+        	  'icone': 'fa-deaf'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+       		  'nome': 'Def.Visual',
+      		  'icone': 'fa-blind'
+    		},
+    		{ 'tipo': 'ACEITA CARTÕES:',
+        	  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-amex'
+     		},
+    		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-diners-club'
+      		},
+    		{ 'tipo': 'ACEITA CARTÕES:',
+        	  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-mastercard'
+     		},
+    		{ 'tipo': 'ACEITA CARTÕES:',
+       		  'nome': 'Cartões de crédito',
+        	  'icone': 'fa-cc-visa'
+     		},
+     		{ 'tipo': 'ACEITA CARTÕES:',
+       		  'nome': 'Cartão genérico',
+      		  'icone': 'fa-money-check'
+     		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+        	  'nome': 'Dinheiro',
+      		  'icone': 'fa-dollar-sign'
+      		},
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+      		  'nome': 'Adega de Vinho',
+      		  'icone': 'fa-wine-bottle'
+      		},      
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+      		  'nome': 'Bar',
+         	  'icone': 'fa-cocktail'
+      		},      
+     		{ 'tipo': 'ALIMENTAÇÃO:',
+        	  'nome': 'Café da manhã incluso',
+		  'icone': 'fa-coffee'
+      		},      
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+        	  'nome': 'Restaurante',
+        	  'icone': 'fa-utensils'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Aceita-se pets',
+      		  'icone': 'fa-paw'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Ar-condicionado',
+      		  'icone': 'fa-snowflake'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Carregador de malas',
+      		  'icone': 'fa-luggage-cart'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'espaço saúde',
+        	  'icone': 'fa-spa'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Estacionamento',
+      		  'icone': 'fa-parking'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Frigobar',
+      		  'icone': 'fa-refrigerator'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Não fumante',
+      		  'icone': 'fa-smoking-ban'
+     		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Piscina',
+      		  'icone': 'fa-swimming-pool'
+      		},      
+     		{ 'tipo': 'CONVENIÊNCIAS:',
+     		   'nome': 'Salão fitness',
+    		   'icone': 'fa-dumbbell'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Serviço de quarto',
+      		  'icone': 'fa-concierge-bell'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Wifi',
+      		  'icone': 'fa-wifi'
+      		},     
+      		{ 'tipo:' 'REDES SOCIAIS:',
+      		  'nome': 'Facebook',
+      		  'icone': 'fa-facebook-square'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+      		  'nome': 'Instagram',
+      		  'icone': 'fa-instagram'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Site',
+       		  'icone': 'fa-globe'
+      		}, 
+     		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
+        	  'nome': 'Estrelas',
+        	  'icone': 'fa-star'
+     		}
+               ]
+	},
+	{
+	label: 'GASTRONOMIA' , value = 'gast' ,
+	items: [
+		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Cadeirante',
+      		  'icone': 'fa-wheelchair'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Def.Auditivo',
+      		  'icone': 'fa-deaf'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Def.Visual',
+      		  'icone': 'fa-blind'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-amex'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-diners-club'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-mastercard'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-visa'
+      		},
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+      		  'nome': 'Adega de Vinho',
+        	  'icone': 'fa-wine-bottle'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Aceita-se pets',
+      		  'icone': 'fa-paw'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Ar-condicionado',
+      		  'icone': 'fa-snowflake'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Estacionamento',
+      		  'icone': 'fa-parking'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+      		  'nome': 'Wifi',
+      		  'icone': 'fa-wifi'
+      		},     
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Facebook',
+        	  'icone': 'fa-facebook-square'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Instagram',
+      		  'icone': 'fa-instagram'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+      		  'nome': 'Site',
+      		  'icone': 'fa-globe'
+      		}, 
+      		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
+     		   'nome': 'Cifrão',
+      		  'icone': 'fa-dollar-sign'
+      		}
+    	       ]
+	},
+	{
+	label: 'PASSEIOS' , value = 'pass' ,
+	items: [
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Cadeirante',
+      		  'icone': 'fa-wheelchair'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Def.Auditivo',
+      		  'icone': 'fa-deaf'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Def.Visual',
+      		  'icone': 'fa-blind'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-amex'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-diners-club'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-mastercard'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+     		  'icone': 'fa-cc-visa'
+     		 },
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+        	  'nome': 'Bar',
+                  'icone': 'fa-cocktail'
+      		},      
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+      		  'nome': 'Restaurante',
+      		  'icone': 'fa-utensils'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	'nome': 'Aceita-se pets',
+        	'icone': 'fa-paw'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Ar-condicionado',
+        	  'icone': 'fa-snowflake'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Estacionamento',
+        	 'icone': 'fa-parking'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Wifi',
+        	  'icone': 'fa-wifi'
+      		},     
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Facebook',
+        	  'icone': 'fa-facebook-square'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Instagram',
+        	  'icone': 'fa-instagram'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+      		  'nome': 'Site',
+      		  'icone': 'fa-globe'
+      		}, 
+      		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
+      		  'nome': 'Positivo',
+      		  'icone': 'fa-thumbs-up'
+      		}
+    	       ]
+	},
+	{
+	label: 'ROTEIROS' , value = 'rote' ,
+	items: [
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Cadeirante',
+      		  'icone': 'fa-wheelchair'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Def.Auditivo',
+      		  'icone': 'fa-deaf'
+      		},
+      		{ 'tipo': 'ACESSIBILIDADE:',
+      		  'nome': 'Def.Visual',
+      		  'icone': 'fa-blind'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-amex'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-diners-club'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+      		  'icone': 'fa-cc-mastercard'
+      		},
+      		{ 'tipo': 'ACEITA CARTÕES:',
+      		  'nome': 'Cartões de crédito',
+     		  'icone': 'fa-cc-visa'
+     		 },
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+        	  'nome': 'Bar',
+                  'icone': 'fa-cocktail'
+      		},      
+      		{ 'tipo': 'ALIMENTAÇÃO:',
+      		  'nome': 'Restaurante',
+      		  'icone': 'fa-utensils'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	'nome': 'Aceita-se pets',
+        	'icone': 'fa-paw'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Ar-condicionado',
+        	  'icone': 'fa-snowflake'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Estacionamento',
+        	 'icone': 'fa-parking'
+      		},      
+      		{ 'tipo': 'CONVENIÊNCIAS:',
+        	  'nome': 'Wifi',
+        	  'icone': 'fa-wifi'
+      		},     
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Facebook',
+        	  'icone': 'fa-facebook-square'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+        	  'nome': 'Instagram',
+        	  'icone': 'fa-instagram'
+      		}, 
+      		{ 'tipo:' 'REDES SOCIAIS:',
+      		  'nome': 'Site',
+      		  'icone': 'fa-globe'
+      		}, 
+      		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
+      		  'nome': 'Positivo',
+      		  'icone': 'fa-thumbs-up'
+      		}
+    	       ]
+	}
+];
+
+
 
 

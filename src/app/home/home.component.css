@@ -1,0 +1,64 @@
+/* body {
+    margin: 0;
+    background: rgb(170, 152, 152);
+    height: 100%;
+    width: 100%;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("sea.jpg");
+    background-size: cover;
+  }
+  
+  .background .water {
+    position: absolute;
+    background-image: url("sea-map.png");
+    background-size: cover;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    filter: url("#turbulence");
+  }
+  
+  .card-deck {
+  position: relative;
+  margin-top: 650px;
+  margin-left: 20px;
+  display: inline-flex;
+  text-align: justify;
+  color: black;
+  }
+  
+  .card-deck2 {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 20px;
+    display: inline-flex;
+    text-align: justify;
+    color: black;
+    }
+  
+  .card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .destaque {
+     color: blue;
+     font-family: Verdana, Geneva, Tahoma, sans-serif; 
+     font-size: large;
+     margin-left: 250px;
+     margin-top: 300px;
+    }
+  
+  .footer {
+    margin-bottom: 0px;
+    display: inline-flex;
+    align-items: center;
+    
+    } */

@@ -8,9 +8,9 @@ import { TableModule } from 'primeng/table';
 import { PanelModule } from 'primeng/panel';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card'
-import { DropdownModule} from 'primeng/dropdown';
-import { ToastModule} from 'primeng/toast';
+import { DropdownModule } from 'primeng/dropdown';
+import { ToastModule } from 'primeng/toast';
+import { CardModule } from 'primeng/card';
 
 // import { ConfirmDialogModule } from 'primeng/confirmdialog';
 // import { ConfirmationService, MessageService } from 'primeng/api';
@@ -28,7 +28,6 @@ import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [					
-
     AppComponent,
     PrefeituraComponent,
     HotelComponent,
@@ -36,8 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     PrincipalComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
-    CardModule
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +50,7 @@ import { FooterComponent } from './footer/footer.component';
     AdministradorModule,
     ToastModule,
     AppRoutes,
+    CardModule
     // ConfirmDialogModule,
     // ConfirmationService
   ],

@@ -17,4 +17,3 @@ export class HomeComponent {
     this.primengConfig.ripple = true;
   }
 }
-

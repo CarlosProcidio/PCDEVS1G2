@@ -169,6 +169,7 @@ categChechbox = [
         	  'nome': 'Wifi',
       		  'icone': 'fa-wifi'
       		},     
+
       		{ 'tipo:' 'REDES SOCIAIS:',
       		  'nome': 'Facebook',
       		  'icone': 'fa-facebook-square'

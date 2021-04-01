@@ -9,7 +9,7 @@ git clone git@github.com:CarlosProcidio/PCDEVS1G2.git
 cd PCDEVS1G2/
 ```
 
-// como ainda não subimos tudo para o "master, vc deve trocar de branch"
+// como ainda não subimos tudo para o branch "main", vc deve trocar de branch"
 ```
 git checkout DEV
 git pull

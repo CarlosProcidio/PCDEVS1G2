@@ -1,10 +1,11 @@
-<br>
 <p-carousel [value]="imagens">
     <ng-template let-imagem pTemplate="item">
         <img class="carousel" [src]="imagem.url" [alt]="imagem.alt">
     </ng-template>
 </p-carousel>
+
 <h1>Vejam nossos destaques:</h1>
+
 <p-card class="card1" header="Passeio de Escuna" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="assets\imagens\passeio de escuna.jpg">
@@ -86,7 +87,6 @@
         <p-button label="Veja mais..." icon="..."></p-button>
     </ng-template>
 </p-card>
-
 
 <br>
 <a routerLink="/">Voltar para a Tela inicial</a>

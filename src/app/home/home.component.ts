@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 
 
@@ -9,9 +9,7 @@ import { PrimeNGConfig } from 'primeng/api';
   styleUrls: ['./home.component.css']
 })
 
-/* export class HomeComponent implements OnInit { /* precisa verificar pq isso dá erro */
-
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   constructor(private primengConfig: PrimeNGConfig) {}
   imagens = [
     {

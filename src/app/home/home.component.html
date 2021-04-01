@@ -1,6 +1,11 @@
 <br>
-<p-card class="card1" header="Passeio de Escuna" [style]="{width: '300px'}"
-    styleClass="p-card-shadow">
+<p-carousel [value]="imagens">
+    <ng-template let-imagem pTemplate="item">
+        <img class="carousel" [src]="imagem.url" [alt]="imagem.alt">
+    </ng-template>
+</p-carousel>
+<h1>Vejam nossos destaques:</h1>
+<p-card class="card1" header="Passeio de Escuna" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="assets\imagens\passeio de escuna.jpg">
     </ng-template>
@@ -10,8 +15,7 @@
         <p-button label="Veja mais..." icon=""></p-button>
     </ng-template>
 </p-card>
-<p-card class="card2" header="Pousada do Saci" [style]="{width: '300px'}"
-    styleClass="p-card-shadow">
+<p-card class="card2" header="Pousada do Saci" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="assets\imagens\pousada do saci.jpg">
     </ng-template>
@@ -21,8 +25,7 @@
         <p-button label="Veja mais..." icon="..."></p-button>
     </ng-template>
 </p-card>
-<p-card class="card3" header="Hotel Serramar" [style]="{width: '300px'}"
-    styleClass="p-card-shadow">
+<p-card class="card3" header="Hotel Serramar" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="assets\imagens\hotel serramar.jpg">
     </ng-template>
@@ -32,20 +35,18 @@
         <p-button label="Veja mais..." icon="..."></p-button>
     </ng-template>
 </p-card>
-<p-card class="card4" header="Praia do Cachorro" [style]="{width: '300px'}"
-styleClass="p-card-shadow">
-<ng-template pTemplate="header">
-    <img alt="Card" src="assets\imagens\praia do cachorro.jpg">
-</ng-template>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-    deserunt quisquam repellat libero asperiores earum nam nobis!</p>
-<ng-template pTemplate="footer">
-    <p-button label="Veja mais..." icon="..."></p-button>
-</ng-template>
+<p-card class="card4" header="Praia do Cachorro" [style]="{width: '300px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="assets\imagens\praia do cachorro.jpg">
+    </ng-template>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
+        deserunt quisquam repellat libero asperiores earum nam nobis!</p>
+    <ng-template pTemplate="footer">
+        <p-button label="Veja mais..." icon="..."></p-button>
+    </ng-template>
 </p-card>
 <br>
-<p-card class="card5" header="Bar do Nemo" [style]="{width: '300px'}"
-    styleClass="p-card-shadow">
+<p-card class="card5" header="Bar do Nemo" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="\assets\imagens\bar do nemo.jpg">
     </ng-template>
@@ -55,8 +56,7 @@ styleClass="p-card-shadow">
         <p-button label="Veja mais..." icon=""></p-button>
     </ng-template>
 </p-card>
-<p-card class="card6" header="Tainha na Telha" [style]="{width: '300px'}"
-    styleClass="p-card-shadow">
+<p-card class="card6" header="Tainha na Telha" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="assets\imagens\tainha na telha.jpg">
     </ng-template>
@@ -66,8 +66,7 @@ styleClass="p-card-shadow">
         <p-button label="Veja mais..." icon="..."></p-button>
     </ng-template>
 </p-card>
-<p-card class="card7" header="Feira de Artesanato" [style]="{width: '300px'}"
-    styleClass="p-card-shadow">
+<p-card class="card7" header="Feira de Artesanato" [style]="{width: '300px'}" styleClass="p-card-shadow">
     <ng-template pTemplate="header">
         <img alt="Card" src="assets\imagens\ferira de artesanato.jpg">
     </ng-template>
@@ -77,18 +76,17 @@ styleClass="p-card-shadow">
         <p-button label="Veja mais..." icon="..."></p-button>
     </ng-template>
 </p-card>
-<p-card class="card8" header="Festival do Camarão" [style]="{width: '300px'}"
-styleClass="p-card-shadow">
-<ng-template pTemplate="header">
-    <img alt="Card" src="assets\imagens\festival de camarão.jpg">
-</ng-template>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
-    deserunt quisquam repellat libero asperiores earum nam nobis!</p>
-<ng-template pTemplate="footer">
-    <p-button label="Veja mais..." icon="..."></p-button>
-</ng-template>
+<p-card class="card8" header="Festival do Camarão" [style]="{width: '300px'}" styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="assets\imagens\festival de camarão.jpg">
+    </ng-template>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
+        deserunt quisquam repellat libero asperiores earum nam nobis!</p>
+    <ng-template pTemplate="footer">
+        <p-button label="Veja mais..." icon="..."></p-button>
+    </ng-template>
 </p-card>
 
-  
+
 <br>
 <a routerLink="/">Voltar para a Tela inicial</a>

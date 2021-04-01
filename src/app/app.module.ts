@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
 
 // import { ConfirmDialogModule } from 'primeng/confirmdialog';
 // import { ConfirmationService, MessageService } from 'primeng/api';
@@ -35,7 +36,7 @@ import { FooterComponent } from './footer/footer.component';
     PrincipalComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,7 +51,8 @@ import { FooterComponent } from './footer/footer.component';
     AdministradorModule,
     ToastModule,
     AppRoutes,
-    CardModule
+    CardModule,
+    CarouselModule
     // ConfirmDialogModule,
     // ConfirmationService
   ],

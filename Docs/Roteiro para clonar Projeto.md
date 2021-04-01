@@ -29,7 +29,8 @@ ng serve
 <spam>ng serve --port <porta> (sem os < >)</spam>
 
 #### No Terminal 2:
-// Entre no seu diretório do Pjetos PCDEVS1G2
+// Entre no seu diretório do Projetos PCDEVS1G2
+
 // iniciar o JSON SERVER
 ```
 json-server --watch db.cadastro.json

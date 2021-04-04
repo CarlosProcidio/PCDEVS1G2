@@ -1,5 +1,10 @@
 w-fer {
-height: 100%;}
+height: 100%;
+}
+.carousel {
+  height: 575px;
+  width: 100%;
+}
 
 .card1 {
   position: absolute;
@@ -50,17 +55,8 @@ height: 100%;}
   margin-top: 650px;
   margin-left:1005px
 }
-.carousel {
-  height: 575px;
-  width: 100%;
-  }
-
-  h1 {
+h1 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3.5em;
+    font-size: 3.0em;
     text-align: center;
-  }
-
-  body {
-    background-image:url("/src/assets/imagens/background-conchas.jpg");
   }

@@ -13,10 +13,6 @@ import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
 
-// import { ConfirmDialogModule } from 'primeng/confirmdialog';
-// import { ConfirmationService, MessageService } from 'primeng/api';
-
-
 import { AppComponent } from './app.component';
 import { PrefeituraComponent } from './prefeitura/prefeitura.component';
 import { HotelComponent } from './hotel/hotel.component';
@@ -26,6 +22,9 @@ import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './account/login/login.component';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { AuthenticationComponent } from './account/authentication/authentication.component';
 
 @NgModule({
   declarations: [					
@@ -37,6 +36,12 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    LoginComponent,
+    CreateAccountComponent,
+    AuthenticationComponent,
+    LoginComponent,
+    CreateAccountComponent,
+    AuthenticationComponent
   ],
   imports: [
     BrowserModule,
@@ -57,9 +62,7 @@ import { FooterComponent } from './footer/footer.component';
     // ConfirmationService
   ],
   providers: [
-    Title,
-    // MessageService,
-    // ConfirmationService 
+    Title   
   ],
   bootstrap: [AppComponent]
 })

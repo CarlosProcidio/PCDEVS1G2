@@ -7,8 +7,10 @@ import {MessageService, SelectItemGroup} from 'primeng/api';
 
 
 // interface Categoria {
+//   cat: string,
+//   tipo: string,
 //   nome: string,
-//   categ: string
+//   icone: string
 // }
 
 @Component({
@@ -47,14 +49,14 @@ export class FormularioComponent implements OnInit {
 }
   
   codigoCliente: any;
-  
+  categorias: any;
   operacao: boolean = true;
   
   servico: string;
 
   grupoCategoria: SelectItemGroup[];
 
-
+  
   // categorias: Categoria[] = [
   //     {nome: 'Serviços...', categ: ' '},
   //     {nome: 'GASTRONOMIA', categ: 'GASTRONOMIA'},
@@ -460,12 +462,8 @@ export class FormularioComponent implements OnInit {
 // 	       }
 // ];
 
-
-
-
 }
     
-
     ngOnInit(): void {
 /*
       this.form = this.formBuilder.group({
@@ -584,7 +582,48 @@ buscarCep(cep:any){
     })
   }
  }
-}
-  
 
-  
+ onChange(event) {
+  console.log('event :' + event);
+  console.log(event.value);
+
+  if (event.value == 'Compras'   
+  ||  event.value == 'Cultura'
+  ||  event.value == 'Lazer'
+  ||  event.value == 'Agências de Turismo')
+      {  console.log('AQUI1');
+        var cat = 'oquefazer';
+      }
+
+ if (cat ==  'oquefazer')
+ {console.log('AQUI2');
+ var ca = this.categorias = [
+ {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
+ {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
+ {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'}
+ ];
+ 
+console.log(ca);
+// {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
+// {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
+// {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'},
+// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-amex'},
+// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-diners-club'},
+// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-mastercard'},
+// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-visa'},
+// {cate: 'oquefazer' , tipo: 'ALIMENTAÇÃO'    , nome: 'Bar'               , icone: 'fa-cocktail'},
+// {cate: 'oquefazer' , tipo: 'ALIMENTAÇÃO'    , nome: 'Restaurante'       , icone: 'fa-utensils'},
+// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
+// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
+// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
+// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'wifi'              , icone: 'fa-wifi'},
+// {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Facebook'          , icone: 'fa-facebook-square'},
+// {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Instagram'         , icone: 'fa-Instagram'},
+// {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
+// {cate: 'oquefazer' , tipo: 'REFERÊNCIA:'    , nome: 'Positivo'          , icone: 'fa-thumbs-up'}
+//];
+ 
+
+   }
+ }
+}

@@ -8,53 +8,53 @@ categorServico = {
 
   this.grupoCategoria = [
   {
-    label: 'GASTRONOMIA' ,  value: 'ga', 
+    categ: 'GASTRONOMIA' ,  value: 'ga', 
     items: [
-        {label: 'Bares/Lanches', value: 'Bares/Lanches'},
-        {label: 'Cafés/Docerias', value: 'Cafés/Docerias'},
-        {label: 'Cozinha Brasileira', value: 'Cozinha Brasileira'},
-        {label: 'Cozinha Internacional', value: 'Cozinha Internacional'},
-        {label: 'Pizzarias', value: 'Pizzarias  '},
-        {label: 'Quiosques', value: 'Quiosques'},
-        {label: 'Demais Segmentos', value: 'Demais Segmentos'}
+        {categ: 'Bares/Lanches', value: 'Bares/Lanches'},
+        {categ: 'Cafés/Docerias', value: 'Cafés/Docerias'},
+        {categ: 'Cozinha Brasileira', value: 'Cozinha Brasileira'},
+        {categ: 'Cozinha Internacional', value: 'Cozinha Internacional'},
+        {categ: 'Pizzarias', value: 'Pizzarias  '},
+        {categ: 'Quiosques', value: 'Quiosques'},
+        {categ: 'Demais Segmentos', value: 'Demais Segmentos'}
     ]
   },
   {
-    label: 'HOSPEDAGEM' ,  value: 'ho', 
+    categ: 'HOSPEDAGEM' ,  value: 'ho', 
     items: [
-        {label: 'Hotéis', value: 'Hotéis'},
-        {label: 'Hotéis Fazenda', value: 'Hotéis Fazenda'},
-        {label: 'Motéis', value: 'Motéis'},
-        {label: 'Pousadas', value: 'Pousadas'},
-        {label: 'Resorts', value: 'Resorts'},
-        {label: 'Campings', value: 'Campings'}
+        {categ: 'Hotéis', value: 'Hotéis'},
+        {categ: 'Hotéis Fazenda', value: 'Hotéis Fazenda'},
+        {categ: 'Motéis', value: 'Motéis'},
+        {categ: 'Pousadas', value: 'Pousadas'},
+        {categ: 'Resorts', value: 'Resorts'},
+        {categ: 'Campings', value: 'Campings'}
     ]
   },
   {
-    label: 'O QUE FAZER' ,  value: 'oq', 
+    categ: 'O QUE FAZER' ,  value: 'oq', 
     items: [
-        {label: 'Compras', value: 'Compras'},
-        {label: 'Cultura', value: 'Cultura'},
-        {label: 'Lazer', value: 'Lazer'},
-        {label: 'Agências de Turismo', value: 'Agências de Turismo'}
+        {categ: 'Compras', value: 'Compras'},
+        {categ: 'Cultura', value: 'Cultura'},
+        {categ: 'Lazer', value: 'Lazer'},
+        {categ: 'Agências de Turismo', value: 'Agências de Turismo'}
     ]
   },
   {
-    label: 'ROTEIROS' ,  value: 'ro', 
+    categ: 'ROTEIROS' ,  value: 'ro', 
     items: [
-        {label: 'Aventuras', value: 'Aventuras'},
-        {label: 'Destilarias', value: 'Destilarias'},
-        {label: 'Equestres', value: 'Equestres'},
-        {label: 'Flores e Frutas', value: 'Flores e Frutas'},
-        {label: 'Pesqueiros', value: 'Pesqueiros'},
-        {label: 'Religioso', value: 'Religioso'},
-        {label: 'Rural', value: 'Rural'}
+        {categ: 'Aventuras', value: 'Aventuras'},
+        {categ: 'Destilarias', value: 'Destilarias'},
+        {categ: 'Equestres', value: 'Equestres'},
+        {categ: 'Flores e Frutas', value: 'Flores e Frutas'},
+        {categ: 'Pesqueiros', value: 'Pesqueiros'},
+        {categ: 'Religioso', value: 'Religioso'},
+        {categ: 'Rural', value: 'Rural'}
     ]
   },
   {
-    label: 'PREFEITURA' ,  value: 'pr', 
+    categ: 'PREFEITURA' ,  value: 'pr', 
     items: [
-        {label: 'Público', value: 'Público'}
+        {categ: 'Público', value: 'Público'}
     ]
   }
 ];
@@ -71,7 +71,7 @@ chk = [
 
 categChechbox = [
 	{
-	label: 'HOSPEDAGEM' , value = 'hosp' ,
+	categ: 'HOSPEDAGEM' , value = 'hosp' ,
 	items: [
       		{ 'tipo': 'ACESSIBILIDADE:',
         	  'nome': 'Cadeirante',
@@ -189,7 +189,7 @@ categChechbox = [
                ]
 	},
 	{
-	label: 'GASTRONOMIA' , value = 'gast' ,
+	categ: 'GASTRONOMIA' , value = 'gast' ,
 	items: [
 		{ 'tipo': 'ACESSIBILIDADE:',
       		  'nome': 'Cadeirante',
@@ -258,7 +258,7 @@ categChechbox = [
     	       ]
 	},
 	{
-	label: 'PASSEIOS' , value = 'pass' ,
+	categ: 'PASSEIOS' , value = 'pass' ,
 	items: [
       		{ 'tipo': 'ACESSIBILIDADE:',
       		  'nome': 'Cadeirante',
@@ -331,7 +331,7 @@ categChechbox = [
     	       ]
 	},
 	{
-	label: 'ROTEIROS' , value = 'rote' ,
+	categ: 'ROTEIROS' , value = 'rote' ,
 	items: [
       		{ 'tipo': 'ACESSIBILIDADE:',
       		  'nome': 'Cadeirante',

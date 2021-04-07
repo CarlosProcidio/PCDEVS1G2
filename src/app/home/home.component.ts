@@ -13,11 +13,11 @@ export class HomeComponent implements OnInit {
   constructor(private primengConfig: PrimeNGConfig) {}
   imagens = [
     {
-      url: "assets/imagens/Escuna Netuno.jpg", discription: "barco no mar", 
+      url: "assets/imagens/Escuna pequena.jpg", discription: "barco no mar", 
       alt: "Barco no mar"
     },
     {
-      url: "assets/imagens/praia do cachorro.jpg", discription: "barco no mar", 
+      url: "assets/imagens/Praia dos Coqueiros.jpg", discription: "barco no mar", 
       alt: "Praia bela"
     },
     {
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
       alt: "Oh delícia de lugar!"
     },
     {
-      url: "assets/imagens/tainha na telha.jpg", discription: "barco no mar", 
+      url: "assets/imagens/Peixes e tartaruga.jpg", discription: "barco no mar", 
       alt: "Delícias do mar!"
     },
   ]

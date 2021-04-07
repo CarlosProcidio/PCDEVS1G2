@@ -8,6 +8,7 @@ height: 100%;
 .card1 {
   position: relative;
   display: inline-block;
+  text-align: justify;
   margin-left: 4em;
   margin-right: 2em;
 
@@ -36,6 +37,7 @@ height: 100%;
 .card5 {
   position: relative;
   display: inline-block;
+  text-align: justify;
   margin-left: 4em;
   margin-right: 2em;
 

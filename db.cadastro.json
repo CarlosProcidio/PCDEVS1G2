@@ -330,5 +330,25 @@
       "horario": "",
       "descricao": "QQQQQQQQQQQQQQQQ"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nome": "teste1",
+      "email": "teste1@teste.com",
+      "senha": "senhateste1"
+    },
+    {
+      "id": 2,
+      "nome": "teste2",
+      "email": "teste2@teste.com",
+      "senha": "senhateste2"
+    },
+    {
+      "id": 3,
+      "nome": "teste3",
+      "email": "teste3@teste.com",
+      "senha": "senhateste3"
+    }
   ]
 }

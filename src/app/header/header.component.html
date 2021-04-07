@@ -6,14 +6,16 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="/">
-            <button pButton
-                label="Home"
-                type="button"
-                class="p-button-rounded"
-                icon="pi pi-home">
-            </button>
+            <button pButton type="button" class="p-button-rounded" icon="pi pi-home"></button>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -93,17 +95,17 @@
                         aria-expanded="false">
                         Busca
                     </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <form class="form-inline my-2 my-lg-0">
-                                <input class="form-control mr-sm-2"
-                                    type="search"
-                                    placeholder="Digite aqui"
-                                    aria-label="Busca">
-                                <button class="btn btn-outline-success my-2 my-sm-0"
-                                    type="submit">Busca
-                                </button>
-                            </form>
-                        </div>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2"
+                                type="search"
+                                placeholder="Digite aqui"
+                                aria-label="Busca">
+                            <button class="btn btn-outline-success my-2 my-sm-0"
+                                type="submit">Busca
+                            </button>
+                        </form>
+                    </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -114,40 +116,50 @@
                         <a class="dropdown-item" routerLink="clientes">Tabela de Clientes</a>
                     </div>
                 </li>
+
+                
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> -->
             </ul>
         </div>
-            <button pButton
-                value = "primary"
-                label="Login"
-                type="button"
-                class="p-button-rounded p-button-primary"
-                icon="pi pi-sign-in"
-                [routerLink]="['/account/login']">
-            </button>
-        
-            <button pButton
-                value = "secondary"
-                label="Cadastro"
-                type="button"
-                class="p-button-rounded p-button-secondary"
-                icon="pi pi-user"
-                [routerLink]="['/create-account']">
-            </button>
         <div>
-    </div>
-            
-            <!-- <ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Busca" aria-label="Busca">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Busca</button>
-                </form>
-            </ul> -->
-            <a [routerLink]="['/home']">
-                    <img class="navbar-img" alt="Grupo 2 Avatar" src="assets/imagens/favicon-G2.png">
+            <div class="row nav-item dropdown navbar-collapse">
+                <a class="nav-link dropdown active"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                    Login
                 </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <button pButton
+                        value = "primary"
+                        label="Login"
+                        type="button"
+                        class="p-button-primary"
+                        icon="pi pi-sign-in"
+                        [routerLink]="['/account/login']">
+                    </button>
+                    <button pButton
+                        value = "secondary"
+                        label="Cadastro"
+                        type="button"
+                        class="p-button-secondary"
+                        icon="pi pi-user"
+                        [routerLink]="['/create-account']">
+                    </button>
+                </div>
+                <div>
+                    <a [routerLink]="['/home']">
+                        <img class="navbar-img" alt="Grupo 2 Avatar" src="assets/imagens/favicon-G2.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
             <!--
             <a aria-label="Slack" target="_blank" rel="noopener" href="https://dh-pcdevs.slack.com/" title="DH-PcDevs">
@@ -168,7 +180,7 @@
                     src="https://en.instagram-brand.com/wp-content/themes/ig-branding/prj-ig-branding/assets/images/ig-logo.svg"
                     alt="Instagram">
             </a>
-</nav>
+
     -->
 <br>
 <br>

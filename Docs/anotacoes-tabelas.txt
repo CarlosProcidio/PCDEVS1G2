@@ -8,4 +8,8 @@ Categoria Gastro, tem serviços de restaurante, boteco, lanchonete, etc.
 dentro do formulario.component já tem uma tabela que pode ser a origem da modelagem;
 
 
+dentro de um <li> vc coloca um loop ngFor com let item de itens buscando do json
+
+<li *ngFor="let item of itens; let i = index">
+<imput type= 'checknox' id='tagname' value={{ item.tag_name }}/>
 

@@ -8,4 +8,16 @@ h3   {text-align: center;
 
 .alinha {
       vertical-align:text-top;
-}      
+}
+
+.chkcateg {
+      font-family: Corbel;
+}
+
+.serv-item {
+      margin-right: 15px;
+}
+
+.serv-label {
+      margin-left: 5px;
+}

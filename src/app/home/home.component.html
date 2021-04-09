@@ -1,12 +1,8 @@
-<div class="row">
-    <div class="cols-12">
-        <p-carousel [value]="imagens">
-            <ng-template let-imagem pTemplate="item">
-                <img class="carousel" [src]="imagem.url" [alt]="imagem.alt">
-            </ng-template>
-        </p-carousel>
-    </div>
-</div>
+<p-carousel [value]="imagens">
+    <ng-template let-imagem pTemplate="item">
+        <img class="carousel" [src]="imagem.url" [alt]="imagem.alt">
+    </ng-template>
+</p-carousel>
 
 <h1>Vejam nossos destaques:</h1>
 

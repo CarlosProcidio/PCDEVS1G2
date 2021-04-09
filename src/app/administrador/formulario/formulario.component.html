@@ -150,44 +150,44 @@
         <div class="chkcateg">
             <span>ACESSIBILIDADE: </span><br>
             <span *ngFor="let item of categorias">
-              <span *ngIf="item.tipo === 'ACESSIBILIDADE:'">
+              <span class="serv-item" *ngIf="item.tipo === 'ACESSIBILIDADE:'">
                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                <label for="{{item.nome}}">{{ item.nome }}</label>
+                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>
             <span>ACEITA CARTÕES: </span><br>
             <span *ngFor="let item of categorias">
-              <span *ngIf="item.tipo === 'ACEITA CARTÕES:'">
+              <span class="serv-item" *ngIf="item.tipo === 'ACEITA CARTÕES:'">
                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                <label for="{{item.nome}}">{{ item.nome }}</label>
+                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>
             <span>ALIMENTAÇÃO: </span><br>
             <span *ngFor="let item of categorias">
-              <span *ngIf="item.tipo === 'ALIMENTAÇÃO:'">
+              <span class="serv-item" *ngIf="item.tipo === 'ALIMENTAÇÃO:'">
                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                <label for="{{item.nome}}">{{ item.nome }}</label>
+                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>
             <span>CONVENIÊNCIAS: </span><br>
             <span *ngFor="let item of categorias">
-              <span *ngIf="item.tipo === 'CONVENIÊNCIAS:'">
+              <span class="serv-item" *ngIf="item.tipo === 'CONVENIÊNCIAS:'">
                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                <label for="{{item.nome}}">{{ item.nome }}</label>
+                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>
             <span>REDES SOCIAIS: </span><br>
             <span *ngFor="let item of categorias">
-              <span *ngIf="item.tipo === 'REDES SOCIAIS:'">
+              <span class="serv-item" *ngIf="item.tipo === 'REDES SOCIAIS:'">
                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                <label for="{{item.nome}}">{{ item.nome }}</label>
+                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>
             <span>REFERÊNCIA: </span><br>
             <span *ngFor="let item of categorias">
-              <span *ngIf="item.tipo === 'REFERÊNCIA:'">
+              <span class="serv-item" *ngIf="item.tipo === 'REFERÊNCIA:'">
                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                <label for="{{item.nome}}">{{ item.nome }}</label>
+                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>
           </div>

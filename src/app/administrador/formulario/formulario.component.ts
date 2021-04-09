@@ -47,7 +47,8 @@ export class FormularioComponent implements OnInit {
     distancia:"",
     horario:""
 }
-  
+  ca: any = [];
+  tipoAnt: any;
   codigoCliente: any;
   categorias: any;
   operacao: boolean = true;
@@ -587,43 +588,142 @@ buscarCep(cep:any){
   console.log('event :' + event);
   console.log(event.value);
 
-  if (event.value == 'Compras'   
-  ||  event.value == 'Cultura'
-  ||  event.value == 'Lazer'
-  ||  event.value == 'Agências de Turismo')
-      {  console.log('AQUI1');
+      if (event.value == 'Hotéis'   
+      ||  event.value == 'Hotéis Fazenda'
+      ||  event.value == 'Motéis'
+      ||  event.value == 'Pousadas'
+      ||  event.value == 'Resorts'
+      ||  event.value == 'Campings')
+        { 
+          var cat = 'hospedagem';
+        }
+  
+   if (cat ==  'hospedagem')
+      this.ca = this.categorias = [
+        {cate: 'hospedagem' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
+        {cate: 'hospedagem' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'},
+        {cate: 'hospedagem' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
+        {cate: 'hospedagem' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Amex'      , icone: 'fa-cc-amex'},
+        {cate: 'hospedagem' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Visa'      , icone: 'fa-cc-visa'},
+        {cate: 'hospedagem' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Diners'    , icone: 'fa-cc-diners-club'},
+        {cate: 'hospedagem' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Mastercard', icone: 'fa-cc-mastercard'},
+        {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Adega de Vinho'    , icone: 'fa-wine-bottle'},   
+        {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Bar'               , icone: 'fa-cocktail'},   
+        {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Café Manha Incluso', icone: 'fa-coffee'},
+        {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Restaurante'       , icone: 'fa-utensils'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Wifi'              , icone: 'fa-wifi'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Carregador Malas'  , icone: 'fa-luggage-cart'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'espaço saúde'      , icone: 'fa-spa'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Frigobar'          , icone: 'fa-refrigerator'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Não Fumante'       , icone: 'fa-smoking-ban'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Piscina'           , icone: 'fa-swimming-pool'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Salão fitness'     , icone: 'fa-dumbbell'},
+        {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Serviço de Quarto' , icone: 'fa-concierge-bell'},
+        {cate: 'hospedagem' , tipo: 'REDES SOCIAIS:' , nome: 'Facebook'          , icone: 'fa-facebook-square'},
+        {cate: 'hospedagem' , tipo: 'REDES SOCIAIS:' , nome: 'Instagram'         , icone: 'fa-Instagram'},
+        {cate: 'hospedagem' , tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
+        {cate: 'hospedagem' , tipo: 'REFERÊNCIA:'    , nome: 'Estrelas'          , icone: 'fa-star'}
+      ];
+
+      if (event.value == 'Bares/Lanches'   
+      ||  event.value == 'Cafés/Docerias'
+      ||  event.value == 'Cozinha Brasileira'
+      ||  event.value == 'Cozinha Internacional'
+      ||  event.value == 'Pizzarias'
+      ||  event.value == 'Quiosques'
+      ||  event.value == 'Demais Segmentos')
+
+        { 
+          var cat = 'gastronomia';
+        }
+  
+   if (cat ==  'gastronomia')
+      this.ca = this.categorias = [
+        {cate: 'gastronomia' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
+        {cate: 'gastronomia' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'},
+        {cate: 'gastronomia' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
+        {cate: 'gastronomia' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Amex'      , icone: 'fa-cc-amex'},
+        {cate: 'gastronomia' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Visa'      , icone: 'fa-cc-visa'},
+        {cate: 'gastronomia' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Diners'    , icone: 'fa-cc-diners-club'},
+        {cate: 'gastronomia' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Mastercard', icone: 'fa-cc-mastercard'},
+        {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Adega de Vinho'    , icone: 'fa-wine-bottle'},   
+        {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Bar'               , icone: 'fa-cocktail'},   
+        {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Café Manha Incluso', icone: 'fa-coffee'},
+        {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Restaurante'       , icone: 'fa-utensils'},
+        {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
+        {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
+        {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
+        {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Wifi'              , icone: 'fa-wifi'},
+        {cate: 'gastronomia' , tipo: 'REDES SOCIAIS:' , nome: 'Facebook'          , icone: 'fa-facebook-square'},
+        {cate: 'gastronomia' , tipo: 'REDES SOCIAIS:' , nome: 'Instagram'         , icone: 'fa-Instagram'},
+        {cate: 'gastronomia' , tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
+        {cate: 'gastronomia' , tipo: 'REFERÊNCIA:'    , nome: '$$$ Cifrão'        , icone: 'fa-dillar-sign'}
+    ];
+
+    if (event.value == 'Compras'   
+    ||  event.value == 'Cultura'
+    ||  event.value == 'Lazer'
+    ||  event.value == 'Agências de Turismo')
+      { 
         var cat = 'oquefazer';
       }
 
  if (cat ==  'oquefazer')
- {console.log('AQUI2');
- var ca = this.categorias = [
- {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
- {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
- {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'}
- ];
- 
-console.log(ca);
-// {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
-// {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
-// {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'},
-// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-amex'},
-// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-diners-club'},
-// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-mastercard'},
-// {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'Cartões de crédito', icone: 'fa-cc-visa'},
-// {cate: 'oquefazer' , tipo: 'ALIMENTAÇÃO'    , nome: 'Bar'               , icone: 'fa-cocktail'},
-// {cate: 'oquefazer' , tipo: 'ALIMENTAÇÃO'    , nome: 'Restaurante'       , icone: 'fa-utensils'},
-// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
-// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
-// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
-// {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'wifi'              , icone: 'fa-wifi'},
-// {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Facebook'          , icone: 'fa-facebook-square'},
-// {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Instagram'         , icone: 'fa-Instagram'},
-// {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
-// {cate: 'oquefazer' , tipo: 'REFERÊNCIA:'    , nome: 'Positivo'          , icone: 'fa-thumbs-up'}
-//];
- 
+    this.ca = this.categorias = [
+    {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
+    {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'},
+    {cate: 'oquefazer' , tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
+    {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Amex'      , icone: 'fa-cc-amex'},
+    {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Visa'      , icone: 'fa-cc-visa'},
+    {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Diners'    , icone: 'fa-cc-diners-club'},
+    {cate: 'oquefazer' , tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Mastercard', icone: 'fa-cc-mastercard'},
+    {cate: 'oquefazer' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Restaurante'       , icone: 'fa-utensils'},
+    {cate: 'oquefazer' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Bar'               , icone: 'fa-cocktail'},
+    {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
+    {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
+    {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
+    {cate: 'oquefazer' , tipo: 'CONVENIÊNCIAS:' , nome: 'Wifi'              , icone: 'fa-wifi'},
+    {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Facebook'          , icone: 'fa-facebook-square'},
+    {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Instagram'         , icone: 'fa-Instagram'},
+    {cate: 'oquefazer' , tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
+    {cate: 'oquefazer' , tipo: 'REFERÊNCIA:'    , nome: 'Positivo'          , icone: 'fa-thumbs-up'}
+    ];
 
+    if (event.value == 'Aventuras'   
+    ||  event.value == 'Destilarias'
+    ||  event.value == 'Equestres'
+    ||  event.value == 'Flores e Frutas'
+    ||  event.value == 'Pesqueiros'
+    ||  event.value == 'Religioso'
+    ||  event.value == 'Rural')
+      { 
+        var cat = 'roteiros';
+      }
+
+    if (cat ==  'roteiros')
+    this.ca = this.categorias = [
+      {cate: 'roteiros', tipo: 'ACESSIBILIDADE:', nome: 'Cadeirante'        , icone: 'fa-wheelchair'},
+      {cate: 'roteiros', tipo: 'ACESSIBILIDADE:', nome: 'Def.Visual'        , icone: 'fa-blind'},
+      {cate: 'roteiros', tipo: 'ACESSIBILIDADE:', nome: 'Def.Auditivo'      , icone: 'fa-deaf'},
+      {cate: 'roteiros', tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Amex'      , icone: 'fa-cc-amex'},
+      {cate: 'roteiros', tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Visa'      , icone: 'fa-cc-visa'},
+      {cate: 'roteiros', tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Diners'    , icone: 'fa-cc-diners-club'},
+      {cate: 'roteiros', tipo: 'ACEITA CARTÕES:', nome: 'C.Cred. Mastercard', icone: 'fa-cc-mastercard'},
+      {cate: 'roteiros', tipo: 'ALIMENTAÇÃO:'   , nome: 'Restaurante'       , icone: 'fa-utensils'},
+      {cate: 'roteiros', tipo: 'ALIMENTAÇÃO:'   , nome: 'Bar'               , icone: 'fa-cocktail'},
+      {cate: 'roteiros', tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
+      {cate: 'roteiros', tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
+      {cate: 'roteiros', tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
+      {cate: 'roteiros', tipo: 'CONVENIÊNCIAS:' , nome: 'Wifi'              , icone: 'fa-wifi'},
+      {cate: 'roteiros', tipo: 'REDES SOCIAIS:' , nome: 'Facebook'          , icone: 'fa-facebook-square'},
+      {cate: 'roteiros', tipo: 'REDES SOCIAIS:' , nome: 'Instagram'         , icone: 'fa-Instagram'},
+      {cate: 'roteiros', tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
+      {cate: 'roteiros', tipo: 'REFERÊNCIA:'    , nome: 'Positivo'          , icone: 'fa-thumbs-up'}
+    ];  
    }
  }
-}
+
+

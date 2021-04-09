@@ -8,4 +8,9 @@ h3   {text-align: center;
 
 .alinha {
       vertical-align:text-top;
-}      
+}   
+
+.chkcateg{
+      padding: 1px;
+      font-family: Corbel;
+}

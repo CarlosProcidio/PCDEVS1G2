@@ -1,24 +1,44 @@
-h3   {text-align: center;
+.container {
+      position: relative;
+}
+
+h3 {
+      text-align: center;
       font-style: bold;
       color: black;
       border-bottom: 2px solid rgb(68, 68, 68);
-      padding: 1px;   
-      padding-bottom:10px;   }  
-
+      padding: 1px;
+      padding-bottom:10px;
+}
 
 .alinha {
       vertical-align:text-top;
 }
 
-
 .serv-item {
-      margin-right: 60px;
+      margin-right: 5px;
 }
 
 .serv-label {
-      margin-left: 10px;
+      margin-left: 5px;
 }
 input[type=checkbox] {
-      /* Double-sized Checkboxes */
       transform: scale(1.5);
-      }
+}
+
+.grade-servicos {
+      background-color: white;
+}
+
+.titulo-cat {
+      border-style: none;
+}
+
+.bloco-servicos {
+      border-style: none;
+}
+
+.itens {
+      display: inline-block;
+      margin-right: 10px;
+}

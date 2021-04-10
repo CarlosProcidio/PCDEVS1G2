@@ -1,12 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 /* Font Family */
 html, body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background: grey;
+}
 
-    background-image: url("/assets/imagens/background-conchas.jpg");
+/*
+background-image: url("assets/imagens/seashells-background.jpg");
     background-repeat: repeat;
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
-}
+    background-size: contain;
+    */

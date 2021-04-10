@@ -1,24 +1,31 @@
-w-fer {
-height: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
 .carousel {
-  height: 600px;
   width: 100%;
+  margin-bottom: 30px;
+}
+h1 {
+  font-family: Caveat;
+  font-size: 3.5em;
+  text-align: center;
+  padding-bottom: 30px;
 }
 .card1 {
   position: relative;
   display: inline-block;
   text-align: justify;
-  margin-left: 4em;
-  margin-right: 2em;
-
+  margin-left: 4.5em;
+  margin-bottom: 2em;
+  background: #fff;
 }
 
 .card2 {
   position: relative;
   display: inline-block;
+  margin-left: 2em;
   text-align: justify;
- 
+  background: #fff;
 }
 
 .card3{
@@ -26,28 +33,31 @@ height: 100%;
   display: inline-block;
   text-align: justify;
   margin-left: 2em;
+  background: #fff;
 }
 .card4 {
   position: relative;
   display: inline-block;
   text-align: justify;
   margin-left: 2em;
+  background: #fff;
 }
 
 .card5 {
   position: relative;
   display: inline-block;
   text-align: justify;
-  margin-left: 4em;
+  margin-left: 4.5em;
   margin-right: 2em;
-
+  margin-bottom: 2em;
+  background: #fff;
 }
 
 .card6 {
   position: relative;
   display: inline-block;
   text-align: justify;
- 
+  background: #fff;
 }
 
 .card7{
@@ -55,15 +65,13 @@ height: 100%;
   display: inline-block;
   text-align: justify;
   margin-left: 2em;
+  background: #fff;
 }
 .card8 {
   position: relative;
   display: inline-block;
   text-align: justify;
   margin-left: 2em;
+  background: #fff;
 }
-h1 {
-    
-    font-size: 2.5em;
-    text-align: center;
-  }
+

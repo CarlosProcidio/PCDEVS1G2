@@ -4,34 +4,36 @@ body {
     align-content: end;
     min-height: 100vh;
     margin-left: 0px;
+    font-family: Montserrat ;
 }
 
 footer {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 50px 100x;
+    padding: 50px 10x;
     background: rgb(18, 83, 134);
 }
 
 footer .container {
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 60px;
 }
 
-footer .container .sec h2 {
+footer .container .sec h4 {
     position: relative;
     color: white;
-    font-weight: 500;
+    font-weight: 100;
     margin-bottom: 15px;
+    line-height: 2;
 }
 
-footer .container .sec h2::before{
+footer .container .sec h4::before{
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: 5px;
     left: 0;
     width: 50px;
     height: 2px;
@@ -40,6 +42,7 @@ footer .container .sec h2::before{
 
 footer .container .sec p {
     color: white;
+    
 }
 
 .sci {
@@ -57,12 +60,11 @@ footer .container .sec p {
     width: 48px;
     height: 48px;
     display: grid;
-    align-content: center;
-    justify-content: center;
+    align-content: flex-start;
 }
 
 .sci li a:hover {
-background: white;
+background: rgb(23, 199, 76);
 }
 
 .quicklinks {
@@ -74,9 +76,9 @@ background: white;
 }
 
 .quicklinks li a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
     display: inline-block;
 }
 
@@ -107,7 +109,7 @@ background: white;
     color: #f7f7f7;
     text-decoration: none;
 }
-
+/*
 .copyrightText {
     width: 100%;
     background: #221533;
@@ -115,6 +117,7 @@ background: white;
     text-align: center;
     color: #fff;
 }
+*/
 
 @media(max-width: 991px)
 {

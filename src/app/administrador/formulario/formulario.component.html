@@ -147,7 +147,7 @@
                 </p-fileUpload>
             </div>
         </div>
-        <div class="chkcateg">
+        <div class="tamanho">
             <span>ACESSIBILIDADE: </span><br>
             <span *ngFor="let item of categorias">
               <span class="serv-item" *ngIf="item.tipo === 'ACESSIBILIDADE:'">
@@ -158,7 +158,7 @@
             <span>ACEITA CARTÕES: </span><br>
             <span *ngFor="let item of categorias">
               <span class="serv-item" *ngIf="item.tipo === 'ACEITA CARTÕES:'">
-                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}">
                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
               </span>
             </span> <br><br>

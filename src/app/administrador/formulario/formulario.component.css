@@ -10,14 +10,15 @@ h3   {text-align: center;
       vertical-align:text-top;
 }
 
-.chkcateg {
-      font-family: Corbel;
-}
 
 .serv-item {
-      margin-right: 15px;
+      margin-right: 60px;
 }
 
 .serv-label {
-      margin-left: 5px;
+      margin-left: 10px;
 }
+input[type=checkbox] {
+      /* Double-sized Checkboxes */
+      transform: scale(1.5);
+      }

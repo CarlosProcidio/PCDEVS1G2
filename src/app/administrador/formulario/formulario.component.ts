@@ -587,7 +587,7 @@ buscarCep(cep:any){
  onChange(event) {
   console.log('event :' + event);
   console.log(event.value);
-
+3
       if (event.value == 'Hotéis'   
       ||  event.value == 'Hotéis Fazenda'
       ||  event.value == 'Motéis'

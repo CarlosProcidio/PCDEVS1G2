@@ -124,7 +124,7 @@
     </div>
     <ul class="navbar-nav mr-sm-2">
         <li class="nav-item dropdown">
-            <a class="nav-link active"
+            <!-- <a class="nav-link active"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -132,13 +132,51 @@
                 aria-haspopup="true"
                 aria-expanded="false">
                 Login
+            </a> -->
+            
+            <a class="navbar-brand" href="#">
+                <button pButton
+                    id="navbarDropdown"
+                    type="button"
+                    class="p-button-rounded"
+                    icon="pi pi-user"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                </button>
+                <br>
+                <span style="font-size:small;">Login</span>
+                <ul class="dropdown-menu dropdown-menu-right mt-2">
+		            <li class="px-3 py-2">
+			            <form class="form" role="form" method="post">
+			                <div class="tituloLoginMobile">
+				                <h5>Faça seu Login</h5>
+			                </div>	
+			                <div class="form-group" style="padding-top:15px;">
+    				            <input id="emailInput" placeholder="seu email" class="form-control form-control form-control-sm" autocomplete="off" type="text" name="Usuario" value=""  />
+	                		</div>
+			                <div class="form-group">
+				                <input id="passwordInput" placeholder="Senha" class="form-control form-control form-control-sm" autocomplete="off" type="password" name="Senha" />
+			                </div>
+			                <div class="form-group">
+				                <button type="submit" class="btn btn-primary btn-block btnEntrar">Entrar</button>
+			                </div>
+			                <div class="form-group text-center">
+				                <small><a class="dropdown-item" href="/recuperarsenha">Esqueceu sua Senha?</a></small>
+				                <small><a class="dropdown-item" href="/create-account">Novo cadastro</a></small>
+			                </div>
+			            </form>
+		            </li>
+	            </ul>
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <button pButton
                         value = "primary"
                         label="Login"
                         type="button"
-                        class="p-button p-button-primary"
+                        data-toggle="dropdown"
+                        class="p-button p-button-primary btn btnLogin btnClickLogin"
                         icon="pi pi-sign-in"
                         [routerLink]="['/account/login']">
                     </button>
@@ -150,7 +188,7 @@
                         icon="pi pi-user"
                         [routerLink]="['/create-account']">
                     </button>
-            </div>
+            </div> -->
         </li>
     </ul>
     <ul class="navbar-nav mr-sm-2">

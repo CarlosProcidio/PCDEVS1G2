@@ -1,6 +1,6 @@
 <div class="container mt-2 mb-5 pt-5">
     <h3>Cadastro de Clientes</h3>
-    <form (ngSubmit)="cadastrarOuAtualizar()">
+    <form (ngSubmit)="cadastrarOuAtualizar()" class="grade-servicos">
         <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
         <div class="form-row">
             <input type="hidden" name="id" [(ngModel)]="administradorGeral.id">
@@ -70,10 +70,6 @@
 
             </div>
         </div>
-
-
-
-
 
         <div class="form-row">
             <div class="form-group col-md-2">
@@ -147,100 +143,121 @@
                 </p-fileUpload>
             </div>
         </div>
-        <div class="grade-servicos">
-            <div class="row">
-                <div class="col-md-2">
-                    <span class="titulo-cat">ACESSIBILIDADE: </span><br>
-                </div>
-                <div class="bloco-servicos col-md-4">
+<div class="grade-servicos">
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">ACESSIBILIDADE: </span><br>
+            </div>    
+             <div class="bloco-servicos col-md-10">
+                <table>
                     <span *ngFor="let item of categorias">
-                        <span class="serv-item col-md-4" *ngIf="item.tipo === 'ACESSIBILIDADE:'">
-                            <div class="itens">
+                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ACESSIBILIDADE:'">
+                            <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                            </div>
-                        </span>
-                    </span><br><br>
-                </div>
-                <div class="col-md-2">
-                    <span class="titulo-cat">ACEITA CARTÕES: </span><br>
-                </div>
-                <div class="bloco-servicos col-md-4">
-                    <span *ngFor="let item of categorias">
-                        <span class="serv-item" *ngIf="item.tipo === 'ACEITA CARTÕES:'">
-                            <div class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}">
-                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                            </div>
-                        </span>
+                                <!-- <label class="serv-label" for="{{icone.nome}}">{{item.icone}}</label> -->
+                            </td>
+                         </tr>   
                     </span> <br><br>
-                </div>
+                </table>
             </div>
+        </div>    
+
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">ACEITA CARTÕES: </span><br>
+            </div>    
+             <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ACEITA CARTÕES:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div>    
         
-            <div class="row">
-                <div class="col-md-2">
-                    <span class="titulo-cat">ALIMENTAÇÃO: </span><br>
-                </div>
-                <div class="bloco-servicos col-md-4">
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">ALIMENTAÇÃO: </span><br>
+            </div>   
+            <div class="bloco-servicos col-md-10">
+                <table>
                     <span *ngFor="let item of categorias">
-                        <span class="serv-item" *ngIf="item.tipo === 'ALIMENTAÇÃO:'">
-                            <div class="itens">
+                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ALIMENTAÇÃO:'">
+                            <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                            </div>
-                        </span>
+                            </td>
+                         </tr>   
                     </span> <br><br>
-                </div>
-                <div class="col-md-2">
-                    <span class="titulo-cat">CONVENIÊNCIAS: </span><br>
-                </div>
-                <div class="bloco-servicos col-md-4">
-                    <span *ngFor="let item of categorias">
-                        <span class="serv-item" *ngIf="item.tipo === 'CONVENIÊNCIAS:'">
-                            <div class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                            </div>
-                        </span>
-                    </span> <br><br>
-                </div>
+                </table>
             </div>
+        </div>    
 
-            <div class="row">
-                <div class="col-md-2">
-                    <span class="titulo-cat">REDES SOCIAIS: </span><br>
-                </div>
-                <div class="bloco-servicos col-md-4">
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">CONVENIÊNCIAS: </span><br>
+            </div>    
+            <div class="bloco-servicos col-md-10">
+                <table>
                     <span *ngFor="let item of categorias">
-                        <span class="serv-item" *ngIf="item.tipo === 'REDES SOCIAIS:'">
-                            <div class="itens">
+                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'CONVENIÊNCIAS:'">
+                            <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                            </div>
-                        </span>
+                            </td>
+                         </tr>   
                     </span> <br><br>
-                </div>
-                <div class="col-md-2">
-                    <span class="titulo-cat">REFERÊNCIA: </span><br>
-                </div>
-                <div class="bloco-servicos col-md-4">
-                    <span *ngFor="let item of categorias">
-                        <span class="serv-item" *ngIf="item.tipo === 'REFERÊNCIA:'">
-                            <div class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
-                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                            </div>
-                        </span>
-                    </span> <br><br>
-                </div>
+                </table>
             </div>
-        </div>
+        </div>            
 
-        <button type="submit" class="btn"
-            [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ? "Cadastrar": "Atualizar" }}
-        </button>
-        <br><br>    
-        <a routerLink="/clientes">Voltar para a pesquisa</a>
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">REDES SOCIAIS: </span><br>
+            </div>    
+            <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'REDES SOCIAIS:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div>                   
+
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">REFERÊNCIA: </span><br>
+             </div>   
+            <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'REFERÊNCIA:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div> 
+    </div>        
+            <button type="submit" class="btn" [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ?
+                "Cadastrar": "Atualizar" }}
+            </button>
+            <br><br>
+            <a routerLink="/clientes">Voltar para a pesquisa</a>
     </form>
 </div>
 

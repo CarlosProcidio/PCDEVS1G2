@@ -570,12 +570,12 @@ export class FormularioComponent implements OnInit {
     }
 
 buscarCep(cep:any){
-  console.log(cep);
+  // console.log(cep);
   let cep1 = cep.replace('_','');
-  console.log(cep1);
+  // console.log(cep1);
   if(cep1.length == 9){
     this.viacepService.search(cep.replace('-','')).subscribe(data => {
-      console.log(data);
+      // console.log(data);
       this.administradorGeral.logradouro = data.logradouro;
       this.administradorGeral.bairro = data.bairro;
       this.administradorGeral.cidade = data.localidade;
@@ -585,9 +585,9 @@ buscarCep(cep:any){
  }
 
  onChange(event) {
-  console.log('event :' + event);
-  console.log(event.value);
-3
+  // console.log('event :' + event);
+  // console.log(event.value);
+
       if (event.value == 'Hotéis'   
       ||  event.value == 'Hotéis Fazenda'
       ||  event.value == 'Motéis'
@@ -609,8 +609,8 @@ buscarCep(cep:any){
         {cate: 'hospedagem' , tipo: 'ACEITA CARTÕES:', nome: 'Mastercard'        , icone: 'fa-cc-mastercard'},
         {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Adega de Vinho'    , icone: 'fa-wine-bottle'},   
         {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Bar'               , icone: 'fa-cocktail'},   
-        {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Café Manha Incluso', icone: 'fa-coffee'},
         {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Restaurante'       , icone: 'fa-utensils'},
+        {cate: 'hospedagem' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Café Manha Incluso', icone: 'fa-coffee'},
         {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
         {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
         {cate: 'hospedagem' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},
@@ -651,8 +651,8 @@ buscarCep(cep:any){
         {cate: 'gastronomia' , tipo: 'ACEITA CARTÕES:', nome: 'Mastercard'        , icone: 'fa-cc-mastercard'},
         {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Adega de Vinho'    , icone: 'fa-wine-bottle'},   
         {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Bar'               , icone: 'fa-cocktail'},   
-        {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Café Manha Incluso', icone: 'fa-coffee'},
         {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Restaurante'       , icone: 'fa-utensils'},
+        {cate: 'gastronomia' , tipo: 'ALIMENTAÇÃO:'   , nome: 'Café Manha Incluso', icone: 'fa-coffee'},
         {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Aceita-se pets'    , icone: 'fa-paw'},
         {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Estacionamento'    , icone: 'fa-parking'},
         {cate: 'gastronomia' , tipo: 'CONVENIÊNCIAS:' , nome: 'Ar-condicionado'   , icone: 'fa-snowflake'},

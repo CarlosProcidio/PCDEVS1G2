@@ -3,4 +3,10 @@
 /* Font Family */
 html, body {
     font-family: 'Roboto', sans-serif;
+
+    background-image: url("/assets/imagens/background-conchas.jpg");
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }

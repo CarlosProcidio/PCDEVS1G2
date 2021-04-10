@@ -1,6 +1,6 @@
 body {
+    width: 1340px;
     display: grid;
-    justify-content: end;
     align-content: end;
     min-height: 100vh;
     margin-left: 0px;
@@ -94,10 +94,9 @@ background: white;
     margin-bottom: 16px;
 }
 
-.info li span:nth-child(1)
-{
-color: #fff;
-font-size: 20px;
+.info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
 }
 
 .info li span {

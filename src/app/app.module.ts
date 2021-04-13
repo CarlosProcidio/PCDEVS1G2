@@ -12,6 +12,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
+import { GalleriaModule bg PhotoService} from 'primeng/galleria';
 
 import { AppComponent } from './app.component';
 import { PrefeituraComponent } from './prefeitura/prefeitura.component';
@@ -57,7 +58,8 @@ import { AuthenticationComponent } from './account/authentication/authentication
     ToastModule,
     AppRoutes,
     CardModule,
-    CarouselModule
+    CarouselModule,
+    GalleriaModule
     // ConfirmDialogModule,
     // ConfirmationService
   ],

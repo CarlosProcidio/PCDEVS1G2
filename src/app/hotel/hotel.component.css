@@ -1,0 +1,17 @@
+.top {
+    position: absolute;
+    display: block;
+}
+
+.bloco1 {
+    position: relative;
+    display: block;
+}
+
+.p-galleria {
+    width: 70%;
+}
+
+.embed {
+    width: 30%;
+}

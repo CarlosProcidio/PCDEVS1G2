@@ -13,8 +13,10 @@ export class HotelComponent implements OnInit {
   }
 
 }
+
+
 // implantado junto com o html do primeng 
-export class GalleriaAutoplayDemo implements OnInit {
+/*export class GalleriaAutoplayDemo implements OnInit {
   images: any[];
 
   responsiveOptions:any[] = [
@@ -38,3 +40,4 @@ export class GalleriaAutoplayDemo implements OnInit {
       this.photoService.getImages().then(images => this.images = images)
   }
 }
+*/

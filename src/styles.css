@@ -14,3 +14,21 @@ background-image: url("assets/imagens/seashells-background.jpg");
     background-attachment: fixed;
     background-size: contain;
     */
+
+
+  
+/*
+
+código para expandir carousel
+
+.p-carousel-prev.p-link.p-ripple {
+    position: absolute !important; 
+    z-index: 10;
+    left: 0;
+}
+
+.p-carousel-next.p-link.p-ripple {
+    position: absolute !important; 
+    right: 0;
+    z-index: 10;
+}*/

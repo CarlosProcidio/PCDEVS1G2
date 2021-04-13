@@ -3,6 +3,7 @@ import { LoginComponent } from './account/login/login.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { HotelComponent } from './hotel/hotel.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PrincipalComponent } from './principal/principal.component';
@@ -10,7 +11,8 @@ import { PrincipalComponent } from './principal/principal.component';
 const routes: Routes = [
   { path: '', component: HomeComponent,
     children: [
-      { path: '', component: PrincipalComponent }
+      { path: '', component: PrincipalComponent },
+      { path: '', component: HotelComponent }
     ],
     canActivate: [AuthGuard]
   },

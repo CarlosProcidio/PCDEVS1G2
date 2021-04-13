@@ -12,7 +12,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
-import { GalleriaModule bg PhotoService} from 'primeng/galleria';
+import { GalleriaModule } from 'primeng/galleria';
 
 import { AppComponent } from './app.component';
 import { PrefeituraComponent } from './prefeitura/prefeitura.component';

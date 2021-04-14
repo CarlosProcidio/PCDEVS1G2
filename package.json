@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~11.1.0",
     "@angular/router": "~11.1.0",
     "bootstrap": "^4.6.0",
+    "galleria": "^1.6.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.14.3",
     "primeflex": "^2.0.0",

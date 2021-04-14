@@ -11,7 +11,7 @@ export class HotelComponent implements OnInit {
 
   images: any[];
 
-  constructor(private photoService: PhotoService) { }
+ /* constructor(private photoService: PhotoService) { }
 
   responsiveOptions:any[] = [
       {
@@ -26,9 +26,9 @@ export class HotelComponent implements OnInit {
           breakpoint: '560px',
           numVisible: 1
       }
-  ];
-  ngOnInit() {
-      this.photoService.getImages().then(images => this.images = images);
+  ];*/
+ ngOnInit() {
+    //  this.photoService.getImages().then(images => this.images = images);
   }
 }
 

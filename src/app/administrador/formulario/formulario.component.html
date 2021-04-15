@@ -4,7 +4,7 @@
         <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
         <div class="form-row">
             <input type="hidden" name="id" [(ngModel)]="administradorGeral.id">
-
+ 
             <!-- formControlName="nome"  -->
             <div class="form-group col-md-5">
                 <label for="razaoSocial">RAZÃO SOCIAL</label>
@@ -59,7 +59,7 @@
             <div class="form-group col-md-4">
                 <label for="categorias">CATEGORIA</label>
                 <p-dropdown styleClass="form-control" [options]="grupoCategoria" (onChange)="onChange($event)"
-                    [(ngModel)]="administradorGeral.servico" [ngModelOptions]="{standalone: true}"
+                    [(ngModel)]="administradorGeral.segmento" [ngModelOptions]="{standalone: true}"
                     placeholder="Escolha o Tipo de Serviço" [group]="true">
                     <ng-template let-group pTemplate="group">
                         <div class="p-d-flex p-ai-center">
@@ -153,13 +153,15 @@
                     <span *ngFor="let item of categorias">
                         <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ACESSIBILIDADE:'">
                             <td class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                                 <!-- <label class="serv-label" for="{{icone.nome}}">{{item.icone}}</label> -->
                             </td>
                          </tr>   
                     </span> <br><br>
                 </table>
+                
             </div>
         </div>    
 
@@ -172,7 +174,8 @@
                     <span *ngFor="let item of categorias">
                         <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ACEITA CARTÕES:'">
                             <td class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />                            
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -190,7 +193,8 @@
                     <span *ngFor="let item of categorias">
                         <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ALIMENTAÇÃO:'">
                             <td class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -208,7 +212,8 @@
                     <span *ngFor="let item of categorias">
                         <tr class="serv-item col-md-4" *ngIf="item.tipo === 'CONVENIÊNCIAS:'">
                             <td class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -226,7 +231,8 @@
                     <span *ngFor="let item of categorias">
                         <tr class="serv-item col-md-4" *ngIf="item.tipo === 'REDES SOCIAIS:'">
                             <td class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -244,7 +250,8 @@
                     <span *ngFor="let item of categorias">
                         <tr class="serv-item col-md-4" *ngIf="item.tipo === 'REFERÊNCIA:'">
                             <td class="itens">
-                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}" />
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   

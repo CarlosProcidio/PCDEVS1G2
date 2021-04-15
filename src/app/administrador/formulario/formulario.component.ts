@@ -4,14 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { AdministradorService } from '../administrador.service';
 import {MessageService, SelectItemGroup} from 'primeng/api';
-
-
-// interface Categoria {
-//   cat: string,
-//   tipo: string,
-//   nome: string,
-//   icone: string
-// }
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-formulario',
@@ -34,7 +27,7 @@ export class FormularioComponent implements OnInit {
     telefoneCel: "",
     negocio:"",
     categoria:"",
-    servico:"",
+    segmento:"",
     cep: "",
     logradouro: "",
     numero: "",
@@ -47,24 +40,16 @@ export class FormularioComponent implements OnInit {
     distancia:"",
     horario:""
 }
+ 
   ca: any = [];
-  tipoAnt: any;
   codigoCliente: any;
   categorias: any;
   operacao: boolean = true;
   
-  servico: string;
+  arrayServico: any[] = [] ; // array de serviços para carga na tabela de serviços
 
   grupoCategoria: SelectItemGroup[];
-
-  
-  // categorias: Categoria[] = [
-  //     {nome: 'Serviços...', categ: ' '},
-  //     {nome: 'GASTRONOMIA', categ: 'GASTRONOMIA'},
-  //     {nome: 'HOSPEDAGEM', categ: 'HOSPEDAGEM'},
-  //     {nome: 'PASSEIOS/ROTEIROS', categ: 'PASSEIOS/ROTEIROS'}
-  //   ];
-
+ 
   constructor(
     private service: AdministradorService,
     private messageService: MessageService,  
@@ -127,345 +112,9 @@ export class FormularioComponent implements OnInit {
     ]
   }
  ];
-
-//  categChechbox = [
-// 	       {
-// 	        categ: 'HOSPEDAGEM' , value = 'hosp' ,
-// 	        items: [
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//         	  'nome': 'Cadeirante',
-//         	  'icone': 'fa-wheelchair'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//         	  'nome': 'Def.Auditivo',
-//         	  'icone': 'fa-deaf'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//        		  'nome': 'Def.Visual',
-//       		  'icone': 'fa-blind'
-//     	  	},
-//     		  { 'tipo': 'ACEITA CARTÕES:',
-//         	  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-amex'
-//      	  	},
-//     		  { 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-diners-club'
-//       		},
-//     	  	{ 'tipo': 'ACEITA CARTÕES:',
-//         	  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-mastercard'
-//      		  },
-//     		    { 'tipo': 'ACEITA CARTÕES:',
-//        		  'nome': 'Cartões de crédito',
-//         	    'icone': 'fa-cc-visa'
-//      		  },
-//      		  { 'tipo': 'ACEITA CARTÕES:',
-//        		  'nome': 'Cartão genérico',
-//       		  'icone': 'fa-money-check'
-//      		  },
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//         	  'nome': 'Dinheiro',
-//       		  'icone': 'fa-dollar-sign'
-//       		},
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//       		  'nome': 'Adega de Vinho',
-//       		  'icone': 'fa-wine-bottle'
-//       		},      
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//       		  'nome': 'Bar',
-//          	  'icone': 'fa-cocktail'
-//       		},      
-//      		  { 'tipo': 'ALIMENTAÇÃO:',
-//         	  'nome': 'Café da manhã incluso',
-// 		        'icone': 'fa-coffee'
-//       		},      
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//         	  'nome': 'Restaurante',
-//         	  'icone': 'fa-utensils'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Aceita-se pets',
-//       		  'icone': 'fa-paw'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Ar-condicionado',
-//       		  'icone': 'fa-snowflake'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Carregador de malas',
-//       		  'icone': 'fa-luggage-cart'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'espaço saúde',
-//         	  'icone': 'fa-spa'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Estacionamento',
-//       		  'icone': 'fa-parking'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Frigobar',
-//       		  'icone': 'fa-refrigerator'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Não fumante',
-//       		  'icone': 'fa-smoking-ban'
-//      		  },      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Piscina',
-//       		  'icone': 'fa-swimming-pool'
-//       		},      
-//      		  { 'tipo': 'CONVENIÊNCIAS:',
-//      		   'nome': 'Salão fitness',
-//     		   'icone': 'fa-dumbbell'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Serviço de quarto',
-//       		  'icone': 'fa-concierge-bell'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Wifi',
-//       		  'icone': 'fa-wifi'
-//       		},     
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//       		  'nome': 'Facebook',
-//       		  'icone': 'fa-facebook-square'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//       		  'nome': 'Instagram',
-//       		  'icone': 'fa-instagram'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Site',
-//        	  'icone': 'fa-globe'
-//       		}, 
-//      		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-//            'nome': 'Estrelas',
-//         	  'icone': 'fa-star'
-//      		 }
-//          ]
-// 	       },
-// 	       {
-// 	        categ: 'GASTRONOMIA' , value = 'gast' ,
-// 	        items: [
-// 		      { 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Cadeirante',
-//       		  'icone': 'fa-wheelchair'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Def.Auditivo',
-//       		  'icone': 'fa-deaf'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Def.Visual',
-//       		  'icone': 'fa-blind'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-amex'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-diners-club'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-mastercard'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-visa'
-//       		},
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//       		  'nome': 'Adega de Vinho',
-//         	  'icone': 'fa-wine-bottle'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Aceita-se pets',
-//       		  'icone': 'fa-paw'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Ar-condicionado',
-//       		  'icone': 'fa-snowflake'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Estacionamento',
-//       		  'icone': 'fa-parking'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//       		  'nome': 'Wifi',
-//       		  'icone': 'fa-wifi'
-//       		},     
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Facebook',
-//         	  'icone': 'fa-facebook-square'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Instagram',
-//       		  'icone': 'fa-instagram'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//       		  'nome': 'Site',
-//       		  'icone': 'fa-globe'
-//       		}, 
-//       		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-//      		   'nome': 'Cifrão',
-//       		  'icone': 'fa-dollar-sign'
-//       		}
-//     	   ]
-// 	      },
-// 	      {
-// 	       categ: 'PASSEIOS' , value = 'pass' ,
-// 	       items: [
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Cadeirante',
-//       		  'icone': 'fa-wheelchair'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Def.Auditivo',
-//       		  'icone': 'fa-deaf'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Def.Visual',
-//       		  'icone': 'fa-blind'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-amex'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-diners-club'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-mastercard'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//      		  'icone': 'fa-cc-visa'
-//      		 },
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//         	  'nome': 'Bar',
-//                   'icone': 'fa-cocktail'
-//       		},      
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//       		  'nome': 'Restaurante',
-//       		  'icone': 'fa-utensils'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	'nome': 'Aceita-se pets',
-//         	'icone': 'fa-paw'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Ar-condicionado',
-//         	  'icone': 'fa-snowflake'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Estacionamento',
-//         	 'icone': 'fa-parking'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Wifi',
-//         	  'icone': 'fa-wifi'
-//       		},     
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Facebook',
-//         	  'icone': 'fa-facebook-square'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Instagram',
-//         	  'icone': 'fa-instagram'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//       		  'nome': 'Site',
-//       		  'icone': 'fa-globe'
-//       		}, 
-//       		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-//       		  'nome': 'Positivo',
-//       		  'icone': 'fa-thumbs-up'
-//       		}
-//     	   ]
-// 	      },
-// 	      {
-// 	       categ: 'ROTEIROS' , value = 'rote' ,
-// 	       items: [
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Cadeirante',
-//       		  'icone': 'fa-wheelchair'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Def.Auditivo',
-//       		  'icone': 'fa-deaf'
-//       		},
-//       		{ 'tipo': 'ACESSIBILIDADE:',
-//       		  'nome': 'Def.Visual',
-//       		  'icone': 'fa-blind'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-amex'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-diners-club'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//       		  'icone': 'fa-cc-mastercard'
-//       		},
-//       		{ 'tipo': 'ACEITA CARTÕES:',
-//       		  'nome': 'Cartões de crédito',
-//      		  'icone': 'fa-cc-visa'
-//      		 },
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//         	  'nome': 'Bar',
-//                   'icone': 'fa-cocktail'
-//       		},      
-//       		{ 'tipo': 'ALIMENTAÇÃO:',
-//       		  'nome': 'Restaurante',
-//       		  'icone': 'fa-utensils'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	'nome': 'Aceita-se pets',
-//         	'icone': 'fa-paw'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Ar-condicionado',
-//         	  'icone': 'fa-snowflake'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Estacionamento',
-//         	 'icone': 'fa-parking'
-//       		},      
-//       		{ 'tipo': 'CONVENIÊNCIAS:',
-//         	  'nome': 'Wifi',
-//         	  'icone': 'fa-wifi'
-//       		},     
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Facebook',
-//         	  'icone': 'fa-facebook-square'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//         	  'nome': 'Instagram',
-//         	  'icone': 'fa-instagram'
-//       		}, 
-//       		{ 'tipo:' 'REDES SOCIAIS:',
-//       		  'nome': 'Site',
-//       		  'icone': 'fa-globe'
-//       		}, 
-//       		{ 'tipo:' 'REFERÊNCIA DE CATEGORIA:',
-//       		  'nome': 'Positivo',
-//       		  'icone': 'fa-thumbs-up'
-//       		}
-//          ]
-// 	       }
-// ];
-
 }
     
-    ngOnInit(): void {
+   ngOnInit(): void {
 /*
       this.form = this.formBuilder.group({
         razaoSocial: ['', Validators.required],
@@ -516,7 +165,10 @@ export class FormularioComponent implements OnInit {
     }
   
     cadastrar(){
-  
+      this.administradorGeral.servicos = this.arrayServico;
+
+      console.log()
+
       this.service.salvar(this.administradorGeral).subscribe(
         resposta => {
         this.messageService.add(
@@ -570,12 +222,9 @@ export class FormularioComponent implements OnInit {
     }
 
 buscarCep(cep:any){
-  // console.log(cep);
   let cep1 = cep.replace('_','');
-  // console.log(cep1);
   if(cep1.length == 9){
     this.viacepService.search(cep.replace('-','')).subscribe(data => {
-      // console.log(data);
       this.administradorGeral.logradouro = data.logradouro;
       this.administradorGeral.bairro = data.bairro;
       this.administradorGeral.cidade = data.localidade;
@@ -585,9 +234,6 @@ buscarCep(cep:any){
  }
 
  onChange(event) {
-  // console.log('event :' + event);
-  // console.log(event.value);
-
       if (event.value == 'Hotéis'   
       ||  event.value == 'Hotéis Fazenda'
       ||  event.value == 'Motéis'
@@ -723,7 +369,23 @@ buscarCep(cep:any){
       {cate: 'roteiros', tipo: 'REDES SOCIAIS:' , nome: 'Site'              , icone: 'fa-globe'},
       {cate: 'roteiros', tipo: 'REFERÊNCIA:'    , nome: 'Positivo'          , icone: 'fa-thumbs-up'}
     ];  
+
+    this.administradorGeral.categoria = cat;
+    this.administradorGeral.segmento = event.value;
+
    }
+
+
+   gravarServico(event,item){
+     
+     if (event.target.checked){
+       this.arrayServico.push(item)
+     }else{
+      this.arrayServico.splice(this.arrayServico.indexOf(item),1)
+     }
+     console.log(this.arrayServico);
+
+  }
  }
 
 

@@ -3,51 +3,49 @@
 </div>
 <div>
     <p>Mar Hotel & Convenções</p>
-<div class="bloco1">
-    <div class="row">
-        <div class="md col-8">
-    <div>
-        <p-galleria [value]="images" [numVisible]="5" [containerStyle]="{'max-width': '640px'} " [circular]="true"
-            [autoPlay]="true" [transitionInterval]="3000">
-            <ng-template pTemplate="item" let-item>
-                <img [src]="item" width="100%" />
-            </ng-template>
-            <ng-template pTemplate="thumbnail" let-item>
-                <div class="p-grid p-nogutter p-justify-center">
-                    <img [src]="item" width="150px" height="50px" />
-                </div>
-            </ng-template>
-        </p-galleria>
-        <span></span>
+    <div class="grid-container">
+        <div class="grid-galeria">
+            <p-galleria [value]="images" [numVisible]="5" [containerStyle]="{'max-width': '640px'} " [circular]="true"
+                [autoPlay]="true" [transitionInterval]="3000">
+                <ng-template pTemplate="item" let-item>
+                    <img [src]="item" width="100%" />
+                </ng-template>
+                <ng-template pTemplate="thumbnail" let-item>
+                    <div class="p-grid p-nogutter p-justify-center">
+                        <img [src]="item" width="150px" height="50px" />
+                    </div>
+                </ng-template>
+            </p-galleria>
+        </div>
+        <div class="grid-mapa">
+            <embed
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.296475558763!2d-46.13250448534868!3d-23.843603777959977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdfb8a4dbed06b%3A0x4c9b92c0a82d2457!2sAv.%20Tom%C3%A9%20de%20Souza%2C%201250%20-%20Vila%20Clais%2C%20Bertioga%20-%20SP%2C%2011250-000!5e0!3m2!1spt-BR!2sbr!4v1618324464175!5m2!1spt-BR!2sbr"
+                width="400" height="520" style="border:0;" allowfullscreen="" loading="lazy" type="">
+        </div>
     </div>
-    <div class="mapa">
-        <embed
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.296475558763!2d-46.13250448534868!3d-23.843603777959977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdfb8a4dbed06b%3A0x4c9b92c0a82d2457!2sAv.%20Tom%C3%A9%20de%20Souza%2C%201250%20-%20Vila%20Clais%2C%20Bertioga%20-%20SP%2C%2011250-000!5e0!3m2!1spt-BR!2sbr!4v1618324464175!5m2!1spt-BR!2sbr"
-            width="400" height="480" style="border:0;" allowfullscreen="" loading="lazy" type="">
-    </div>
-</div>    
-    <div>
-        <span class="p-buttonset">
-            <button pButton type="button" label="LIGAR" icon="pi pi-phone" class="p-button-sm" class="ligar"></button>
-            <button pButton type="button" label="SITE" icon="pi pi-globe" class="p-button-sm" class="site"></button>
-            <button pButton type="button" label="FACEBOOK" icon="pi pi-facebook" class="p-button-sm"
-                class="facebook"></button>
-            <button pButton type="button" label="INSTAGRAM" icon="pi pi-photo" class="p-button-sm" class="ligar"
-                instagram></button>
-        </span>
-    </div>
-    <div class="row">
-        <div class="col-8">
-            <p class="descritivo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam illum accusantium
-                voluptatum
-                officiis error minus quo voluptas aliquid minima, quis dolores, eveniet, in magni rerum!
-                Asperiores
-                nostrum rerum optio ad labore debitis.
-                <br>
-                <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nam explicabo blanditiis eaque
-                itaque id
-                facilis delectus incidunt minus, aliquid corrupti! Quo ipsum quos vero possimus ad labore
-                debitis totam!
-            </p>
+</div>
+<div>
+    <span class="p-buttonset">
+        <button pButton type="button" label="LIGAR" icon="pi pi-phone" class="p-button-sm" class="ligar"></button>
+        <button pButton type="button" label="SITE" icon="pi pi-globe" class="p-button-sm" class="site"></button>
+        <button pButton type="button" label="FACEBOOK" icon="pi pi-facebook" class="p-button-sm"
+            class="facebook"></button>
+        <button pButton type="button" label="INSTAGRAM" icon="pi pi-photo" class="p-button-sm" class="ligar"
+            instagram></button>
+    </span>
+</div>
+<div class="row">
+    <div class="col-8">
+        <p class="descritivo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam illum accusantium
+            voluptatum
+            officiis error minus quo voluptas aliquid minima, quis dolores, eveniet, in magni rerum!
+            Asperiores
+            nostrum rerum optio ad labore debitis.
+            <br>
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nam explicabo blanditiis eaque
+            itaque id
+            facilis delectus incidunt minus, aliquid corrupti! Quo ipsum quos vero possimus ad labore
+            debitis totam!
+        </p>

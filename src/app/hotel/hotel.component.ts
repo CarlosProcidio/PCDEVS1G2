@@ -9,67 +9,17 @@ import { Component, OnInit, Injectable } from '@angular/core';
 
 export class HotelComponent implements OnInit {
 
-  images: any[];
+  images = [
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeDPUr1ol-Tnb4t8cWdXMJ3q_B-DkDqlqM0wY5hLLcEO4gYgStlDgYMKL_MXsp8kEXW0&usqp=CAU.jpg',
+    'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpg',
+    'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg',
+    'https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg',
+    'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg'
+    
+  ];
 
- /* constructor(private photoService: PhotoService) { }
-
-  responsiveOptions:any[] = [
-      {
-          breakpoint: '1024px',
-          numVisible: 5
-      },
-      {
-          breakpoint: '768px',
-          numVisible: 3
-      },
-      {
-          breakpoint: '560px',
-          numVisible: 1
-      }
-  ];*/
  ngOnInit() {
     //  this.photoService.getImages().then(images => this.images = images);
   }
 }
 
-
-@Injectable()
-export class PhotoService {
-
-  constructor(private http: HttpClient) { }
-
-  getImages() {
-  return this.http.get<any>('assets/showcase/data/photos.json')
-    .toPromise()
-    .then(res => <'typeof Image'[]>res.data)
-    .then(data => { return data; });
-  }
-}
-
-
-// implantado junto com o html do primeng 
-/*export class GalleriaAutoplayDemo implements OnInit {
-  images: any[];
-
-  responsiveOptions:any[] = [
-      {
-          breakpoint: '1024px',
-          numVisible: 5
-      },
-      {
-          breakpoint: '768px',
-          numVisible: 3
-      },
-      {
-          breakpoint: '560px',
-          numVisible: 1
-      }
-  ];
-
-  constructor(private photoService: PhotoService) { }
-
-  ngOnInit() {
-      this.photoService.getImages().then(images => this.images = images)
-  }
-}
-*/

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
       alt: "Oh delícia de lugar!"
     },
     {
-      url: "assets/imagens/Peixes e tartaruga.jpg", discription: "barco no mar", 
+    url: "assets/imagens/Peixes e tartaruga.jpg", discription: "barco no mar",   
       alt: "Delícias do mar!"
     },
   ]

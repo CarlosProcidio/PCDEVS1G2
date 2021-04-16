@@ -25,7 +25,7 @@ export class FormularioComponent implements OnInit {
     site: "",
     telefoneFixo: "",
     telefoneCel: "",
-    negocio:"",
+    descricao:"",
     categoria:"",
     segmento:"",
     cep: "",

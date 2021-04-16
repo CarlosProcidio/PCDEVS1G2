@@ -34,10 +34,69 @@ h3   {text-align: center;
   width: 220px;
   text-align: center !important;
 }
-.th-telefoneCel {
+
+.th-descricao {
+  width: 220px;
+  text-align: center !important;
+}
+.th-categoria {
+  width: 120px;
+  text-align: center !important;
+}
+.th-segmento {
+  width: 150px;
+  text-align: center !important;
+}
+.th-logradouro {
+  width: 220px;
+  text-align: center !important;
+}
+
+.th-bairro {
   width: 160px;
   text-align: center !important;
 }
+
+.th-numero {
+  width: 100px;
+  text-align: center !important;
+}
+
+.th-complemento {
+  width: 150px;
+  text-align: center !important;
+}
+
+.th-telefoneCel {
+  width: 150px;
+  text-align: center !important;
+}
+
+.th-telefoneFixo {
+  width: 140px;
+  text-align: center !important;
+}
+
+.th-distancia {
+  width: 250px;
+  text-align: center !important;
+}
+
+.th-referencia {
+  width: 250px;
+  text-align: center !important;
+}
+
+.th-horario {
+  width: 200px;
+  text-align: center !important;
+}
+
+.th-mapa {
+  width: 280px;
+  text-align: center !important;
+}
+
 
 .th-cep {
   width: 120px;
@@ -49,6 +108,10 @@ h3   {text-align: center;
   text-align: center !important;
 }
 
+.th-cnpj {
+  width: 170px;
+  text-align: center !important;
+}
 
 .th-estado {
   width: 75px;

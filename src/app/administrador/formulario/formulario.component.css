@@ -26,10 +26,6 @@ input[type=checkbox] {
       transform: scale(1.5);
 }
 
-.grade-servicos {
-      background-color: white;
-}
-
 .titulo-cat {
       border-style: none;
 }

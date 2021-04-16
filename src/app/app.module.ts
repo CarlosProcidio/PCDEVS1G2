@@ -19,7 +19,6 @@ import { PrefeituraComponent } from './prefeitura/prefeitura.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { AppRoutes } from './app.routing';
-import { PrincipalComponent } from './principal/principal.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -33,7 +32,6 @@ import { AuthenticationComponent } from './account/authentication/authentication
     PrefeituraComponent,
     HotelComponent,
     ClienteComponent,
-    PrincipalComponent,
     HomeComponent,
     HeaderComponent,
     FooterComponent,

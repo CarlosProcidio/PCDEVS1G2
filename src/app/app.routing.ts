@@ -6,12 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent,
     children: [
-      { path: '', component: PrincipalComponent },
       { path: '', component: HotelComponent }
     ],
     canActivate: [AuthGuard]

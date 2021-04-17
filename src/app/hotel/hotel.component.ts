@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee, faGlobe, faPaw, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faBlind, faCoffee, faConciergeBell, faDeaf, faDumbbell, faGlobe, faLuggageCart, faMoneyCheck, faParking, faPaw, faSmoking, faSmokingBan, faSnowflake, faSpa, faStar, faSwimmingPool, faUtensils, faWheelchair, faWifi, faWineBottle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-hotel',
@@ -8,10 +8,27 @@ import { faCoffee, faGlobe, faPaw, faUtensils } from '@fortawesome/free-solid-sv
 })
 
 export class HotelComponent implements OnInit {
+  faWeelchair = faWheelchair;
+  faDeaf = faDeaf;
+  faBlind = faBlind;
+  faWineBottle = faWineBottle;
   faCoffee = faCoffee;
-  faGlobe = faGlobe;
   faUtensils = faUtensils;
-  faPaw = faPaw
+  faPaw = faPaw;
+  faSnowflake = faSnowflake;
+  faLuggageCart = faLuggageCart;
+  faSpa = faSpa;
+  faParking = faParking;
+  faSmoking = faSmoking;
+  faSmokingBna = faSmokingBan;
+  faGlobe = faGlobe;
+  fawifi = faWifi;
+  faSwimmimngPool = faSwimmingPool;
+  faDumbbell = faDumbbell;
+  faConciergeBell = faConciergeBell;
+  faMoneyCheck = faMoneyCheck;
+  faStar = faStar
+
   images = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeDPUr1ol-Tnb4t8cWdXMJ3q_B-DkDqlqM0wY5hLLcEO4gYgStlDgYMKL_MXsp8kEXW0&usqp=CAU.jpg',
     'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpg',

@@ -1,5 +1,5 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { faCoffee, faGlobe, faPaw, faUtensils } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-hotel',
@@ -8,7 +8,10 @@ import { Component, OnInit, Injectable } from '@angular/core';
 })
 
 export class HotelComponent implements OnInit {
-
+  faCoffee = faCoffee;
+  faGlobe = faGlobe;
+  faUtensils = faUtensils;
+  faPaw = faPaw
   images = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfeDPUr1ol-Tnb4t8cWdXMJ3q_B-DkDqlqM0wY5hLLcEO4gYgStlDgYMKL_MXsp8kEXW0&usqp=CAU.jpg',
     'https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500.jpg',
@@ -17,6 +20,7 @@ export class HotelComponent implements OnInit {
     'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg'
     
   ];
+  
 
  ngOnInit() {
     //  this.photoService.getImages().then(images => this.images = images);

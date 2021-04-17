@@ -9,8 +9,8 @@
 }
 .linha {
     position: relative;
-    border: 5px;
-    border-color: black;
+    border: 3px;
+    border-color: rgb(18, 83, 134);
     border-bottom-style: solid;
 }
 .grid-container {

@@ -13,6 +13,7 @@ import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
 import { GalleriaModule } from 'primeng/galleria';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { PrefeituraComponent } from './prefeitura/prefeitura.component';
@@ -57,7 +58,8 @@ import { AuthenticationComponent } from './account/authentication/authentication
     AppRoutes,
     CardModule,
     CarouselModule,
-    GalleriaModule
+    GalleriaModule,
+    FontAwesomeModule
     // ConfirmDialogModule,
     // ConfirmationService
   ],

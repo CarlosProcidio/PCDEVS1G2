@@ -46,7 +46,7 @@
                 </p-inputMask>
             </div>
             <div class="form-group col-md-2">
-                <label for="telefoneCel">TELEFONE (CELULAR)</label>
+                <label for="telefoneCel">CELULAR    </label>
                 <p-inputMask styleClass="form-control" name="telefoneCel" placeholder="(99) 99999-9999"
                     [(ngModel)]="administradorGeral.telefoneCel" mask="(99) 99999-9999">
                 </p-inputMask>
@@ -108,34 +108,33 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-10">
+            <div class="form-group col-md-12">
                 <label for="mapa">MAPA</label>
                 <input name="mapa" type="text" class="form-control" [(ngModel)]="administradorGeral.mapa">
-            </div>
-            <div class="form-group col-md-2">
-                <label for="categorias">STATUS</label>
-                <p-dropdown styleClass="form-control" [(ngModel)]="administradorGeral.status"
-                            [ngModelOptions]="{standalone: true}">
-                            
-                    
-                </p-dropdown>
             </div>
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-5">
                 <label for="referencia">REFERÊNCIA</label>
                 <input name="referencia" type="text" class="form-control" [(ngModel)]="administradorGeral.referencia">
             </div>
-            <div class="form-group col-md-4">
-                <label for="distancia">DISTÂNCIA CENTRO</label>
-                <input name="distancia" type="text" class="form-control" [(ngModel)]="administradorGeral.distancia">
-            </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-5">
                 <label for="horario">HORÁRIO FUNCIONAMENTO</label>
                 <input name="horario" type="text" class="form-control" [(ngModel)]="administradorGeral.horario">
             </div>
-        </div>
+            <div class="form-group col-md-2">
+                <label for="categorias">STATUS</label>
+                <p-dropdown styleClass="form-control" [(ngModel)]="administradorGeral.status"
+                            [ngModelOptions]="{standalone: true}"
+                            placeholder=": : : "
+                            optionDisabled="inactive"
+                            [options]="status">
+                            
+                    
+                </p-dropdown>
+            </div>
+         </div>
 
         <div class="form-row">
             <div class="form-group  col-md-6">

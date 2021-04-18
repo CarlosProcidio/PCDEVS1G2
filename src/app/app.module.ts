@@ -42,6 +42,7 @@ import { AuthenticationComponent } from './account/authentication/authentication
     LoginComponent,
     CreateAccountComponent,
     AuthenticationComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -58,7 +59,7 @@ import { AuthenticationComponent } from './account/authentication/authentication
     AppRoutes,
     CardModule,
     CarouselModule,
-    GalleriaModule,
+    GalleriaModule,    
     FontAwesomeModule
     // ConfirmDialogModule,
     // ConfirmationService
@@ -68,5 +69,6 @@ import { AuthenticationComponent } from './account/authentication/authentication
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
-
+export class AppModule {
+   
+ }

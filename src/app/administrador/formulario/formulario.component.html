@@ -126,12 +126,10 @@
             <div class="form-group col-md-2">
                 <label for="categorias">STATUS</label>
                 <p-dropdown styleClass="form-control" [(ngModel)]="administradorGeral.status"
-                            [ngModelOptions]="{standalone: true}"
-                            placeholder=": : : "
-                            optionDisabled="inactive"
-                            [options]="status">
-                            
-                    
+                    [ngModelOptions]="{standalone: true}"
+                    placeholder=": : : "
+                    optionDisabled="inactive"
+                    appendTo="body">
                 </p-dropdown>
             </div>
          </div>

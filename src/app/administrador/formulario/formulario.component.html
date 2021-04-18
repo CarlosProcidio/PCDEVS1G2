@@ -156,7 +156,7 @@
              <div class="bloco-servicos col-md-10">
                 <table>
                     <span *ngFor="let item of categorias">
-                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ACESSIBILIDADE:'">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACESSIBILIDADE:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />
@@ -177,7 +177,7 @@
              <div class="bloco-servicos col-md-10">
                 <table>
                     <span *ngFor="let item of categorias">
-                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ACEITA CARTÕES:'">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACEITA CARTÕES:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />                            
@@ -196,7 +196,7 @@
             <div class="bloco-servicos col-md-10">
                 <table>
                     <span *ngFor="let item of categorias">
-                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'ALIMENTAÇÃO:'">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ALIMENTAÇÃO:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />
@@ -215,7 +215,7 @@
             <div class="bloco-servicos col-md-10">
                 <table>
                     <span *ngFor="let item of categorias">
-                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'CONVENIÊNCIAS:'">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'CONVENIÊNCIAS:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />
@@ -234,7 +234,7 @@
             <div class="bloco-servicos col-md-10">
                 <table>
                     <span *ngFor="let item of categorias">
-                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'REDES SOCIAIS:'">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REDES SOCIAIS:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />
@@ -253,7 +253,7 @@
             <div class="bloco-servicos col-md-10">
                 <table>
                     <span *ngFor="let item of categorias">
-                        <tr class="serv-item col-md-4" *ngIf="item.tipo === 'REFERÊNCIA:'">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REFERÊNCIA:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />

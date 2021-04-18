@@ -22,34 +22,34 @@
       "estado": "SP",
       "mapa": "https://buritama.sp.gov.br/site2/",
       "referencia": "em frente ao Forum",
-      "distancia": "3 km",
-      "horario": "Segunda a Sexta: das 08hs até 17hs"
+      "horario": "Segunda a Sexta: das 08hs até 17hs",
+      "status": "Pendente"
     },
     {
       "id": 2,
-      "razaoSocial": "BBB",
-      "cnpj": "BBB",
-      "nomeFantasia": "BBB",
-      "email": "BBB",
-      "logomarca": "BBB",
-      "site": "BBB",
-      "telefoneFixo": "(11) 1111-1111",
-      "telefoneCel": "(22) 22222-2222",
-      "responsavel": "BBB",
-      "negocio": "",
-      "categoria": "PASSEIOS/ROTEIROS",
-      "cep": "03166-001",
-      "logradouro": "Rua Taquari",
-      "numero": "888",
-      "complemento": "BBB",
-      "bairro": "Mooca",
-      "cidade": "São Paulo",
+      "razaoSocial": "Prefeitura Municipal  Buritama",
+      "cnpj": "69.802.375/0001-20",
+      "nomeFantasia": "Cidade de Buritama",
+      "email": "secrtur@buritama.sp.gov.br",
+      "logomarca": "https://buritama.sp.gov.br/site2/",
+      "site": "https://buritama.sp.gov.br/site2/",
+      "telefoneFixo": "(18) 7865-4123",
+      "telefoneCel": "(18) 95764-4411",
+      "responsavel": "Ubaldo Ribeiro",
+      "negocio": "Balneario do Nordeste de São PAulo",
+      "categoria": "Prefeitura",
+      "segmento": "",
+      "cep": "15290-000",
+      "logradouro": "Avenida Principal",
+      "numero": "2978",
+      "complemento": "BLoco A",
+      "bairro": "Centro",
+      "cidade": "Buritama",
       "estado": "SP",
-      "mapa": "BBB",
-      "referencia": "BBB",
-      "distancia": "BBB",
-      "horario": "BBB",
-      "descricao": "BBB"
+      "mapa": "https://buritama.sp.gov.br/site2/",
+      "referencia": "em frente ao Forum",
+      "horario": "Segunda a Sexta: das 08hs até 17hs",
+      "status": "Pendente"
     }
   ],
   "administradores": [
@@ -76,8 +76,8 @@
       "estado": "SP",
       "mapa": "https://buritama.sp.gov.br/site2/",
       "referencia": "em frente ao Forum",
-      "distancia": "100 metros do Igreja Matriz",
-      "horario": "Segunda a Sexta: das 08hs até 17hs"
+      "horario": "Segunda a Sexta: das 08hs até 17hs",
+      "status": "Pendente"
     },
     {
       "id": 2,
@@ -102,8 +102,8 @@
       "estado": "SP",
       "mapa": "https://buritama.sp.gov.br/site2/",
       "referencia": "em frente ao Forum",
-      "distancia": "100 metros do Igreja Matriz",
-      "horario": "Segunda a Sexta: das 08hs até 17hs"
+      "horario": "Segunda a Sexta: das 08hs até 17hs",
+      "status": "Pendente"
     },
     {
       "id": 19,
@@ -127,7 +127,6 @@
       "estado": "",
       "mapa": "",
       "referencia": "",
-      "distancia": "",
       "horario": "",
       "servicos": [
         {
@@ -172,8 +171,8 @@
       "estado": "",
       "mapa": "",
       "referencia": "",
-      "distancia": "",
       "horario": "",
+      "status": "Pendente",
       "servicos": [
         {
           "cate": "hospedagem",
@@ -229,8 +228,8 @@
       "estado": "MG",
       "mapa": "http://www.bardojoão.com.br/mapa",
       "referencia": "em frente ao Forum",
-      "distancia": "100 metros do Igreja Matriz",
       "horario": "Seg-Sab:08:00 as 20:00 Dom::Fechado",
+      "status": "Pendente",
       "servicos": [
         {
           "cate": "gastronomia",
@@ -261,6 +260,45 @@
           "tipo": "REDES SOCIAIS:",
           "nome": "Facebook",
           "icone": "fa-facebook-square"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "razaoSocial": "KKKKK",
+      "cnpj": "KKKKK",
+      "nomeFantasia": "KKKKK",
+      "responsavel": "KKKKK",
+      "email": "KKKKK",
+      "site": "KKKKK",
+      "telefoneFixo": "(11) 2222-2333",
+      "telefoneCel": "(11) 11111-1111",
+      "descricao": "KKKKK",
+      "categoria": "gastronomia",
+      "segmento": "Bares/Lanches",
+      "cep": "30535-550",
+      "logradouro": "Avenida Presidente Juscelino Kubitschek",
+      "numero": "555",
+      "complemento": "BLoco A",
+      "bairro": "Vila Oeste",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "mapa": "KKK",
+      "referencia": "KKK",
+      "horario": "KKK",
+      "status": "Aprovado",
+      "servicos": [
+        {
+          "cate": "gastronomia",
+          "tipo": "ACESSIBILIDADE:",
+          "nome": "Cadeirante",
+          "icone": "fa-wheelchair"
+        },
+        {
+          "cate": "gastronomia",
+          "tipo": "ACEITA CARTÕES:",
+          "nome": "Amex",
+          "icone": "fa-cc-amex"
         }
       ]
     }

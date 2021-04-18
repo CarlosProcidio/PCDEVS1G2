@@ -206,6 +206,63 @@
           "icone": "fa-cc-diners-club"
         }
       ]
+    },
+    {
+      "id": 21,
+      "razaoSocial": "Bar do João Cachaça",
+      "cnpj": "69.802.375/0001-20",
+      "nomeFantasia": "Bar do João Cachaça",
+      "responsavel": "João Ubaldo Ribeiro",
+      "email": "contto@bardojoao.com.br",
+      "site": "http://www.bardojoão.com.br",
+      "telefoneFixo": "(11) 2222-2333",
+      "telefoneCel": "(99) 99999-9999",
+      "descricao": "comércio de aguardentes em geral",
+      "categoria": "gastronomia",
+      "segmento": "Bares/Lanches",
+      "cep": "30535-550",
+      "logradouro": "Avenida Presidente Juscelino Kubitschek",
+      "numero": "899",
+      "complemento": "BLoco A",
+      "bairro": "Vila Oeste",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "mapa": "http://www.bardojoão.com.br/mapa",
+      "referencia": "em frente ao Forum",
+      "distancia": "100 metros do Igreja Matriz",
+      "horario": "Seg-Sab:08:00 as 20:00 Dom::Fechado",
+      "servicos": [
+        {
+          "cate": "gastronomia",
+          "tipo": "ACESSIBILIDADE:",
+          "nome": "Cadeirante",
+          "icone": "fa-wheelchair"
+        },
+        {
+          "cate": "gastronomia",
+          "tipo": "ACEITA CARTÕES:",
+          "nome": "Amex",
+          "icone": "fa-cc-amex"
+        },
+        {
+          "cate": "gastronomia",
+          "tipo": "ALIMENTAÇÃO:",
+          "nome": "Adega de Vinho",
+          "icone": "fa-wine-bottle"
+        },
+        {
+          "cate": "gastronomia",
+          "tipo": "CONVENIÊNCIAS:",
+          "nome": "Aceita-se pets",
+          "icone": "fa-paw"
+        },
+        {
+          "cate": "gastronomia",
+          "tipo": "REDES SOCIAIS:",
+          "nome": "Facebook",
+          "icone": "fa-facebook-square"
+        }
+      ]
     }
   ],
   "users": [

@@ -1,3 +1,4 @@
+import { faWheelchair, faDeaf, faBlind, faWineBottle, faCoffee, faUtensils, faPaw, faSnowflake, faLuggageCart, faSpa, faParking, faSmoking, faSmokingBan, faGlobe, faWifi, faSwimmingPool, faDumbbell, faConciergeBell, faMoneyCheck, faStar } from '@fortawesome/free-solid-svg-icons';
 import { ViacepService } from '../../viacep.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -14,6 +15,27 @@ import { isNgTemplate } from '@angular/compiler';
 })
 
 export class FormularioComponent implements OnInit {
+
+  faWeelchair =faWheelchair;
+  faDeaf = faDeaf
+  faBlind = faBlind;
+  faWineBottle = faWineBottle;
+  faCoffee = faCoffee;
+  faUtensils = faUtensils;
+  faPaw = faPaw;
+  faSnowflake = faSnowflake;
+  faLuggageCart = faLuggageCart;
+  faSpa = faSpa
+  faParking = faParking;
+  faSmoking = faSmoking;
+  faSmokingBna = faSmokingBan;
+  faGlobe = faGlobe;
+  fawifi = faWifi;
+  faSwimmimngPool = faSwimmingPool;
+  faDumbbell = faDumbbell;
+  faConciergeBell = faConciergeBell;
+  faMoneyCheck = faMoneyCheck;
+  faStar = faStar;
   
   administradorGeral: any = {
     id: "",
@@ -192,6 +214,8 @@ export class FormularioComponent implements OnInit {
     }
 
     atualizar(){
+
+      this.administradorGeral.servicos = this.arrayServico;
   
       this.service.atualizar(this.administradorGeral).subscribe(
         resposta => {

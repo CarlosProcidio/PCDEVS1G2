@@ -108,9 +108,17 @@
         </div>
 
         <div class="form-row">
-            <div class="form-group col-md-12">
+            <div class="form-group col-md-10">
                 <label for="mapa">MAPA</label>
                 <input name="mapa" type="text" class="form-control" [(ngModel)]="administradorGeral.mapa">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="categorias">STATUS</label>
+                <p-dropdown styleClass="form-control" [(ngModel)]="administradorGeral.status"
+                            [ngModelOptions]="{standalone: true}">
+                            
+                    
+                </p-dropdown>
             </div>
         </div>
 
@@ -156,7 +164,7 @@
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
                                         (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
-                                <!-- <label class="serv-label" for="{{icone.nome}}">{{item.icone}}</label> -->
+                                <!-- <label class="serv-label" for="{{item.icone}}">{{item.icone}}</label>  -->
                             </td>
                          </tr>   
                     </span> <br><br>
@@ -260,8 +268,8 @@
             </div>
         </div> 
     </div>        
-            <button type="submit" class="btn" [class]="operacao ? 'btn-primary' : 'btn-success'">{{ operacao ?
-                "Cadastrar": "Atualizar" }}
+            <button type="submit" class="btn" [class]="operacao ? 'btn-primary' : 'btn-success'"
+            >{{ operacao ? "Cadastrar": "Atualizar" }}
             </button>
             <br><br>
             <a routerLink="/clientes">Voltar para a pesquisa</a>

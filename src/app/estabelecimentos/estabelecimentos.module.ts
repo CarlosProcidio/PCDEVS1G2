@@ -8,4 +8,4 @@ import { EstabelecimentosComponent } from './estabelecimentos.component';
   ],
   declarations: [EstabelecimentosComponent]
 })
-export class EstabelecimentosModule { }
+export class EstabelecimentosModule {  }

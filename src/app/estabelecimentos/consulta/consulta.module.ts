@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConsultaComponent } from './consulta.component';
 
-@NgModule({
+@NgModule({ 
   imports: [
     CommonModule
   ],

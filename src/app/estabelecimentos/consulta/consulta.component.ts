@@ -9,7 +9,7 @@ export class ConsultaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
 }

@@ -128,8 +128,8 @@
                 <p-dropdown styleClass="form-control" [(ngModel)]="administradorGeral.status"
                     [ngModelOptions]="{standalone: true}"
                     placeholder=": : : "
-                    optionDisabled="inactive"
-                    appendTo="body">
+                    [options]="status"
+                    optionDisabled="inactive" >
                 </p-dropdown>
             </div>
          </div>

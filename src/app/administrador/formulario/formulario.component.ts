@@ -58,18 +58,18 @@ export class FormularioComponent implements OnInit {
     estado: "",
     mapa: "",
     referencia: "",
-    distancia: "",
-    horario: ""
+    horario: "",
+    status:""
   }
 
   ca: any = [];
   codigoCliente: any;
   categorias: any;
   operacao: boolean = true;
-
   arrayServico: any[] = []; // array de serviços para carga na tabela de serviços
-
   grupoCategoria: SelectItemGroup[];
+  status: any [] = [];
+
 
   constructor(
     private service: AdministradorService,
@@ -81,6 +81,10 @@ export class FormularioComponent implements OnInit {
     //    private formBuilder: FormBuilder
   ) {
 
+    this.status = [
+      {label: "Pendente", value:"Pendente"},
+      {label: "Aprovado", value:"Aprovado"}
+    ]
     this.grupoCategoria = [
       {
         label: 'GASTRONOMIA', value: 'gastronomia',

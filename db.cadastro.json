@@ -301,6 +301,166 @@
           "icone": "fa-cc-amex"
         }
       ]
+    },
+    {
+      "id": 23,
+      "razaoSocial": "Fazenda da Maria",
+      "cnpj": "69.802.375/0001-20",
+      "nomeFantasia": "Fazenda da Maria",
+      "responsavel": "amama",
+      "email": "amama",
+      "site": "amama",
+      "telefoneFixo": "(11) 2222-2333",
+      "telefoneCel": "(22) 22222-2222",
+      "descricao": "amama",
+      "categoria": "hospedagem",
+      "segmento": "Hotéis Fazenda",
+      "cep": "30535-550",
+      "logradouro": "Avenida Presidente Juscelino Kubitschek",
+      "numero": "",
+      "complemento": "BLoco A",
+      "bairro": "Vila Oeste",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "mapa": "https://buritama.sp.gov.br/site2/",
+      "referencia": "em frente ao Forum",
+      "horario": "aaaa",
+      "status": "Aprovado",
+      "servicos": [
+        {
+          "cate": "hospedagem",
+          "subCat": "ACESSIBILIDADE:",
+          "nome": "Cadeirante",
+          "icone": "fa-wheelchair"
+        },
+        {
+          "cate": "hospedagem",
+          "subCat": "ALIMENTAÇÃO:",
+          "nome": "Restaurante",
+          "icone": "fa-utensils"
+        },
+        {
+          "cate": "hospedagem",
+          "subCat": "CONVENIÊNCIAS:",
+          "nome": "Piscina",
+          "icone": "fa-swimming-pool"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "razaoSocial": "QQQ",
+      "cnpj": "QQQ",
+      "nomeFantasia": "Carolina",
+      "responsavel": "QQQ",
+      "email": "bbb",
+      "site": "www",
+      "telefoneFixo": "(11) 2222-2333",
+      "telefoneCel": "(11) 11111-1111",
+      "descricao": "qwww",
+      "categoria": "gastronomia",
+      "segmento": "Cozinha Internacional",
+      "cep": "30535-550",
+      "logradouro": "Avenida Presidente Juscelino Kubitschek",
+      "numero": "777",
+      "complemento": "BLoco A",
+      "bairro": "Vila Oeste",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "mapa": "https://buritama.sp.gov.br/site2/",
+      "referencia": "em frente ao Forum",
+      "horario": "xxx",
+      "status": "Pendente",
+      "servicos": []
+    },
+    {
+      "id": 25,
+      "razaoSocial": "",
+      "cnpj": "",
+      "nomeFantasia": "",
+      "responsavel": "",
+      "email": "",
+      "site": "",
+      "telefoneFixo": "",
+      "telefoneCel": "",
+      "descricao": "",
+      "categoria": "",
+      "segmento": "",
+      "cep": "",
+      "logradouro": "",
+      "numero": "",
+      "complemento": "",
+      "bairro": "",
+      "cidade": "",
+      "estado": "",
+      "mapa": "",
+      "referencia": "",
+      "horario": "",
+      "status": "",
+      "servicos": []
+    },
+    {
+      "razaoSocial": "ppp",
+      "cnpj": "ppp",
+      "nomeFantasia": "ppp",
+      "responsavel": "ppp",
+      "email": "ppp",
+      "site": "ppp",
+      "telefoneFixo": "",
+      "telefoneCel": "",
+      "descricao": "ppp",
+      "cep": "03166-001",
+      "segmento": "Rural",
+      "categoria": "roteiros",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "logradouro": "Rua Taquari",
+      "bairro": "Mooca",
+      "numero": "99",
+      "complemento": "99",
+      "mapa": "pp",
+      "referencia": "pp",
+      "horario": "pp",
+      "status": "Aprovado",
+      "servicos": [
+        {
+          "cate": "roteiros",
+          "subCat": "ACESSIBILIDADE:",
+          "nome": "Cadeirante",
+          "icone": "fa-wheelchair"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "ACEITA CARTÕES:",
+          "nome": "Amex",
+          "icone": "fa-cc-amex"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "ALIMENTAÇÃO:",
+          "nome": "Restaurante",
+          "icone": "fa-utensils"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "CONVENIÊNCIAS:",
+          "nome": "Aceita-se pets",
+          "icone": "fa-paw"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "REDES SOCIAIS:",
+          "nome": "Facebook",
+          "icone": "fa-facebook-square"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "REFERÊNCIA:",
+          "nome": "Positivo",
+          "icone": "fa-thumbs-up"
+        }
+      ],
+      "id": 26
     }
   ],
   "users": [

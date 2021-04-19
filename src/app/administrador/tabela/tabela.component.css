@@ -1,16 +1,16 @@
 h3   {text-align: center;
-      font-style: bold;
-      color: black;
-      border-bottom: 2px solid rgb(68, 68, 68);
-      padding: 1px;   
-      padding-bottom:10px;
-  }  
+  font-style: bold;
+  color: black;
+  border-bottom: 2px solid rgb(68, 68, 68);
+  padding: 1px;   
+  padding-bottom:10px;
+}  
 
 .deletar-atualizar {
-    width: 150px;
-    text-align: center;
-  }
-  
+  width: 150px;
+  text-align: center;
+}
+
 .espaco {
   margin-right: 10px;
 }
@@ -22,6 +22,11 @@ h3   {text-align: center;
 
 .th-nomeFantasia {
   width: 120px;
+  text-align: center !important;
+}
+
+.th-cnpj {
+  width: 100px;
   text-align: center !important;
 }
 
@@ -77,11 +82,6 @@ h3   {text-align: center;
   text-align: center !important;
 }
 
-.th-distancia {
-  width: 250px;
-  text-align: center !important;
-}
-
 .th-referencia {
   width: 250px;
   text-align: center !important;
@@ -108,10 +108,6 @@ h3   {text-align: center;
   text-align: center !important;
 }
 
-.th-cnpj {
-  width: 170px;
-  text-align: center !important;
-}
 
 .th-estado {
   width: 75px;

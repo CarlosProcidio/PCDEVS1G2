@@ -26,6 +26,8 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
+import { ListaEstabComponent } from './cliente/lista-estab/lista-estab.component';
+import { ConsultaEstabComponent } from './cliente/consulta-estab/consulta-estab.component';
 
 @NgModule({
   declarations: [					
@@ -41,7 +43,9 @@ import { AuthenticationComponent } from './account/authentication/authentication
     AuthenticationComponent,
     LoginComponent,
     CreateAccountComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    ListaEstabComponent,
+    ConsultaEstabComponent
     
   ],
   imports: [
@@ -67,7 +71,8 @@ import { AuthenticationComponent } from './account/authentication/authentication
   providers: [
     Title   
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [ListaEstabComponent, ConsultaEstabComponent]
 })
 export class AppModule {
    

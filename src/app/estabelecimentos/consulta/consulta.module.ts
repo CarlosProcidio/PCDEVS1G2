@@ -6,6 +6,6 @@ import { ConsultaComponent } from './consulta.component';
   imports: [
     CommonModule
   ],
-  declarations: [ConsultaComponent]
+  declarations: [ConsultaEstabComponent]
 })
 export class ConsultaModule { }

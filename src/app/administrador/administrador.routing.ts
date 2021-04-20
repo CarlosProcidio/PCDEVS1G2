@@ -1,5 +1,5 @@
-import { ListaEstabComponent } from './../estabelecimentos/lista/lista.component';
-import { ConsultaEstabComponent } from './../estabelecimentos/consulta/consulta.component';
+import { MeusEstabComponent } from './../estabelecimentos/meus-estab/meus-estab.component';
+import { ConsultaEstabComponent } from './../estabelecimentos/consulta-estab/consulta-estab.component';
 import { HomeComponent } from './../home/home.component';
 import { HotelComponent } from './../hotel/hotel.component';
 import { FormularioComponent } from './formulario/formulario.component';
@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'home' , component:HomeComponent},
   { path: 'hotel' , component:HotelComponent},
   { path: 'consulta' , component:ConsultaEstabComponent},
-  { path: 'lista' , component:ListaEstabComponent}
+  { path: 'meus-estab' , component:MeusEstabComponent}
+  
 ];
 
 export const AdministradorRoutes = RouterModule.forChild(routes);

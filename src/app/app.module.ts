@@ -1,3 +1,4 @@
+import { MeusEstabComponent } from './estabelecimentos/meus-estab/meus-estab.component';
 import { AdministradorModule } from './administrador/administrador.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
@@ -26,8 +27,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
-import { ListaEstabComponent } from './estabelecimentos/lista/lista.component';
-import { ConsultaEstabComponent } from './estabelecimentos/consulta/consulta.component';
+import { ConsultaEstabComponent } from './estabelecimentos/consulta-estab/consulta-estab.component';
 
 @NgModule({
   declarations: [					
@@ -44,9 +44,8 @@ import { ConsultaEstabComponent } from './estabelecimentos/consulta/consulta.com
     LoginComponent,
     CreateAccountComponent,
     AuthenticationComponent,
-    ListaEstabComponent,
-    ConsultaEstabComponent
-    
+    ConsultaEstabComponent,
+    MeusEstabComponent    
   ],
   imports: [
     BrowserModule,
@@ -72,7 +71,7 @@ import { ConsultaEstabComponent } from './estabelecimentos/consulta/consulta.com
     Title   
   ],
   bootstrap: [AppComponent],
-  exports: [ListaEstabComponent, ConsultaEstabComponent]
+  exports: [MeusEstabComponent, ConsultaEstabComponent]
 })
 export class AppModule {
    

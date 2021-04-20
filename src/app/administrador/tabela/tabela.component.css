@@ -21,12 +21,12 @@ h3   {text-align: center;
 }
 
 .th-nomeFantasia {
-  width: 120px;
+  width: 160px;
   text-align: center !important;
 }
 
 .th-cnpj {
-  width: 100px;
+  width: 150px;
   text-align: center !important;
 }
 
@@ -89,6 +89,11 @@ h3   {text-align: center;
 
 .th-horario {
   width: 200px;
+  text-align: center !important;
+}
+
+.th-status {
+  width: 120px;
   text-align: center !important;
 }
 

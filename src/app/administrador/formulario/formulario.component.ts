@@ -252,12 +252,14 @@ export class FormularioComponent implements OnInit {
     let cep1 = cep.replace('_', '');
     if (cep1.length == 9) {
       this.viacepService.search(cep.replace('-', '')).subscribe(data => {
+        console.log(data);
         this.administradorGeral.logradouro = data.logradouro;
         this.administradorGeral.bairro = data.bairro;
         this.administradorGeral.cidade = data.localidade;
         this.administradorGeral.estado = data.uf;
       })
     }
+    console.log(ViacepService);
   }
 
   onChange(event) {

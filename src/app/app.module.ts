@@ -28,6 +28,7 @@ import { LoginComponent } from './account/login/login.component';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
 import { ConsultaEstabComponent } from './estabelecimentos/consulta-estab/consulta-estab.component';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 @NgModule({
   declarations: [					
@@ -62,9 +63,9 @@ import { ConsultaEstabComponent } from './estabelecimentos/consulta-estab/consul
     AppRoutes,
     CardModule,
     CarouselModule,
-    GalleriaModule,    
-    FontAwesomeModule
-    // ConfirmDialogModule,
+    GalleriaModule,
+    FontAwesomeModule,
+    ConfirmDialogModule,
     // ConfirmationService
   ],
   providers: [

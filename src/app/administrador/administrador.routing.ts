@@ -10,12 +10,17 @@ const routes: Routes = [
   { path: 'clientes/cadastro' , component:FormularioComponent },
   { path: 'clientes/cadastro/:id' , component:FormularioComponent },
   { path: 'clientes' , component:TabelaComponent },
+  { path: 'meus-estab' , component:MeusEstabComponent},
+  { path: 'estabelecimentos' , component:MeusEstabComponent },
   { path: 'listar/administrador' , component:TabelaComponent },
+  { path: 'listar/estabelecimento' , component:MeusEstabComponent },
   { path: 'administradores/:id' , component:TabelaComponent },
+  { path: 'estabelecimentos/:id' , component:MeusEstabComponent },
   { path: 'home' , component:HomeComponent},
   { path: 'hotel' , component:HotelComponent},
-  { path: 'consulta' , component:ConsultaEstabComponent},
-  { path: 'meus-estab' , component:MeusEstabComponent}
+  { path: 'consulta' , component:ConsultaEstabComponent
+}
+  
   
 ];
 

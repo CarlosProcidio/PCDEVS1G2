@@ -1,0 +1,278 @@
+<div class="container mt-2 mb-5 pt-5">
+    <h4>Cadastro de Estabelecientos</h4 >
+    <form (ngSubmit)="cadastrarOuAtualizar()">
+        <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
+        <div class="form-row">
+            <input type="hidden" name="id" [(ngModel)]="administradorGeral.id">
+ 
+            <!-- formControlName="nome"  -->
+            <div class="form-group col-md-5">
+                <label for="razaoSocial">RAZÃO SOCIAL</label>
+                <input name="razaoSocial" type="text" class="form-control" [(ngModel)]="administradorGeral.razaoSocial">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="cnpj">CNPJ</label>
+                <input name="cnpj" type="text" class="form-control" [(ngModel)]="administradorGeral.cnpj">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="nomeFantasia">NOME FANTASIA</label>
+                <input name="nomeFantasia" type="text" class="form-control"
+                    [(ngModel)]="administradorGeral.nomeFantasia">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="responsavel">RESPONSAVEL</label>
+                <input name="responsavel" type="text" class="form-control" [(ngModel)]="administradorGeral.responsavel">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="email">EMAIL</label>
+                <input name="email" type="text" class="form-control" [(ngModel)]="administradorGeral.email">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="site">SITE</label>
+                <input name="site" type="text" class="form-control" [(ngModel)]="administradorGeral.site">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="telefoneFixo">TELEFONE (FIXO)</label>
+                <p-inputMask styleClass="form-control" name="telefoneFixo" placeholder="(99) 9999-9999"
+                    [(ngModel)]="administradorGeral.telefoneFixo" mask="(99) 9999-9999">
+                </p-inputMask>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="telefoneCel">CELULAR    </label>
+                <p-inputMask styleClass="form-control" name="telefoneCel" placeholder="(99) 99999-9999"
+                    [(ngModel)]="administradorGeral.telefoneCel" mask="(99) 99999-9999">
+                </p-inputMask>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="descric">DESCRIÇÃO DO NEGÓCIO</label>
+                <input name="descric" type="text" class="form-control" [(ngModel)]="administradorGeral.descricao">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="categorias">CATEGORIA</label>
+                <p-dropdown styleClass="form-control" [options]="grupoCategoria" (onChange)="onChange($event)"
+                    [(ngModel)]="administradorGeral.segmento" [ngModelOptions]="{standalone: true}"
+                    placeholder="Escolha o Tipo de Serviço" [group]="true">
+                    <ng-template let-group pTemplate="group">
+                        <div class="p-d-flex p-ai-center">
+                            <span>{{group.label}}</span>
+                        </div>
+                    </ng-template>
+                </p-dropdown>
+
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="cep">CEP</label>
+                <p-inputMask styleClass="form-control" name="cep" placeholder="99999-999"
+                    [(ngModel)]="administradorGeral.cep" mask="99999-999" (keydown)="buscarCep(administradorGeral.cep)">
+                </p-inputMask>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="logradouro">LOGRADOURO</label>
+                <input type="text" class="form-control" name="logradouro" [(ngModel)]="administradorGeral.logradouro">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="numero">NÚMERO</label>
+                <input type="text" class="form-control" name="numero" [(ngModel)]="administradorGeral.numero">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="complemento">COMPLEMENTO</label>
+                <input name="complemento" type="text" class="form-control" [(ngModel)]="administradorGeral.complemento">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="bairro">BAIRRO</label>
+                <input name="bairro" type="text" class="form-control" [(ngModel)]="administradorGeral.bairro">
+            </div>
+            <div class="form-group col-md-5">
+                <label for="cidade">CIDADE</label>
+                <input name="cidade" type="text" class="form-control" [(ngModel)]="administradorGeral.cidade">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="estado">ESTADO</label>
+                <input name="estado" type="text" class="form-control" [(ngModel)]="administradorGeral.estado">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label for="mapa">MAPA</label>
+                <input name="mapa" type="text" class="form-control" [(ngModel)]="administradorGeral.mapa">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label for="referencia">REFERÊNCIA</label>
+                <input name="referencia" type="text" class="form-control" [(ngModel)]="administradorGeral.referencia">
+            </div>
+            <div class="form-group col-md-5">
+                <label for="horario">HORÁRIO FUNCIONAMENTO</label>
+                <input name="horario" type="text" class="form-control" [(ngModel)]="administradorGeral.horario">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="categorias">STATUS</label>
+                <p-dropdown styleClass="form-control" [(ngModel)]="administradorGeral.status"
+                    [ngModelOptions]="{standalone: true}"
+                    placeholder=": : : "
+                    [options]="status"
+                    optionDisabled="inactive" >
+                </p-dropdown>
+            </div>
+         </div>
+
+        <div class="form-row">
+            <div class="form-group  col-md-6">
+                <label for="razaoSocial">FOTO DA LOGOMARCA</label>
+                <p-fileUpload #upload name="demo[]" chooseLabel="Adicionar foto..." [showUploadButton]="false"
+                    [showCancelButton]="false" [multiple]="false" accept="image/*">
+                </p-fileUpload>
+            </div>
+            <div class="form-group  col-md-6">
+                <label for="razaoSocial">FOTOS DO NEGÓCIO</label>
+                <p-fileUpload #upload name="demo[]" chooseLabel="Adicionar foto..." [showUploadButton]="false"
+                    [showCancelButton]="false" [multiple]="false" accept="image/*">
+                </p-fileUpload>
+            </div>
+        </div>
+<div>
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">ACESSIBILIDADE: </span><br>
+            </div>    
+             <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACESSIBILIDADE:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                                <!-- <label class="serv-label" for="{{item.icone}}">{{item.icone}}</label>  -->
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+                
+            </div>
+        </div>    
+
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">ACEITA CARTÕES: </span><br>
+            </div>    
+             <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACEITA CARTÕES:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />                            
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div>    
+        
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">ALIMENTAÇÃO: </span><br>
+            </div>   
+            <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ALIMENTAÇÃO:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div>    
+
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">CONVENIÊNCIAS: </span><br>
+            </div>    
+            <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'CONVENIÊNCIAS:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div>            
+
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">REDES SOCIAIS: </span><br>
+            </div>    
+            <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REDES SOCIAIS:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div>                   
+
+        <div class="row">
+            <div class="col-md-2">
+                <span class="titulo-cat">REFERÊNCIA: </span><br>
+             </div>   
+            <div class="bloco-servicos col-md-10">
+                <table>
+                    <span *ngFor="let item of categorias">
+                        <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REFERÊNCIA:'">
+                            <td class="itens">
+                                <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
+                                        (change)="gravarServico($event,item)" />
+                                <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                            </td>
+                         </tr>   
+                    </span> <br><br>
+                </table>
+            </div>
+        </div> 
+    </div>        
+            <button type="submit" class="btn" [class]="operacao ? 'btn-primary' : 'btn-success'"
+            >{{ operacao ? "Cadastrar": "Atualizar" }}
+            </button>
+            <br><br>
+            <a routerLink="/clientes">Voltar para a pesquisa</a>
+    </form>
+</div>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+<p-toast position="bottom-center" key="toast"></p-toast>

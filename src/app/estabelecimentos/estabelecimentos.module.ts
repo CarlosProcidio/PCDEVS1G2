@@ -18,7 +18,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
-import { FormularioComponent } from '../administrador/formulario/formulario.component';
+import { FormuEstabComponent } from '../estabelecimento/formu-estab/form-estab.Component';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { FormEstabComponent } from './form-estab/form-estab.component';
 
@@ -40,14 +40,13 @@ import { FormEstabComponent } from './form-estab/form-estab.component';
     MessageModule,
     ToastModule,
     AdministradorRoutes,
-    FormularioComponent,
     ConfirmationService,
     MessageService
   ],
   declarations: [
     EstabelecimentosComponent,
     MeusEstabComponent,
-    FormularioComponent,
+    FormEstabComponent,
     ConsultaEstabComponent,
     FormEstabComponent,
   ],

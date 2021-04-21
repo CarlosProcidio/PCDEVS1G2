@@ -1,3 +1,4 @@
+import { FormEstabComponent } from './../estabelecimentos/form-estab/form-estab.component';
 import { MeusEstabComponent } from './../estabelecimentos/meus-estab/meus-estab.component';
 import { ConsultaEstabComponent } from './../estabelecimentos/consulta-estab/consulta-estab.component';
 import { HomeComponent } from './../home/home.component';
@@ -8,8 +9,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'clientes/cadastro' , component:FormularioComponent },
+  { path: 'estabelecimentos/cadastro' , component:FormEstabComponent },
   { path: 'clientes/cadastro/:id' , component:FormularioComponent },
+  { path: 'estabelecimentos/cadastro/:id' , component:FormEstabComponent },
   { path: 'clientes' , component:TabelaComponent },
+  { path: 'estabelecimentos' , component:MeusEstabComponent },
   { path: 'meus-estab' , component:MeusEstabComponent},
   { path: 'estabelecimentos' , component:MeusEstabComponent },
   { path: 'listar/administrador' , component:TabelaComponent },

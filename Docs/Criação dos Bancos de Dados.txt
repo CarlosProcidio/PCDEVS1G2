@@ -1,0 +1,77 @@
+
+CREATE TABLE estabelecimentos (
+	idEstab INT NOT NULL AUTO_INCREMENT ,
+  	foto VARCHAR(50) NULL ,
+    	servico VARCHAR(50) NULL ,
+    	subCategoria VARCHAR(50) NOT NULL ,
+    	responsavel VARCHAR(50) NOT NULL ,
+    	status BOOLEAN NOT NULL ,
+    	razaoSocial VARCHAR(50) NOT NULL ,
+    	cnpj VARCHAR(50) NOT NULL ,
+    	nomeFantasia VARCHAR(50) NOT NULL ,
+    	email VARCHAR(50) NULL ,
+    	site VARCHAR(50) NULL,
+    	telFixo VARCHAR(50) NULL ,
+    	telCel VARCHAR(50) NULL ,
+    	descrNegocio VARCHAR(150) NOT NULL ,
+    	cep VARCHAR(50) NOT NULL ,
+    	logradouro VARCHAR(50) NULL ,
+    	numero VARCHAR(50) NULL ,
+    	complemento VARCHAR(50) NULL ,
+    	bairro VARCHAR(50) NULL ,
+    	cidade VARCHAR(50) NULL ,
+    	estado VARCHAR(50) NULL ,
+    	mapa VARCHAR(50) NULL ,
+    	referencia VARCHAR(50) NULL ,
+    	horarioFunc VARCHAR(50) NOT NULL ,
+    	fotoLogomarca VARCHAR NULL ,
+	dataCadastro DATE NOT NULL ,  
+    	PRIMARY KEY (idEstab) ,
+	FOREIGN KEY (foto) references fotos(idfoto),
+	FOREIGN KEY (servico) references servicoCategoria(idServico),
+	FOREIGN KEY (subCategoria) references servicoCategoria(idSubCat),
+	FOREIGN KEY (responsavel) references user(idUser) )
+	ENGINE = InnoDB ;
+
+CREATE TABLE user (
+	idUser 	INT NOT NULL AUTO_INCREMENT ,
+	nome VARCHAR(50) NOT NULL ,
+	email VARCHAR(50) NOT NULL ,
+	senha VARCHAR(50) NOT NULL ,
+	telCel VARCHAR(50) NOT NULL ,
+    	PRIMARY KEY (idUser) )
+	ENGINE = InnoDB ;
+
+CREATE TABLE fotos (
+	idFoto INT NOT NULL AUTO_INCREMENT ,
+	idEstab INT NOT NULL ,
+	urlfoto VARCHAR(50) NOT NULL ,
+	descrFoto VARCHAR(50) NOT NULL ,
+    	PRIMARY KEY (idFoto) )
+	ENGINE = InnoDB ;
+
+CREATE TABLE servicos (
+	idServico INT NOT NULL AUTO_INCREMENT ,
+	tipoServico VARCHAR(50) NOT NULL ,
+	nomeServico VARCHAR(50) NOT NULL ,
+	iconServico VARCHAR(50) NOT NULL ,
+    	PRIMARY KEY (idServico) )
+	ENGINE = InnoDB ;
+
+CREATE TABLE servCategoria (
+	idServCateg INT NOT NULL AUTO_INCREMENT ,
+	idServico INT NOT NULL ,
+	idCategoria INT NOT NULL ,
+	PRIMARY KEY (idServCateg) ,
+	FOREIGN KEY (idServico) references servicos(idServico),
+	FOREIGN KEY (idCategoria) references categoria(idCategoria) )
+	ENGINE = InnoDB ;
+
+CREATE TABLE categorias (
+	idCategoria VARCHAR(50) NOT NULL AUTO_INCREMENT ,
+	idSubCateg VARCHAR(50) NOT NULL ,
+	descrCategoria  VARCHAR(50) NOT NULL ,
+	descrSubCat VARCHAR(50) NOT NULL ,
+	PRIMARY KEY (idCategoria) ,
+	PRIMARY KEY (idSubCat) )
+	ENGINE = InnoDB ;

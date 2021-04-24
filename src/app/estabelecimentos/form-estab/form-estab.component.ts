@@ -61,7 +61,7 @@ export class FormEstabComponent implements OnInit {
   }
 
   ca: any = [];
-  codigoEstabelecimento: any;
+  codigoEstab: any;
   categorias: any;
   operacao: boolean = true;
   arrayServico: any[] = []; // array de serviços para carga na tabela de serviços
@@ -163,18 +163,20 @@ export class FormEstabComponent implements OnInit {
           });
       */
 
-    this.codigoEstabelecimento = this.route.snapshot.params['id'];
+    this.codigoEstab = this.route.snapshot.params['id'];
     this.title.setTitle('Novo Estabelecimento');
 
-    if (this.codigoEstabelecimento) {
+    if (this.codigoEstab) {
       this.operacao = false;
-      this.carregarEstabelecimento(this.codigoEstabelecimento);
+      this.carregarEstab(this.codigoEstab);
     }
   }
 
-  carregarEstabelecimento(codigoEstabelecimento: number) {
-    this.service.buscarById(codigoEstabelecimento).subscribe(resposta => {
+  carregarEstab(codigoEstab: number) {
+    this.service.buscarById(codigoEstab).subscribe(resposta => {
       this.estabelecimentoGeral = <any>resposta;
+      this.onChange(this.estabelecimentoGeral.segmento);
+      this.arrayServico = this.estabelecimentoGeral.servicos;
       this.title.setTitle(`Edição do Estabelecimento: ${this.estabelecimentoGeral.id}`);
     });
   }
@@ -260,13 +262,13 @@ export class FormEstabComponent implements OnInit {
     console.log(ViacepService);
   }
 
-  onChange(event) {
-    if (event.value == 'Hotéis'
-      || event.value == 'Hotéis Fazenda'
-      || event.value == 'Motéis'
-      || event.value == 'Pousadas'
-      || event.value == 'Resorts'
-      || event.value == 'Campings') {
+  onChange(segmento) {
+    if (segmento == 'Hotéis'
+      || segmento == 'Hotéis Fazenda'
+      || segmento == 'Motéis'
+      || segmento == 'Pousadas'
+      || segmento == 'Resorts'
+      || segmento == 'Campings') {
       var cat = 'hospedagem';
     }
 
@@ -300,13 +302,13 @@ export class FormEstabComponent implements OnInit {
         { cate: 'hospedagem', subCat: 'REFERÊNCIA:', nome: 'Estrelas', icone: 'fa-star' }
       ];
 
-    if (event.value == 'Bares/Lanches'
-      || event.value == 'Cafés/Docerias'
-      || event.value == 'Cozinha Brasileira'
-      || event.value == 'Cozinha Internacional'
-      || event.value == 'Pizzarias'
-      || event.value == 'Quiosques'
-      || event.value == 'Demais Segmentos') {
+    if (segmento == 'Bares/Lanches'
+      || segmento == 'Cafés/Docerias'
+      || segmento == 'Cozinha Brasileira'
+      || segmento == 'Cozinha Internacional'
+      || segmento == 'Pizzarias'
+      || segmento == 'Quiosques'
+      || segmento == 'Demais Segmentos') {
       cat = 'gastronomia';
     }
 
@@ -333,10 +335,10 @@ export class FormEstabComponent implements OnInit {
         { cate: 'gastronomia', subCat: 'REFERÊNCIA:', nome: '$$$ Cifrão', icone: 'fa-dillar-sign' }
       ];
 
-    if (event.value == 'Compras'
-      || event.value == 'Cultura'
-      || event.value == 'Lazer'
-      || event.value == 'Agências de Turismo') {
+    if (segmento == 'Compras'
+      || segmento == 'Cultura'
+      || segmento == 'Lazer'
+      || segmento == 'Agências de Turismo') {
       cat = 'oquefazer';
     }
 
@@ -361,13 +363,13 @@ export class FormEstabComponent implements OnInit {
         { cate: 'oquefazer', subCat: 'REFERÊNCIA:', nome: 'Positivo', icone: 'fa-thumbs-up' }
       ];
 
-    if (event.value == 'Aventuras'
-      || event.value == 'Destilarias'
-      || event.value == 'Equestres'
-      || event.value == 'Flores e Frutas'
-      || event.value == 'Pesqueiros'
-      || event.value == 'Religioso'
-      || event.value == 'Rural') {
+    if (segmento == 'Aventuras'
+      || segmento == 'Destilarias'
+      || segmento == 'Equestres'
+      || segmento == 'Flores e Frutas'
+      || segmento == 'Pesqueiros'
+      || segmento == 'Religioso'
+      || segmento == 'Rural') {
       cat = 'roteiros';
     }
 
@@ -393,7 +395,7 @@ export class FormEstabComponent implements OnInit {
       ];
 
     this.estabelecimentoGeral.categoria = cat;
-    this.estabelecimentoGeral.segmento = event.value;
+    this.estabelecimentoGeral.segmento = segmento;
 
   }
 
@@ -401,9 +403,9 @@ export class FormEstabComponent implements OnInit {
   gravarServico(event, item) {
 
     if (event.target.checked) {
-      this.arrayServico.push(item)
+      this.arrayServico.push(item.nome)
     } else {
-      this.arrayServico.splice(this.arrayServico.indexOf(item), 1)
+      this.arrayServico.splice(this.arrayServico.indexOf(item.nome), 1)
     }
     console.log(this.arrayServico);
 

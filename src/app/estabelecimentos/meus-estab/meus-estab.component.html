@@ -1,5 +1,3 @@
-<!-- <p>Lista Meus Estabelecimentos works!</p> -->
-
 <div class="container mt-5 mb-5">
     <h4>Lista Meus Estabelecimentos</h4>
         <p-table #dt
@@ -76,7 +74,7 @@
                 <td class="th-status">{{estabelecimento.status}}</td> -->
                 <td class="deletar-atualizar">
                     <p-button 
-                        routerLink="/estabelecimentos/cadastro/{{estabelecimento.id}}" 
+                        routerLink="/meus-estab/cadastro/{{estabelecimento.id}}" 
                         class="espaco" 
                         [title] = "'Editar Estabelecimento' + estabelecimento.nomeFantasia" 
                         icon="pi pi-pencil"></p-button>
@@ -90,7 +88,7 @@
             </tr>
         </ng-template>
         <ng-template pTemplate="paginatorleft">
-            <p-button type="button" routerLink="estabelecimentos/cadastro">Novo Estabelecimento</p-button>
+            <p-button type="button" routerLink="meus-estab/cadastro">Novo Estabelecimento</p-button>
         </ng-template>
     </p-table>
 </div>

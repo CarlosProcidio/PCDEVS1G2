@@ -203,7 +203,11 @@
           "tipo": "ACEITA CARTÕES:",
           "nome": "Diners",
           "icone": "fa-cc-diners-club"
-        }
+        },
+        "Cadeirante",
+        "Visa",
+        "Wifi",
+        "Salão fitness"
       ]
     },
     {
@@ -313,8 +317,8 @@
       "telefoneFixo": "(11) 2222-2333",
       "telefoneCel": "(22) 22222-2222",
       "descricao": "amama",
-      "categoria": "hospedagem",
-      "segmento": "Hotéis Fazenda",
+      "categoria": "gastronomia",
+      "segmento": "Bares/Lanches",
       "cep": "30535-550",
       "logradouro": "Avenida Presidente Juscelino Kubitschek",
       "numero": "",
@@ -327,24 +331,7 @@
       "horario": "aaaa",
       "status": "Aprovado",
       "servicos": [
-        {
-          "cate": "hospedagem",
-          "subCat": "ACESSIBILIDADE:",
-          "nome": "Cadeirante",
-          "icone": "fa-wheelchair"
-        },
-        {
-          "cate": "hospedagem",
-          "subCat": "ALIMENTAÇÃO:",
-          "nome": "Restaurante",
-          "icone": "fa-utensils"
-        },
-        {
-          "cate": "hospedagem",
-          "subCat": "CONVENIÊNCIAS:",
-          "nome": "Piscina",
-          "icone": "fa-swimming-pool"
-        }
+        "Cadeirante"
       ]
     },
     {
@@ -371,7 +358,11 @@
       "referencia": "em frente ao Forum",
       "horario": "xxx",
       "status": "Pendente",
-      "servicos": []
+      "servicos": [
+        "Def.Auditivo",
+        "Def.Visual",
+        "Cadeirante"
+      ]
     },
     {
       "id": 25,
@@ -458,7 +449,14 @@
           "subCat": "REFERÊNCIA:",
           "nome": "Positivo",
           "icone": "fa-thumbs-up"
-        }
+        },
+        "Cadeirante",
+        "Positivo",
+        "Positivo",
+        "Positivo",
+        "Amex",
+        "Restaurante",
+        "Aceita-se pets"
       ],
       "id": 26
     }

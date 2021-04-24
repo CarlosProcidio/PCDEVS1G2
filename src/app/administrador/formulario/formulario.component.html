@@ -58,9 +58,14 @@
 
             <div class="form-group col-md-4">
                 <label for="categorias">CATEGORIA</label>
-                <p-dropdown styleClass="form-control" [options]="grupoCategoria" (onChange)="onChange($event)"
+                <p-dropdown styleClass="form-control" [options]="grupoCategoria" (onChange)="onChange($event.value)"
                     [(ngModel)]="administradorGeral.segmento" [ngModelOptions]="{standalone: true}"
                     placeholder="Escolha o Tipo de Serviço" [group]="true">
+                    <ng-template pTemplate="selectedItem" *ngIf = "administradorGeral.segmento != '' ">
+
+                        {{adminstradorGeral.segmento}}
+                    </ng-template>
+
                     <ng-template let-group pTemplate="group">
                         <div class="p-d-flex p-ai-center">
                             <span>{{group.label}}</span>
@@ -84,7 +89,7 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="numero">NÚMERO</label>
-                <input type="text" class="form-control" name="numero" [(ngModel)]="administradorGeral.numero">
+                <input type="text" class="form-control"  [(ngModel)]="administradorGeral.numero">
             </div>
             <div class="form-group col-md-3">
                 <label for="complemento">COMPLEMENTO</label>
@@ -121,7 +126,7 @@
             </div>
             <div class="form-group col-md-5">
                 <label for="horario">HORÁRIO FUNCIONAMENTO</label>
-                <input name="horario" type="text" class="form-control" [(ngModel)]="administradorGeral.horario">
+                <input  type="text" class="form-control" [(ngModel)]="administradorGeral.horario">
             </div>
             <div class="form-group col-md-2">
                 <label for="categorias">STATUS</label>
@@ -159,7 +164,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACESSIBILIDADE:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                                 <!-- <label class="serv-label" for="{{item.icone}}">{{item.icone}}</label>  -->
                             </td>
@@ -180,7 +186,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACEITA CARTÕES:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />                            
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -199,7 +206,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ALIMENTAÇÃO:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -218,7 +226,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'CONVENIÊNCIAS:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -237,7 +246,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REDES SOCIAIS:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -256,7 +266,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REFERÊNCIA:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   

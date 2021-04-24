@@ -5,7 +5,30 @@
   "projects": {
     "ProjetoIntegrador": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "spec": false,
+          "style": "css",
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "commonModule": true,
+          "routing": true,
+          "routingScope": "Child"
+        },
+        "@schematics/angular:service": {
+          "skipTests": false
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": false
+        },
+        "@schematics/angular:directive": {
+          "skipTests": false
+        },
+        "@schematics/angular:class": {
+          "skipTests": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

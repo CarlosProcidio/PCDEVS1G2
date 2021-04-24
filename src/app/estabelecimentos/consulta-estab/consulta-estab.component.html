@@ -1,1 +1,124 @@
-<p>Consulta Estabelecimentos por Categoria works!</p>
+<div class="container mt-5 mb-5">
+    <h4>Lista de Estabelecimentos por Categoria</h4>
+<div class="p-grid">
+    <div class="p-col-6" *ngFor = "let estabelecimento of estabelecimentos">
+        <p-card>
+            <ng-template pTemplate="header">
+                <h2>{{estabelecimento.nomeFantasia}}</h2>
+            </ng-template>
+            Body Content
+            <ng-template pTemplate="footer">
+                Footer content here
+            </ng-template>
+        </p-card>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+        <p-table #dt
+        *ngIf = "false"
+        [value]="estabelecimentos"
+        [responsive]="true"
+        [scrollable]="true"
+        [paginator]="true" 
+        [rows]="10" 
+        [showCurrentPageReport]="true" 
+        currentPageReportTemplate="Mostrando {first} até {last} de {totalRecords} registros"
+        [rowsPerPageOptions]="[5,10,25,50]"
+        styleClass="p-datatable-customers p-datatable-gridlines"
+        [loading]="loading"
+        [filterDelay]="0" 
+        [globalFilterFields]="['id','nomeFantasia','cnpj','responsavel','telefoneCel','telefoneFixo','email',
+                                'cep','logradouro','numero','complemento','bairro','cidade','estado',
+                                'mapa','referencia','status','horario']">                        
+        <ng-template pTemplate="caption">
+            <div class="table-header">           
+                <span class="p-input-icon-left  p-ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input #pesquisa pInputText type="text" (input)="dt.filterGlobal(pesquisa.value, 'contains')" placeholder="Pesquisar" />
+                </span>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="id" class="th-id">Matricula <p-sortIcon field="id"></p-sortIcon></th>
+                <th pSortableColumn="nomeFantasia" class="th-nomeFantasia">Nome<p-sortIcon field="nomeFantasia"></p-sortIcon></th>
+                <!--<th pSortableColumn="cnpj" class="th-cnpj">CNPJ<p-sortIcon field="cnpj"></p-sortIcon></th>-->
+                <!--<th pSortableColumn="responsavel" class="th-responsavel">Responsável <p-sortIcon field="responsavel"></p-sortIcon></th>-->
+                <th pSortableColumn="telefoneFixo"  class="th-telefoneFixo">Telefone Fixo <p-sortIcon field="telefoneFixo"></p-sortIcon></th>
+                <th pSortableColumn="telefoneCel"  class="th-telefoneCel">Celular<p-sortIcon field="telefoneCel"></p-sortIcon></th>
+                <!--<th pSortableColumn="email" class="th-email">E-mail <p-sortIcon field="email"></p-sortIcon></th>-->
+                <th pSortableColumn="descricao" class="th-descricao">Descrição<p-sortIcon field="descricao"></p-sortIcon></th>
+                <th pSortableColumn="categoria" class="th-categoria">Categoria<p-sortIcon field="categoria"></p-sortIcon></th>
+                <th pSortableColumn="segmento" class="th-segmento">Segmento <p-sortIcon field="segmento"></p-sortIcon></th>
+                <!--<th pSortableColumn="cep"  class="th-cep">CEP <p-sortIcon field="cep"></p-sortIcon></th>-->
+                <th pSortableColumn="logradouro"  class="th-logradouro">Logradouro <p-sortIcon field="logradouro"></p-sortIcon></th>
+                <th pSortableColumn="numero"  class="th-numero">Numero<p-sortIcon field="numero"></p-sortIcon></th>
+                <th pSortableColumn="complemento"  class="th-complemento">Complemento <p-sortIcon field="complemento"></p-sortIcon></th>
+                <th pSortableColumn="bairro"  class="th-bairro">Bairro <p-sortIcon field="bairro"></p-sortIcon></th>
+                <th pSortableColumn="cidade"  class="th-cidade">Cidade <p-sortIcon field="cidade"></p-sortIcon></th>
+                <th pSortableColumn="estado"  class="th-estado">Estado <p-sortIcon field="estado"></p-sortIcon></th>
+                <!--<th pSortableColumn="mapa"  class="th-mapa">Mapa <p-sortIcon field="mapa"></p-sortIcon></th>-->
+                <th pSortableColumn="referencia"  class="th-referencia">Referencia<p-sortIcon field="Referencia"></p-sortIcon></th>
+                <th pSortableColumn="horario"  class="th-horario">Horario<p-sortIcon field="horario"></p-sortIcon></th>
+                <!--<th pSortableColumn="status"  class="th-status">Status<p-sortIcon field="status"></p-sortIcon></th>
+                <th class="deletar-atualizar"></th>-->
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-estabelecimento>
+            <tr>
+               <td class="th-id">{{estabelecimento.id}}</td>
+                <td class="th-nomeFantasia">{{estabelecimento.nomeFantasia}}</td>
+            </tr>
+            <tr>
+                <td class="th-cnpj">{{estabelecimento.cnpj}}</td>
+                <td class="th-responsavel">{{estabelecimento.responsavel}}</td>
+                <td class="th-telefoneFixo">{{estabelecimento.telefoneFixo}}</td>
+                <td class="th-telefoneCel">{{estabelecimento.telefoneCel}}</td>
+                <td class="th-email">{{estabelecimento.email}}</td>
+                <td class="th-descricao">{{estabelecimento.descricao}}</td>
+                <td class="th-categoria">{{estabelecimento.categoria}}</td>
+                <td class="th-segmento">{{estabelecimento.segmento}}</td> 
+                <td class="th-cep">{{estabelecimento.cep}}</td>
+                <td class="th-logradouro">{{estabelecimento.logradouro}}</td>
+                <td class="th-numero">{{estabelecimento.numero}}</td>
+                <td class="th-complemento">{{estabelecimento.complemento}}</td>
+                <td class="th-bairro">{{estabelecimento.bairro}}</td> 
+                <td class="th-cidade">{{estabelecimento.cidade}}</td>
+                <td class="th-estado">{{estabelecimento.estado}}</td>
+                <td class="th-mapa">{{estabelecimento.mapa}}</td>
+                <td class="th-referencia">{{estabelecimento.referencia}}</td>
+                <td class="th-horario">{{estabelecimento.horario}}</td>
+                <td class="th-status">{{estabelecimento.status}}</td>
+                
+                <td class="deletar-atualizar">
+                    <p-button 
+                        routerLink="/estabelecimentos/cadastro/{{estabelecimento.id}}" 
+                        class="espaco" 
+                        [title] = "'Editar Estabelecimento' + estabelecimento.nomeFantasia" 
+                        icon="pi pi-pencil"></p-button>
+
+                    <p-button class="p-button-danger"
+                        (click)="excluir(estabelecimento.id)" 
+                        type="button"
+                        [title] = "'Excluir Estabelecimento ' + estabelecimento.nomeFantasia" 
+                        icon="pi pi-trash"></p-button>
+                </td>
+                -->
+            </tr>
+        </ng-template>
+      <!--  <ng-template pTemplate="paginatorleft">
+            <p-button type="button" routerLink="estabelecimentos/cadastro">Novo Estabelecimento</p-button>
+        </ng-template> 
+        -->
+    </p-table>
+</div>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<p-toast position="bottom-center" key="toast"></p-toast>

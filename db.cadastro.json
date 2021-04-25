@@ -456,9 +456,59 @@
         "Positivo",
         "Amex",
         "Restaurante",
-        "Aceita-se pets"
+        "Aceita-se pets",
+        "Def.Visual"
       ],
       "id": 26
+    },
+    {
+      "servicos": [
+        {
+          "cate": "roteiros",
+          "subCat": "ACESSIBILIDADE:",
+          "nome": "Cadeirante",
+          "icone": "fa-wheelchair"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "ACEITA CARTÕES:",
+          "nome": "Amex",
+          "icone": "fa-cc-amex"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "ALIMENTAÇÃO:",
+          "nome": "Restaurante",
+          "icone": "fa-utensils"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "CONVENIÊNCIAS:",
+          "nome": "Aceita-se pets",
+          "icone": "fa-paw"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "REDES SOCIAIS:",
+          "nome": "Facebook",
+          "icone": "fa-facebook-square"
+        },
+        {
+          "cate": "roteiros",
+          "subCat": "REFERÊNCIA:",
+          "nome": "Positivo",
+          "icone": "fa-thumbs-up"
+        },
+        "Cadeirante",
+        "Positivo",
+        "Positivo",
+        "Positivo",
+        "Amex",
+        "Restaurante",
+        "Aceita-se pets",
+        "Def.Visual"
+      ],
+      "id": 27
     }
   ],
   "estabelecimentos": [
@@ -490,18 +540,22 @@
     },
     {
       "id": 2,
-      "razaoSocial": "Prefeitura Municipal Buritama",
+      "razaoSocial": "Padaria do Zé",
       "cnpj": "69.802.375/0001-20",
-      "nomeFantasia": "Cidade de Buritama",
+      "nomeFantasia": "Pão Fresquinho",
       "email": "secrtur@buritama.sp.gov.br",
       "logomarca": "https://buritama.sp.gov.br/site2/",
       "site": "https://buritama.sp.gov.br/site2/",
       "telefoneFixo": "(18) 7865-4123",
       "telefoneCel": "(18) 95764-4411",
-      "responsavel": "João Ubaldo Ribeiro",
+      "responsavel": "Zé do Bar",
       "negocio": "Balneario do Nordeste de São PAulo",
-      "categoria": "Prefeitura",
-      "segmento": " ",
+      "segmento": {
+        "originalEvent": {
+          "isTrusted": true
+        },
+        "value": "Demais Segmentos"
+      },
       "cep": "15290-000",
       "logradouro": "Avenida Principal",
       "numero": "2978",
@@ -710,6 +764,9 @@
           "icone": "fa-cc-amex"
         }
       ]
+    },
+    {
+      "id": 23
     }
   ],
   "users": [

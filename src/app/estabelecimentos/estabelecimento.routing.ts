@@ -6,9 +6,9 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: "meus-estab", component: MeusEstabComponent },
   { path: "form-estab", component: FormEstabComponent },
+  { path: "meus-estab/cadastro" , component:FormEstabComponent },
+  { path: "meus-estab/cadastro/:id" , component:FormEstabComponent },
   { path: "consulta-estab", component: ConsultaEstabComponent },
-  { path: 'meus-estab/cadastro' , component:MeusEstabComponent },
-  { path: 'meus-estab/cadastro/:id' , component:MeusEstabComponent },
 ];
 
 export const EstabelecimentoRoutes = RouterModule.forChild(routes);

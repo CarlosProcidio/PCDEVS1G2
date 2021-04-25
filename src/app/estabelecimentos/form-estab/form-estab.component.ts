@@ -1,10 +1,11 @@
+import { EstabelecimentoService } from '../estabelecimento.service';
 import { Component, OnInit } from '@angular/core';
+
 import { faWheelchair, faDeaf, faBlind, faWineBottle, faCoffee, faUtensils, faPaw, faSnowflake, faLuggageCart, faSpa, faParking, faSmoking, faSmokingBan, faGlobe, faWifi, faSwimmingPool, faDumbbell, faConciergeBell, faMoneyCheck, faStar } from '@fortawesome/free-solid-svg-icons';
 import { ViacepService } from '../../viacep.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MessageService, SelectItemGroup } from 'primeng/api';
-import { EstabelecimentoService } from '../estabelecimento.service';
 
 @Component({
   selector: 'app-form-estab',
@@ -14,7 +15,7 @@ import { EstabelecimentoService } from '../estabelecimento.service';
 export class FormEstabComponent implements OnInit {
 
   faWeelchair = faWheelchair;
-  faDeaf = faDeaf
+  faDeaf = faDeaf;
   faBlind = faBlind;
   faWineBottle = faWineBottle;
   faCoffee = faCoffee;
@@ -22,7 +23,7 @@ export class FormEstabComponent implements OnInit {
   faPaw = faPaw;
   faSnowflake = faSnowflake;
   faLuggageCart = faLuggageCart;
-  faSpa = faSpa
+  faSpa = faSpa;
   faParking = faParking;
   faSmoking = faSmoking;
   faSmokingBna = faSmokingBan;
@@ -61,7 +62,7 @@ export class FormEstabComponent implements OnInit {
   }
 
   ca: any = [];
-  codigoEstab: any;
+  codigoEstabelecimento: any;
   categorias: any;
   operacao: boolean = true;
   arrayServico: any[] = []; // array de serviços para carga na tabela de serviços
@@ -163,17 +164,17 @@ export class FormEstabComponent implements OnInit {
           });
       */
 
-    this.codigoEstab = this.route.snapshot.params['id'];
+    this.codigoEstabelecimento = this.route.snapshot.params['id'];
     this.title.setTitle('Novo Estabelecimento');
 
-    if (this.codigoEstab) {
+    if (this.codigoEstabelecimento) {
       this.operacao = false;
-      this.carregarEstab(this.codigoEstab);
+      this.carregarEstabelecimento(this.codigoEstabelecimento);
     }
   }
 
-  carregarEstab(codigoEstab: number) {
-    this.service.buscarById(codigoEstab).subscribe(resposta => {
+  carregarEstabelecimento(codigoEstabelecimento: number) {
+    this.service.buscarById(codigoEstabelecimento).subscribe(resposta => {
       this.estabelecimentoGeral = <any>resposta;
       this.onChange(this.estabelecimentoGeral.segmento);
       this.arrayServico = this.estabelecimentoGeral.servicos;

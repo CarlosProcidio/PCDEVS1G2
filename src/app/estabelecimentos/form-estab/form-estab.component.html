@@ -1,14 +1,16 @@
-<p>form-estab works!</p>
-<!-- 
 <div class="container mt-2 mb-5 pt-5">
-    <h4>Cadastro de Estabelecientos</h4 >
+    <h4>Cadastro de Estabeleciento</h4 >
     <form (ngSubmit)="cadastrarOuAtualizar()">
+        <!-- <form (ngSubmit)="submit()" [formGroup]="form"> -->
         <div class="form-row">
             <input type="hidden" name="id" [(ngModel)]="estabelecimentoGeral.id">
+ 
+            <!-- formControlName="nome"  -->
             <div class="form-group col-md-5">
                 <label for="razaoSocial">RAZÃO SOCIAL</label>
                 <input name="razaoSocial" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.razaoSocial">
             </div>
+
             <div class="form-group col-md-3">
                 <label for="cnpj">CNPJ</label>
                 <input name="cnpj" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.cnpj">
@@ -19,11 +21,13 @@
                     [(ngModel)]="estabelecimentoGeral.nomeFantasia">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label for="responsavel">RESPONSAVEL</label>
                 <input name="responsavel" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.responsavel">
             </div>
+
             <div class="form-group col-md-4">
                 <label for="email">EMAIL</label>
                 <input name="email" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.email">
@@ -33,6 +37,7 @@
                 <input name="site" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.site">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="telefoneFixo">TELEFONE (FIXO)</label>
@@ -50,19 +55,27 @@
                 <label for="descric">DESCRIÇÃO DO NEGÓCIO</label>
                 <input name="descric" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.descricao">
             </div>
+
             <div class="form-group col-md-4">
                 <label for="categorias">CATEGORIA</label>
-                <p-dropdown styleClass="form-control" [options]="grupoCategoria" (onChange)="onChange($event)"
+                <p-dropdown styleClass="form-control" [options]="grupoCategoria" (onChange)="onChange($event.value)"
                     [(ngModel)]="estabelecimentoGeral.segmento" [ngModelOptions]="{standalone: true}"
                     placeholder="Escolha o Tipo de Serviço" [group]="true">
+                    <ng-template pTemplate="selectedItem" *ngIf = "estabelecimentoGeral.segmento != '' ">
+
+                        {{adminstradorGeral.segmento}}
+                    </ng-template>
+
                     <ng-template let-group pTemplate="group">
                         <div class="p-d-flex p-ai-center">
                             <span>{{group.label}}</span>
                         </div>
                     </ng-template>
                 </p-dropdown>
+
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-2">
                 <label for="cep">CEP</label>
@@ -76,13 +89,14 @@
             </div>
             <div class="form-group col-md-2">
                 <label for="numero">NÚMERO</label>
-                <input type="text" class="form-control" name="numero" [(ngModel)]="estabelecimentoGeral.numero">
+                <input type="text" class="form-control"  [(ngModel)]="estabelecimentoGeral.numero">
             </div>
             <div class="form-group col-md-3">
                 <label for="complemento">COMPLEMENTO</label>
                 <input name="complemento" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.complemento">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="bairro">BAIRRO</label>
@@ -97,12 +111,14 @@
                 <input name="estado" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.estado">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label for="mapa">MAPA</label>
                 <input name="mapa" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.mapa">
             </div>
         </div>
+
         <div class="form-row">
             <div class="form-group col-md-5">
                 <label for="referencia">REFERÊNCIA</label>
@@ -110,7 +126,7 @@
             </div>
             <div class="form-group col-md-5">
                 <label for="horario">HORÁRIO FUNCIONAMENTO</label>
-                <input name="horario" type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.horario">
+                <input  type="text" class="form-control" [(ngModel)]="estabelecimentoGeral.horario">
             </div>
             <div class="form-group col-md-2">
                 <label for="categorias">STATUS</label>
@@ -122,6 +138,7 @@
                 </p-dropdown>
             </div>
          </div>
+
         <div class="form-row">
             <div class="form-group  col-md-6">
                 <label for="razaoSocial">FOTO DA LOGOMARCA</label>
@@ -136,7 +153,7 @@
                 </p-fileUpload>
             </div>
         </div>
-    <div>
+<div>
         <div class="row">
             <div class="col-md-2">
                 <span class="titulo-cat">ACESSIBILIDADE: </span><br>
@@ -147,14 +164,18 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACESSIBILIDADE:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
+                                <!-- <label class="serv-label" for="{{item.icone}}">{{item.icone}}</label>  -->
                             </td>
                          </tr>   
                     </span> <br><br>
                 </table>
+                
             </div>
         </div>    
+
         <div class="row">
             <div class="col-md-2">
                 <span class="titulo-cat">ACEITA CARTÕES: </span><br>
@@ -165,7 +186,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ACEITA CARTÕES:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />                            
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -173,6 +195,7 @@
                 </table>
             </div>
         </div>    
+        
         <div class="row">
             <div class="col-md-2">
                 <span class="titulo-cat">ALIMENTAÇÃO: </span><br>
@@ -183,7 +206,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'ALIMENTAÇÃO:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -191,6 +215,7 @@
                 </table>
             </div>
         </div>    
+
         <div class="row">
             <div class="col-md-2">
                 <span class="titulo-cat">CONVENIÊNCIAS: </span><br>
@@ -201,7 +226,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'CONVENIÊNCIAS:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -209,6 +235,7 @@
                 </table>
             </div>
         </div>            
+
         <div class="row">
             <div class="col-md-2">
                 <span class="titulo-cat">REDES SOCIAIS: </span><br>
@@ -219,7 +246,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REDES SOCIAIS:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -227,6 +255,7 @@
                 </table>
             </div>
         </div>                   
+
         <div class="row">
             <div class="col-md-2">
                 <span class="titulo-cat">REFERÊNCIA: </span><br>
@@ -237,7 +266,8 @@
                         <tr class="serv-item col-md-4" *ngIf="item.subCat === 'REFERÊNCIA:'">
                             <td class="itens">
                                 <input type="checkbox" id="{{item.nome}}" value="{{item.nome}}"
-                                        (change)="gravarServico($event,item)" />
+                                [checked]="arrayServico.includes(item.nome)"
+                                (change)="gravarServico($event,item)" />
                                 <label class="serv-label" for="{{item.nome}}">{{ item.nome }}</label>
                             </td>
                          </tr>   
@@ -250,8 +280,10 @@
             >{{ operacao ? "Cadastrar": "Atualizar" }}
             </button>
             <br><br>
-            <a routerLink="/estabelecimentos">Voltar para a pesquisa</a>
+            <a routerLink="/meus-estab">Voltar para a lista.</a>
     </form>
 </div>
+
 <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
-<p-toast position="bottom-center" key="toast"></p-toast> -->
+
+<p-toast position="bottom-center" key="toast"></p-toast>

@@ -34,5 +34,9 @@
 .descritivo {
     text-align: justify;
     margin-top: 30px;
+    margin-left: 45px;
     font-size: medium;
+}
+.estrela {
+    color: rgb(243, 243, 11);
 }

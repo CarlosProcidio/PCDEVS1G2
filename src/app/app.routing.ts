@@ -10,7 +10,7 @@ import { HotelComponent } from './hotel/hotel.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
-  {path:"hotel",component:HotelComponent},
+  {path:"hotel/:id",component:HotelComponent},
 ]
 @NgModule({
 

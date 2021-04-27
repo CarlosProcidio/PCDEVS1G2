@@ -13,7 +13,7 @@ export class EstabelecimentoService {
     return this.http.get(this.url);
    }
    buscarById(id: number) {
-    return this.http.get(`${environment.url}`+'/estabelecimentos/'+id);
+    return this.http.get(this.url + '/'+id);
   }
   salvar(estabelecimentoGeral: any){
     return this.http.post(`${environment.url}`+'/estabelecimentos', estabelecimentoGeral);

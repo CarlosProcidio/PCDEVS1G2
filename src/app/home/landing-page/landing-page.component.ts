@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  providers: [],
-  styleUrls: ['./home.component.css']
+  selector: 'app-landing-page',
+  templateUrl: './landing-page.component.html',
+  styleUrls: ['./landing-page.component.css']
 })
+export class LandingPageComponent implements OnInit {
 
-export class HomeComponent implements OnInit {
   constructor(private primengConfig: PrimeNGConfig) {}
   imagens = [
     {

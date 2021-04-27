@@ -5,11 +5,9 @@ import { AuthGuard } from './account/shared/auth.guard';
 import { HotelComponent } from './hotel/hotel.component'; */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { HotelComponent } from './hotel/hotel.component';
 
 const routes: Routes = [
-  {path:"",component:HomeComponent},
   {path:"hotel",component:HotelComponent},
 ]
 @NgModule({

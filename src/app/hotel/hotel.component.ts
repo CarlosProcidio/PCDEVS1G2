@@ -48,4 +48,3 @@ export class HotelComponent implements OnInit {
     //  this.photoService.getImages().then(images => this.images = images);
   }
 }
-

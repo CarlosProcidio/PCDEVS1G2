@@ -51,4 +51,3 @@ export class ConsultaEstabComponent implements OnInit {
   });
   }
 }
-

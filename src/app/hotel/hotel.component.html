@@ -3,7 +3,7 @@
         <img src="assets/imagens/Mar hotel.png" alt="logo do hotel" width="200px">
     </div>
     <div>
-        <h2>Mar Hotel & Convenções</h2>
+        <h2>{{estabelecimento.nomeFantasia}}</h2>
         <div class="estrela">
             <fa-icon [icon]="faStar" ></fa-icon>&nbsp;<fa-icon [icon]="faStar"></fa-icon>&nbsp;<fa-icon [icon]="faStar">
             </fa-icon>&nbsp;<fa-icon [icon]="faStar"></fa-icon>&nbsp;
@@ -32,7 +32,8 @@
         </div>
         <div class="icon">
             <p class="descritivo">
-                Av. Tomé de Souza, 1.250, Vila Clais - Bertioga/SP
+                <!-- Av. Tomé de Souza, 1.250, Vila Clais - Bertioga/SP -->
+                {{estabelecimento.logradouro +', ' + estabelecimento.numero + ', ' + estabelecimento.bairro }}
             </p>
             <p>Acessibilidade:
                 <fa-icon [icon]="faWeelchair"></fa-icon>&nbsp;

@@ -21,6 +21,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MessageModule } from 'primeng/message';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   imports: [
@@ -41,6 +42,7 @@ import { MessageModule } from 'primeng/message';
     ToastModule,
     ConfirmDialogModule,
     EstabelecimentoRoutes,
+    CardModule
   ],
   declarations: [
     EstabelecimentosComponent,

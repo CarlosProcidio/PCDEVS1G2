@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { faBlind, faCoffee, faConciergeBell, faDeaf, faDumbbell, faGlobe, faLuggageCart, faMoneyCheck, faParking, faPaw, faSmoking, faSmokingBan, faSnowflake, faSpa, faStar, faSwimmingPool, faUtensils, faWheelchair, faWifi, faWineBottle } from '@fortawesome/free-solid-svg-icons';
+import { EstabelecimentoService } from '../estabelecimentos/estabelecimento.service';
 
 @Component({
   selector: 'app-hotel',
@@ -35,12 +37,14 @@ export class HotelComponent implements OnInit {
     'https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg',
     'https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg',
     'https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940.jpg'
-    
-  ];
-  
 
- ngOnInit() {
+  ];
+  estabelecimento: any = {}; 
+  constructor(private route: ActivatedRoute, private service: EstabelecimentoService) { }
+
+  ngOnInit() {
+    let estabelecimentoId = this.route.snapshot.params['id'];
+    this.service.buscarById(estabelecimentoId).subscribe(resposta => this.estabelecimento = resposta);
     //  this.photoService.getImages().then(images => this.images = images);
   }
 }
-

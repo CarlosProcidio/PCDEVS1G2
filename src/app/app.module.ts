@@ -1,3 +1,5 @@
+import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 import { EstabelecimentosModule } from './estabelecimentos/estabelecimentos.module';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -19,9 +21,6 @@ import { BrowserModule, Title } from '@angular/platform-browser';
 import { CreateAccountComponent } from './account/create-account/create-account.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
 import { LoginComponent } from './account/login/login.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { HotelComponent } from './hotel/hotel.component';
 import { PrefeituraComponent } from './prefeitura/prefeitura.component';
@@ -34,14 +33,12 @@ import { NgModule } from '@angular/core';
     PrefeituraComponent,
     HotelComponent,
     ClienteComponent,
-    HomeComponent,
-    HeaderComponent,
-    FooterComponent,
     LoginComponent,
     AuthenticationComponent,
     CreateAccountComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -52,6 +49,7 @@ import { NgModule } from '@angular/core';
     ButtonModule,
     DropdownModule,
     AdministradorModule,
+    HomeModule,
     ToastModule,
     AppRoutes,
     CardModule,

@@ -2,7 +2,7 @@ import { EstabelecimentoService } from '../estabelecimento.service';
 import { Component, OnInit } from '@angular/core';
 
 import { faWheelchair, faDeaf, faBlind, faWineBottle, faCoffee, faUtensils, faPaw, faSnowflake, faLuggageCart, faSpa, faParking, faSmoking, faSmokingBan, faGlobe, faWifi, faSwimmingPool, faDumbbell, faConciergeBell, faMoneyCheck, faStar } from '@fortawesome/free-solid-svg-icons';
-import { ViacepService } from '../../viacep.service';
+import { ViacepService } from '../../shared/viacep.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { MessageService, SelectItemGroup } from 'primeng/api';

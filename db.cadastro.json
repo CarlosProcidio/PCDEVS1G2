@@ -788,5 +788,314 @@
       "email": "teste3@teste.com",
       "senha": "senhateste3"
     }
+  ],
+  "servicos": [
+    {
+      "id": 1,
+      "tipo": "Acessibilidade",
+      "nome": "Cadeirante",
+      "icone": "fa-wheelchair"
+    },
+    {
+      "id": 2,
+      "tipo": "Acessibilidade",
+      "nome": "Def. Visual",
+      "icone": "fa-blind"
+    },
+    {
+      "id": 3,
+      "tipo": "Acessibilidade",
+      "nome": "Def. Auditivo",
+      "icone": "fa-deaf"
+    },
+    {
+      "id": 4,
+      "tipo": "AceitaCartoes",
+      "nome": "Amex",
+      "icone": "fa-cc-amex"
+    },
+    {
+      "id": 5,
+      "tipo": "AceitaCartoes",
+      "nome": "Visa",
+      "icone": "fa-cc-visa"
+    },
+    {
+      "id": 6,
+      "tipo": "AceitaCartoes",
+      "nome": "Diners",
+      "icone": "fa-cc-diners-club"
+    },
+    {
+      "id": 7,
+      "tipo": "AceitaCartoes",
+      "nome": "MasterCard",
+      "icone": "fa-cc-mastercard"
+    },
+    {
+      "id": 8,
+      "tipo": "Alimentação",
+      "nome": "Adega de Vinho",
+      "icone": "fa-wine-bottle"
+    },
+    {
+      "id": 9,
+      "tipo": "Alimentação",
+      "nome": "Adega de Vinho",
+      "icone": "fa-wine-bottle"
+    },
+    {
+      "id": 10,
+      "tipo": "Alimentação",
+      "nome": "Bar",
+      "icone": "fa-cocktail"
+    },
+    {
+      "id": 11,
+      "tipo": "Alimentação",
+      "nome": "Restaurante",
+      "icone": "fa-utensils"
+    },
+    {
+      "id": 12,
+      "tipo": "Alimentação",
+      "nome": "Café Manha Incluso",
+      "icone": "fa-coffee"
+    },
+    {
+      "id": 13,
+      "tipo": "Conveniência",
+      "nome": "Aceita-se pets",
+      "icone": "fa-paw"
+    },
+    {
+      "id": 14,
+      "tipo": "Conveniência",
+      "nome": "Estacionomento",
+      "icone": "fa-parking"
+    },
+    {
+      "id": 15,
+      "tipo": "Conveniência",
+      "nome": "Ar-condicionado",
+      "icone": "fa-snowflake"
+    },
+    {
+      "id": 16,
+      "tipo": "Conveniência",
+      "nome": "Wifi",
+      "icone": "fa-wifi"
+    },
+    {
+      "id": 17,
+      "tipo": "Conveniência",
+      "nome": "Carregador Malas",
+      "icone": "fa-luggage-cart"
+    },
+    {
+      "id": 18,
+      "tipo": "Conveniência",
+      "nome": "espaço saúde",
+      "icone": "fa-spa"
+    },
+    {
+      "id": 19,
+      "tipo": "Conveniência",
+      "nome": "Frigobar",
+      "icone": "fa-refrigerator"
+    },
+    {
+      "id": 20,
+      "tipo": "Conveniência",
+      "nome": "Não Fumante",
+      "icone": "fa-smoking-ban"
+    },
+    {
+      "id": 21,
+      "tipo": "Conveniência",
+      "nome": "Piscina",
+      "icone": "fa-swimming-pool"
+    },
+    {
+      "id": 22,
+      "tipo": "Conveniência",
+      "nome": "Salão fitness",
+      "icone": "fa-dumbbell"
+    },
+    {
+      "id": 23,
+      "tipo": "Conveniência",
+      "nome": "Serviço de Quarto",
+      "icone": "fa-concierge-bell"
+    },
+    {
+      "id":24,
+      "tipo": "Redes Sociais",
+      "nome": "Facebook",
+      "icone": "fa-facebook-square"
+    },
+    {
+      "id":25,
+      "tipo": "Redes Sociais",
+      "nome": "Instagram",
+      "icone": "fa-Instagram"
+    },
+    {
+      "id":26,
+      "tipo": "Redes Sociais",
+      "nome": "Site",
+      "icone": "fa-globe"
+    },
+    {
+      "id":27,
+      "tipo": "Referência",
+      "nome": "Positivo",
+      "icone": "fa-thumbs-up"
+    },
+    {
+      "id":28,
+      "tipo": "Referência",
+      "nome": "$$$ Cifrão",
+      "icone": "fa-dillar-sign"
+    },
+    {
+      "id":29,
+      "tipo": "Referência",
+      "nome": "Estrelas",
+      "icone": "fa-star"
+    }
+    
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "nome": "Gastronomia",
+      "subCat": [
+        {
+          "id": 1,
+          "nome": "Bares/Lanches"
+        },
+        {
+          "id": 2,
+          "nome": "Cafés/Docerias"
+        },
+        {
+          "id": 3,
+          "nome": "Cozinha Brasileira"
+        },
+        {
+          "id": 4,
+          "nome": "Cozinha Internacional"
+        },
+        {
+          "id": 5,
+          "nome": "Pizzarias"
+        },
+        {
+          "id": 6,
+          "nome": "Quiosques"
+        },
+        {
+          "id": 7,
+          "nome": "Demais Segmentos"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Hospedagem",
+      "subCat": [
+        {
+          "id": 1,
+          "nome": "Hotéis"
+        },
+        {
+          "id": 2,
+          "nome": "Hotéis Fazenda"
+        },
+        {
+          "id": 3,
+          "nome": "Motéis"
+        },
+        {
+          "id": 4,
+          "nome": "Pousadas"
+        },
+        {
+          "id": 5,
+          "nome": "Resorts"
+        },
+        {
+          "id": 6,
+          "nome": "Campings"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Prefeitura",
+      "subCat": [
+        {
+          "id": 1,
+          "nome": "Público"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Roteiros",
+      "subCat": [
+        {
+          "id": 1,
+          "nome": "Aventuras"
+        },
+        {
+          "id": 2,
+          "nome": "Destilarias"
+        },
+        {
+          "id": 3,
+          "nome": "Equestres"
+        },
+        {
+          "id": 4,
+          "nome": "Flores e Frutas"
+        },
+        {
+          "id": 5,
+          "nome": "Pesqueiros"
+        },
+        {
+          "id": 6,
+          "nome": "Religioso"
+        },
+        {
+          "id": 7,
+          "nome": "Rural"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "O que fazer",
+      "subCat": [
+        {
+          "id": 1,
+          "nome": "Compras"
+        },
+        {
+          "id": 2,
+          "nome": "Cultura"
+        },
+        {
+          "id": 3,
+          "nome": "Lazer"
+        },
+        {
+          "id": 4,
+          "nome": "Agências de Turismo"
+        }
+      ]
+    }
   ]
 }

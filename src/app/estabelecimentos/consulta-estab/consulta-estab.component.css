@@ -1,15 +1,6 @@
-.header {
-  margin-left: 25px;
+body {
+  background: grey;
 }
-
-h3   {text-align: center;
-    font-style: bold;
-    color: black;
-    border-bottom: 2px solid rgb(68, 68, 68);
-    padding: 1px;   
-    padding-bottom:10px;
-  }  
-
   
   /*
   .deletar-atualizar {

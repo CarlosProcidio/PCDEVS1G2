@@ -1,0 +1,213 @@
+======================================================================
+//NÃO CONSEGUI FAZER A FOREIGN KEY subCat
+
+CREATE TABLE estabelecimento (
+	idEstab INT NOT NULL AUTO_INCREMENT ,
+  	foto INT ,
+   	categoria VARCHAR(50) NOT NULL,
+   	subCat VARCHAR(50) NOT NULL ,
+   	responsavel INT NOT NULL ,
+   	status BOOLEAN NOT NULL ,
+   	razaoSocial VARCHAR(50) NOT NULL ,
+   	cnpj VARCHAR(50) NOT NULL ,
+   	nomeFantasia VARCHAR(50) NOT NULL ,
+   	email VARCHAR(50) ,
+   	site VARCHAR(50) ,
+   	telFixo VARCHAR(50) ,
+   	telCel VARCHAR(50) ,
+   	descrNegocio VARCHAR(500) NOT NULL ,
+   	cep VARCHAR(50) NOT NULL ,
+   	logradouro VARCHAR(100) ,
+   	numero VARCHAR(50) ,
+   	complemento VARCHAR(50) ,
+   	bairro VARCHAR(50) ,
+   	cidade VARCHAR(50) ,
+   	estado VARCHAR(50) ,
+   	mapa VARCHAR(50) ,
+   	referencia VARCHAR(50)  ,
+   	horarioFunc VARCHAR(50) NOT NULL ,
+	fotoLogomarca VARCHAR(50) ,
+	dataCadastro DATE NOT NULL ,  
+	PRIMARY KEY (idEstab) ,
+	FOREIGN KEY (foto) references foto(idFoto),
+	FOREIGN KEY (responsavel) references user(idUser) )
+	FOREIGN KEY (categoria) references categoria(idCategoria),
+	FOREIGN KEY (subCat) references categoria(idSubCat) )
+	ENGINE = InnoDB ;
+======================================================================
+
+======================================================================
+// OK
+CREATE TABLE user (
+	idUser INT NOT NULL AUTO_INCREMENT ,
+	nome VARCHAR(50) NOT NULL ,
+	email VARCHAR(50) NOT NULL ,
+	senha VARCHAR(50) NOT NULL ,
+	telCel VARCHAR(50) NOT NULL ,
+    	PRIMARY KEY (idUser) )
+	ENGINE = InnoDB ;
+======================================================================
+
+======================================================================
+// OK
+CREATE TABLE foto (
+	idFoto INT NOT NULL AUTO_INCREMENT ,
+	idEstab INT NOT NULL ,
+	urlFoto VARCHAR(50) NOT NULL ,
+	descrFoto VARCHAR(50) NOT NULL ,
+    	PRIMARY KEY (idFoto) )
+	ENGINE = InnoDB ;
+======================================================================
+
+======================================================================
+// OK
+CREATE TABLE servico (
+	idServico INT NOT NULL AUTO_INCREMENT ,
+	tipoServico VARCHAR(50) NOT NULL ,
+	nomeServico VARCHAR(50) NOT NULL ,
+	iconServico VARCHAR(50) NOT NULL ,
+    	PRIMARY KEY (idServico) )
+	ENGINE = InnoDB ;
+======================================================================
+
+======================================================================
+// OK
+CREATE TABLE categoria (
+	idCategoria VARCHAR(50) NOT NULL ,
+	idsubcat VARCHAR(50) NOT NULL ,
+	PRIMARY KEY (idCategoria , idSubCat) )
+	ENGINE = InnoDB ;
+======================================================================
+
+======================================================================
+// OK
+CREATE TABLE servicosCategoria (
+	idServico INT NOT NULL ,
+	idCategoria VARCHAR(50) NOT NULL ,
+	FOREIGN KEY (idServico) references servico(idServico),
+	FOREIGN KEY (idCategoria) references categoria(idCategoria) )
+	ENGINE = InnoDB ;
+======================================================================
+
+======================================================================
+/ FALTA FAZER - *ManyToMany - 
+CREATE TABLE servicosCatEstab (
+	idServico INT NOT NULL ,
+	idEstab INT NOT NULL ,
+	idCategoria INT NOT NULL ,
+	FOREIGN (idServico) references servico(idServico),
+	FOREIGN KEY (idEstab) references estabelecimento(idEstab),
+	FOREIGN KEY (idCategoria) references categoria(idCategoria) )
+	ENGINE = InnoDB ;   */
+======================================================================
+
+======================================================================
+//INSERT NA TABELA CATEGORIA - OK
+INSERT INTO categoria VALUES 
+('Gastronomia', 'Bares/Lanches') ,
+('Gastronomia', 'Cafés/Docerias') ,
+('Gastronomia', 'Cozinha Brasileira') ,
+('Gastronomia', 'Cozinha Internacional') ,
+('Gastronomia', 'Pizzarias') ,
+('Gastronomia', 'Quiosques') ,
+('Gastronomia', 'Demais Segmentos') ,
+('Hospedagem', 'Hotéis') ,
+('Hospedagem', 'Hotéis Fazenda') ,
+('Hospedagem', 'Motéis') ,
+('Hospedagem', 'Pousadas') ,
+('Hospedagem', 'Resorts') ,
+('Hospedagem', 'Campings') ,
+('Passeios', 'Compras') , 
+('Passeios', 'Cultura') ,
+('Passeios', 'Lazer') , 
+('Passeios', 'Agências de Turismo') ,
+('Roteiros', 'Aventuras') ,
+('Roteiros', 'Destilarias') ,
+('Roteiros', 'Equestres') ,
+('Roteiros', 'Flores e Frutas') ,
+('Roteiros', 'Pesqueiros') ,
+('Roteiros', 'Religioso') ,
+('Roteiros', 'Rural') ;
+======================================================================
+
+======================================================================
+//INSERT NA TABELA SERVICO - OK
+INSERT INTO servico VALUES 
+(null , 'ACESSIBILIDADE:', 'Cadeirante', 'fa-wheelchair') ,
+(null , 'ACESSIBILIDADE:', 'Def.Visual', 'fa-blind') ,
+(null , 'ACESSIBILIDADE:', 'Def.Auditivo', 'fa-deaf') ,
+(null , 'ACEITA CARTÕES:', 'Amex', 'fa-cc-amex') ,
+(null , 'ACEITA CARTÕES:', 'Visa', 'fa-cc-visa') ,
+(null , 'ACEITA CARTÕES:', 'Diners', 'fa-cc-diners-club') ,
+(null , 'ACEITA CARTÕES:', 'MasterCard', 'fa-cc-mastercard') ,
+(null , 'ALIMENTAÇÃO:', 'Adega de Vinho', 'fa-wine-bottle') ,
+(null , 'ALIMENTAÇÃO:', 'Bar', 'fa-cocktail') ,
+(null , 'ALIMENTAÇÃO:', 'Restaurante', 'fa-utensils') ,
+(null , 'ALIMENTAÇÃO:', 'Café Manha Incluso', 'fa-coffee') ,
+(null , 'CONVENIÊNCIAS:', 'Aceita-se pets', 'fa-paw') ,
+(null , 'CONVENIÊNCIAS:', 'Estacionamento', 'fa-parking') ,
+(null , 'CONVENIÊNCIAS:', 'Ar-condicionado', 'fa-snowflake') ,
+(null , 'CONVENIÊNCIAS:', 'Wifi', 'fa-wifi') ,
+(null , 'CONVENIÊNCIAS:', 'Carregador Malas', 'fa-luggage-cart') ,
+(null , 'CONVENIÊNCIAS:', 'Espaço Saúde', 'fa-spa') ,
+(null , 'CONVENIÊNCIAS:', 'Frigobar', 'fa-refrigerator') ,
+(null , 'CONVENIÊNCIAS:', 'Não Fumante', 'fa-smoking-ban') ,
+(null , 'CONVENIÊNCIAS:', 'Piscina', 'fa-swimming-pool') ,
+(null , 'CONVENIÊNCIAS:', 'Salão fitness', 'fa-dumbbell') ,
+(null , 'CONVENIÊNCIAS:', 'Serviço de Quarto', 'fa-concierge-bell') ,
+(null , 'REDES SOCIAIS:', 'Facebook', 'fa-facebook-square') ,
+(null , 'REDES SOCIAIS:', 'Instagram', 'fa-Instagram') ,
+(null , 'REDES SOCIAIS:', 'Site', 'fa-globe') ,
+(null , 'REFERÊNCIA:', 'Estrelas', 'fa-star') ,
+(null , 'REFERÊNCIA:', 'Positivo', 'fa-thumbs-up')
+(null , 'REFERÊNCIA:',	'$$$ Cifrão' ,'fa-dollar-sign') ;
+======================================================================
+
+INSERT INTO estabelecimento 
+(`idEstab`, `foto`, `categoria`   , `subCat`        , `responsavel`, `status`   , `razaoSocial`, `cnpj`, `nomeFantasia`, `email`, `site`, `telFixo`, `telCel`, `descrNegocio`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `mapa`, `referencia`, `horarioFunc`, `fotoLogomarca`, `dataCadastro`) VALUES
+
+  (null    ,   1   , 'Gastronomia' , 'Bares/Lanches' , 1           , 'pendente' , '[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','[value-16]','[value-17]','[value-18]','[value-19]','[value-20]','[value-21]','[value-22]','[value-23]','[value-24]','[value-25]','[value-26]')
+
+
+INSERT estabelecimento
+1 - Bar
+2 - Hotél
+3 - Feira Artesato
+4 - Passeio de barco
+
+
+INSERT INTO foto VALUESINSERT estabelecimento
+1 - Bar
+2 - Hotél
+3 - Feira Artesato
+4 - Passeio de barco                
+
+INSERT INTO foto VALUES
+( null , 1 , './assets/imagensq/1d-1/caesar salad.jpg caesar salad', 'Uma bem servida porção da versão calabresa da famosa Caesar Salad, com um  potinho de maionese no centro do prato.
+' ) ,
+( null , 1 , './assets/imagens/1d-1/calabresa aperitivo.jpg', 'Saborosa porção de calabresa fatiada com anéis de cebolas e dois copos de choppe bem gelados.' ) ,
+( null , 1 , './assets/imagens/1d-1/hot dog de calabresa.jpg', 'Uma baguete recehada com molho vinagrete, purê de batatas e uma linguiçabem assada.' ) ,
+( null , 1 , './assets/imagens/1d-1/monte seu lanche.jpg', 'Um grande sanduiche de calabresa com queijo chedar, salada, azeitonas verdes, tomates e alface.' ) ,
+( null , 1 , './assets/imagens/1d-1/strogonof de calabresa.jpg', 'Um prato com estrogonofe de calabresa, batatas palito e arroz, delicadamente decorado com manjerição.' ) ,
+
+( null , 2 , './assets/imagens/id-2/chalé com lareira.jpg', 'Em um ambiente integrado, o primeiro plano mostra uma sala com um aparador de madeira, uma lareira, uma tv plana na parede e uma pequena escada 
+que dá acesso a cama de casal.' ) ,
+( null , 2 , './assets/imagens/id-2/champgne.jpg', 'No gramado ao lado da piscina, um balde de gelo com duas taças e uma garrafa de champagne, esperaos hóspedes para um brinde.' ) ,
+( null , 2 , './assets/imagens/id-2/espreguiçadeiras.jpg', 'Em piso de tábuas corridas, destacam-se duas confortáveis espreguiçadeiras e, ao fundo, uma porta balcão dá acesso a sala de estar do chalé' ) ,
+( null , 2 , './assets/imagens/id-2/piscina de dia.jpg', 'Foto da piscina com a sede e restaurante do hotel, ao fundo. ' ) ,
+( null , 2 , './assets/imagens/id-2/quarto com armário.jpg', Aconchegante suíte com cama de casal, armário de madeira e entrada para o banho.' ) ,
+( null , 2 , './assets/imagens/id-2/sala com sofá e puff.jpg', 'Ambiente amplo com confortáveis sofá, poltrona e puff. Ao fundo, separado apenas pela altura do piso (dois degraus), vê-se um amplo espaço com cama de casal, aparador e abajur.' ) ,
+
+( null , 3 , './assets/imagens/id-3/Artesanato Indígena.jpg', 'Em um amplo espaço, indígenas apresentam seus trabalhos manuais com diversos, produzidos com variados tipos de materiais naturais, como Cocares, arcos e flexas, caçcambas e colares entre muitos outros ítens' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de lustres.jpg', 'Lustres, arandelas e uma série de pequenos enfeites feitos em vidro, são a especialidade desta artesã.' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de pratos .jpg', 'Seja para bolo, aperitivos, salgados ou para uso diário, a variedade de desenhos e motivos da decoração, vão aprimorar dar um up na apresentação!' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de toalhas de mesa.jpg', 'Uma infinidade de modelos de toalhas e caminhos de mesa, com diferentes formatos, texturas e tamanhos.' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de trabalhos em madeira.jpg', 'Magníficos trabalhos em madeira! Entalhes, cortes e texturas dão vida a pedaços de madeira.' ) ,
+
+( null , 4 , './assets/imagens/id-4/barcos na praia.jpg', 'Diversos barcos de turismo ancorados, para que seus ocupantes possam desfrutar de um delicioso banho de mar em águas transparentes.' ) ,
+( null , 4 , './assets/imagens/id-4/casal na escuna.jpg', 'Sentados na murada da embarcação, um casal de turistas acena para a camera. Ao fundo, vê-se uma praia de areias brancas e águas azuis, mais ao fundo, uma densa mata completa a natureza' ) ,
+( null , 4 , './assets/imagens/id-4/debaixo dágua.jpg', 'A linha dágua divide a imagem em duas visões: abaixo da linha, três amigos acenam para a camera e, acima dessa mesma linha, vê-se a escuna de inde mergulharam.' ) ;
+( null , 4 , './assets/imagens/id-4/moça com escunas.jpg', 'Uma moça de biquini anda pela praia. Ao fundo, cinco escunas de passeios ancoradas na praia de uma linda ilha coberta por mata nativa.' ) ;
+( null , 4 , './assets/imagens/id-4/Na proa do barco.jpg', Na proa do barco, uma mulher de maiô, com os braços levantados, curte a velocidade e o vento.' ) ;
+( null , 4 , './assets/imagens/id-4/turistas nadando .jpg', 'Turista nada em água transparente, próximo a escuna de passeios.' ) ;
+

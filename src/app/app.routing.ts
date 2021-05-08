@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HotelComponent } from './hotel/hotel.component';
 
 const routes: Routes = [
+  {path:"hotel",component:HotelComponent},
   {path:"hotel/:id",component:HotelComponent},
 ]
 @NgModule({

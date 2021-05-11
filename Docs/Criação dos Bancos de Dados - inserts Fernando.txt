@@ -1,4 +1,73 @@
+==========================================================================
+[Flagner]
+Cargas no BD => import.sql
+
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'fernando@casa.com', 'Fernando', '12345678', '11999994545');
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'carlos@casa.com', 'Carlos', '12345678', '11987654396');
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'flagner@casa.com', 'Flagner', '12345678', '41987654396');
+
+INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Gastronomia');
+INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Hospedagem');
+INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Passeios');
+INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Roteiros');
+
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Bares/Lanches', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cafés/Docerias', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cozinha Brasileira', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cozinha Internacional', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Pizzarias', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Quiosques', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Demais segmentos', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Hotéis', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Hotéis Fazenda', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Motéis', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Pousadas', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Resorts', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Campings', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Compras', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cultura', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Lazer', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Agências de Turismo', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Aventuras', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Destilarias', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Equestres', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Flores e Frutas', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Pesqueiros', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Religiosos', '');
+INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Rural', '');
+
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-wheelchair', 'Cadeirante', 'Acessibilidade', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-blind', 'Def.Visual', 'Acessibilidade', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-deaf', 'Def.Auditivo', 'Acessibilidade', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-amex', 'Amex', 'Aceita Cartões', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-visa', 'Visa', 'Aceita Cartões', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-diners', 'Diners', 'Aceita Cartões', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-mastercard', 'Mastercard', 'Aceita Cartões', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-wine-bottle', 'Adega de Vinho', 'Alimentação', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cocktail', 'Bar', 'Alimentação', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-utensils', 'Restaurante', 'Alimentação', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-coffee', 'Café Manhã Incluso', 'Alimentação', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-paw', 'Aceita Pets', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-parking', 'Estacionamento', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-snowflake', 'Ar Condicionado', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-wifi', 'Wifi', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-luggage-cart', 'Carregador de malas', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-spa', 'Espaço Saúde', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-refrigerator', 'Frigobar', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-smoking-ban', 'Não Fumante', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-swimming-pool', 'Piscina', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-dumbbell', 'Salão fitness', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-concierge-bell', 'Serviço de Quarto', 'Conveniência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-facebook-square', 'Facebook', 'Redes Sociais', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-Instagram', 'Instagram', 'Redes Sociais', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-globe', 'Site', 'Redes Sociais', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-star', 'Estrelas', 'Referência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-thumbs-up', 'Positivo', 'Referência', '');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-dollar-sign', '$$$ Cifrão', 'Referência', '');
+
 ======================================================================
+
+[Fernando]
 //NÃO CONSEGUI FAZER A FOREIGN KEY subCat
 
 CREATE TABLE estabelecimento (

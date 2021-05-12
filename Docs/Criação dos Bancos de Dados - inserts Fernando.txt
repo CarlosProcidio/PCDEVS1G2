@@ -1,5 +1,159 @@
+2021-05-12 [Flagner] - INSERTs com base nos modelos de ontem:
+
+INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'rafael@dh.com.br','Rafael','123456','78 5698-9856');
+INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'carlos@sttm.com','12345678','11-999995501');
+INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'fernando@sttm.com','12345678','11-999995502');
+INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'flagner@sttm.com','12345678','11-999995503');
+
+INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (1,null,'Gastronomia');
+INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (2,null,'Hospedagem');
+INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (3,null,'O que Fazer');
+INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (4,null,'Roteiros');
+
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (1,null,'Bares/lanches',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (2,null,'Cafés/Docerias',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (3,null,'Cozinha Brasileira',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (4,null,'Cozinha Internacional',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (5,null,'Pizzarias',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (6,null,'Quiosques',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (7,null,'Demais Segmentos',1);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (8,null,'Hotéis',2);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (9,null,'Hotéis Fazenda',2);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (10,null,'Motéis',2);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (11,null,'Pousadas',2);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (12,null,'Resorts',2);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (13,null,'Campings',2);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (14,null,'Compras',3);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (15,null,'Cultura',3);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (16,null,'Lazer',3);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (17,null,'Agencias de Turismo',3);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (18,null,'Aventuras',4);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (19,null,'Destilarias',4);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (20,null,'Equestres',4);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (21,null,'Flores e Frutas',4);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (22,null,'Pesqueiros',4);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (23,null,'Religioso',4);
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (24,null,'Rural',4);
+
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (1,null,'fa-wheelchair','Cadeirante','Acessibilidade');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (2,null,'fa-deaf','Def.Auditivo','Acessibilidade');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (3,null,'fa-blind','Def.Visual','Acessibilidade');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (4,null,'fa-wine-bottle''      ','Adega de Vinho','Alimentação');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (5,null,'fa-cocktail','Bar','Alimentação');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (6,null,'fa-coffee''      ','Café da manhã incluso','Alimentação');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (7,null,'fa-utensils''      ','Restaurante','Alimentação');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (8,null,'fa-paw''      ','Aceita-se pets','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (9,null,'fa-snowflake''      ','Ar-condicionado','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (10,null,'fa-luggage-cart''      ','Carregador de malas','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (11,null,'fa-spa''      ','Espaço saúde','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (12,null,'fa-parking''      ','Estacionamento','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (13,null,'fa-refrigerator''      ','Frigobar','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (14,null,'fa-smoking-ban','Não fumante','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (15,null,'fa-swimming-pool''      ','Piscina','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (16,null,'fa-dumbbell''      ','Salão fitness','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (17,null,'fa-concierge-bell''      ','Serviço de quarto','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (18,null,'fa-wifi','Wifi','Conveniências');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (19,null,'fa-cc-amex','Cartão Amex','Pagamentos');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (20,null,'fa-cc-diners-club','Cartão Diners','Pagamentos');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (21,null,'fa-cc-mastercard','Cartão Master','Pagamentos');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (22,null,'fa-cc-visa','Cartão Visa','Pagamentos');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (23,null,'fa-money-check','Outros Cartões','Pagamentos');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (24,null,'fa-dollar-sign','Dinheiro','Pagamentos');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (25,null,'fa-facebook-square'' ','Facebook','Redes Sociais');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (26,null,'fa-instagram'' ','Instagram','Redes Sociais');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (27,null,'fa-globe'' ','Site','Redes Sociais');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (28,null,'fa-star','Estrelas','Referência');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (29,null,'fa-dollar-sign','Cifrão','Referência');
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (30,null,'fa-thumbs-up','Positivo','Referência');
+
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (4, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (5, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (6, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (7, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (10, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (11, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (13, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (14, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (15, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (16, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (17, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (23, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (24, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 2);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (28, 2);
+
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (4, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 1);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (29, 1
+
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (5, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (7, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (30, 3);
+
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (5, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (7, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (30, 4);
+
+
+[...]
+
 ==========================================================================
-[Flagner]
+
+2021-05-11 [Flagner] ** deu erro
 Cargas no BD => import.sql
 
 INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'fernando@casa.com', 'Fernando', '12345678', '11999994545');
@@ -279,4 +433,3 @@ que dá acesso a cama de casal.' ) ,
 ( null , 4 , './assets/imagens/id-4/moça com escunas.jpg', 'Uma moça de biquini anda pela praia. Ao fundo, cinco escunas de passeios ancoradas na praia de uma linda ilha coberta por mata nativa.' ) ;
 ( null , 4 , './assets/imagens/id-4/Na proa do barco.jpg', Na proa do barco, uma mulher de maiô, com os braços levantados, curte a velocidade e o vento.' ) ;
 ( null , 4 , './assets/imagens/id-4/turistas nadando .jpg', 'Turista nada em água transparente, próximo a escuna de passeios.' ) ;
-

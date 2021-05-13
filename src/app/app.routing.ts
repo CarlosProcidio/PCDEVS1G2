@@ -5,11 +5,15 @@ import { AuthGuard } from './account/shared/auth.guard';
 import { HotelComponent } from './hotel/hotel.component'; */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CreateAccountComponent } from './account/create-account/create-account.component';
+import { LoginComponent } from './account/login/login.component';
 import { HotelComponent } from './hotel/hotel.component';
 
 const routes: Routes = [
   {path:"hotel",component:HotelComponent},
   {path:"hotel/:id",component:HotelComponent},
+  {path:"login",component:LoginComponent},
+  {path:"create-account",component:CreateAccountComponent},
 ]
 @NgModule({
 

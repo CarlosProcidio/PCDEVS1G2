@@ -1,3 +1,4 @@
+import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     RouterModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule
   ],
   exports: [
     FooterComponent,

@@ -1,27 +1,32 @@
-<!-- Navbar -->
-<!-- <img width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="> -->
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="/">
-        <button pButton type="button" class="p-button-rounded" icon="pi pi-home"></button>
-    </a>
-    <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--
+        <ul class="navbar-nav mr-sm-2">
+            <li class="nav-item dropdown">
+                <a class="navbar-brand" href="/">
+                    <button pButton
+                        class="p-button-rounded"
+                        icon="pi pi-home"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    </button>
+                    <br>
+                    <span style="font-size:small;">Home</span>                
+                </a>
+            </li>
+        </ul>
+        -->
         <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li> -->
-        
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Home</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Gastronomia
@@ -77,28 +82,14 @@
                 <a class="dropdown-item" href="#">Rural</a>
                 </div>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link active" href="#">Sobre</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="#">Contato</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Busca
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2"
-                            type="search"
-                            placeholder="Digite aqui"
-                            aria-label="Busca">
-                        <button class="btn btn-success my-2 my-sm-0" type="submit">
-                            Busca
-                        </button>
-                    </form>
-                </div>
-            </li>
+            -->
             <li class="nav-item dropdown">
                 <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Carlos
@@ -119,9 +110,19 @@
                     <a class="dropdown-item" routerLink="meus-estab">Lista Meus Estabelecimentos</a>
                     <a class="dropdown-item" routerLink="hotel">Detalhes do Estabelecimento</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <span class="p-input-icon-right my-2 my-lg-0 waves-light" >
+                    <i class="pi pi-search"></i>
+                    <input class="form-control mr-sm-2"
+                    type="search"                    
+                    placeholder="Buscar">
+                </span>
+            </li>
         </ul>
     </div>
     <ul class="navbar-nav mr-sm-2">
+        <!--
         <li class="nav-item dropdown">
             <a class="navbar-brand" href="#">
                 <button pButton
@@ -158,27 +159,17 @@
 		            </li>
 	            </ul>
             </a>
-
-            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <button pButton
-                        value = "primary"
-                        label="Login"
-                        type="button"
-                        data-toggle="dropdown"
-                        class="p-button p-button-primary btn btnLogin btnClickLogin"
-                        icon="pi pi-sign-in"
-                        [routerLink]="['/account/login']">
-                    </button>
-                    <button pButton
-                        value = "secondary"
-                        label="Cadastro"
-                        type="button"
-                        class="p-button p-button-secondary"
-                        icon="pi pi-user"
-                        [routerLink]="['/create-account']">
-                    </button>
-            </div> -->
         </li>
+        -->
+        <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" routerLink="login">Fazer Login</a>
+                    <a class="dropdown-item" routerLink="create-account">Cadastrar-se</a>
+                </div>
+            </li>
     </ul>
     <ul class="navbar-nav mr-sm-2">
         <li>
@@ -190,6 +181,11 @@
         </li>
     </ul>
 </nav>
+
+<link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+/>
 
             <!--
             <a aria-label="Slack" target="_blank" rel="noopener" href="https://dh-pcdevs.slack.com/" title="DH-PcDevs">

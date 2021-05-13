@@ -1,152 +1,48 @@
+INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'rafael@dh.com.br','Rafael','123456','78 5698-9856')
+
+INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (1,null,'Gastronomia')
+INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (2,null,'Hospedagem')
+
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (1,null,'Hotel',2)
+INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (2,null,'Resort',2)
+
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (1,null,'fa-wifi','Wi-Fi','Conveniência')
+INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (2,null,'fa-wifi','Estacionamento','Conveniência')
+
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 1)
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 1)
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 2)
+
+INSERT INTO `estabelecimento`(`id_estab`, `cnpj`, `data_criacao`, `descr_negocio`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `nome_fantasia`, `razao_social`, `site`, `status`, `tel_cel`, `tel_fixo`, `responsavel`, `id_subcat`) VALUES (1, '69.802.375/0001-20', null,'Hotel com infraestrutura para: cozinha, cozinha,  energia elétrica e estacionamento. Único camping pé na areia de Bertioga.','mamo@email.com','Albatroz','11250-216','Bertioga','','SP','Rua João Ramalho','','899','','','Seg-Sab:08:00 as 20:00 Dom::Fechado','Camping Bertioga','Hospedagem e Camping Bertioga ME','minhasite.com',1,'(13) 99999-9999','(13) 1222-2233','1','1')
+INSERT INTO `estabelecimento`(`id_estab`, `cnpj`, `data_criacao`, `descr_negocio`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `nome_fantasia`, `razao_social`, `site`, `status`, `tel_cel`, `tel_fixo`, `responsavel`, `id_subcat`) VALUES (2, '69.802.255/0001-20', null,'Resort com infraestrutura para: cozinha, cozinha,  energia elétrica e estacionamento. Único camping pé na areia de Bertioga.','mamona@email.com','Pelicano','11250-218','Maresias','','SP','Rua João Ramalho','','899','','','Seg-Sab:08:00 as 20:00 Dom::Fechado','Camping Bertioga','Hospedagem e Camping Bertioga ME','minhasite.com',1,'(13) 99999-9999','(13) 1222-2233','1','2')
+
+
+INSERT INTO `estabelecimento_servico`(`id_estabelecimento`, `id_servico`) VALUES (1,1)
+INSERT INTO `estabelecimento_servico`(`id_estabelecimento`, `id_servico`) VALUES (2,1)
+INSERT INTO `estabelecimento_servico`(`id_estabelecimento`, `id_servico`) VALUES (2,2)
+
+==================================================================
+
 2021-05-12 [Flagner] - INSERTs com base nos modelos de ontem:
 
-INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'rafael@dh.com.br','Rafael','123456','78 5698-9856');
-INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'carlos@sttm.com','12345678','11-999995501');
-INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'fernando@sttm.com','12345678','11-999995502');
-INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (null,null,'flagner@sttm.com','12345678','11-999995503');
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'rafael@dh.com.br', 'Rafael', '123456', '78 5698-9856')
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'carlos@sttm.com', 'Carlos', '12345678', '11-999995501')
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'fernando@sttm.com', 'Fernando', '12345678', '11-999995502')
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'flagner@sttm.com', 'Flagner', '12345678', '41-999995503')
 
-INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (1,null,'Gastronomia');
-INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (2,null,'Hospedagem');
-INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (3,null,'O que Fazer');
-INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (4,null,'Roteiros');
+INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES ('1', NULL, 'Gastronomia'), ('2', NULL, 'Hospedagem'), ('3', NULL, 'O que fazer'), ('4', NULL, 'Roteiros')
 
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (1,null,'Bares/lanches',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (2,null,'Cafés/Docerias',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (3,null,'Cozinha Brasileira',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (4,null,'Cozinha Internacional',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (5,null,'Pizzarias',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (6,null,'Quiosques',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (7,null,'Demais Segmentos',1);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (8,null,'Hotéis',2);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (9,null,'Hotéis Fazenda',2);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (10,null,'Motéis',2);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (11,null,'Pousadas',2);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (12,null,'Resorts',2);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (13,null,'Campings',2);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (14,null,'Compras',3);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (15,null,'Cultura',3);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (16,null,'Lazer',3);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (17,null,'Agencias de Turismo',3);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (18,null,'Aventuras',4);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (19,null,'Destilarias',4);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (20,null,'Equestres',4);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (21,null,'Flores e Frutas',4);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (22,null,'Pesqueiros',4);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (23,null,'Religioso',4);
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (24,null,'Rural',4);
+INSERT INTO `subcategoria` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES ('1', NULL, 'Bares/lanches', '1'), ('2', NULL, 'Cafés/Docerias', '1'), ('3', NULL, 'Cozinha Brasileira', '1'), ('4', NULL, 'Cozinha Internacional', '1'), ('5',NULL,'Pizzarias','1'), ('6',NULL,'Quiosques','1'), ('7',NULL,'Demais Segmentos','1'), ('8',NULL,'Hotéis','2'), ('9',NULL,'Hotéis Fazenda','2'), ('10',NULL,'Motéis','2'), ('11',NULL,'Pousadas','2'), ('12',NULL,'Resorts','2'), ('13',NULL,'Campings','2'), ('14',NULL,'Compras','3'), ('15',NULL,'Cultura','3'), ('16',NULL,'Lazer','3'), ('17',NULL,'Agencias de Turismo','3'), ('18',NULL,'Aventuras','4'), ('19',NULL,'Destilarias','4'), ('20',NULL,'Equestres','4'), ('21',NULL,'Flores e Frutas','4'), ('22',NULL,'Pesqueiros','4'), ('23',NULL,'Religioso','4'), ('24',NULL,'Rural','4')
 
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (1,null,'fa-wheelchair','Cadeirante','Acessibilidade');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (2,null,'fa-deaf','Def.Auditivo','Acessibilidade');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (3,null,'fa-blind','Def.Visual','Acessibilidade');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (4,null,'fa-wine-bottle''      ','Adega de Vinho','Alimentação');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (5,null,'fa-cocktail','Bar','Alimentação');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (6,null,'fa-coffee''      ','Café da manhã incluso','Alimentação');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (7,null,'fa-utensils''      ','Restaurante','Alimentação');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (8,null,'fa-paw''      ','Aceita-se pets','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (9,null,'fa-snowflake''      ','Ar-condicionado','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (10,null,'fa-luggage-cart''      ','Carregador de malas','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (11,null,'fa-spa''      ','Espaço saúde','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (12,null,'fa-parking''      ','Estacionamento','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (13,null,'fa-refrigerator''      ','Frigobar','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (14,null,'fa-smoking-ban','Não fumante','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (15,null,'fa-swimming-pool''      ','Piscina','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (16,null,'fa-dumbbell''      ','Salão fitness','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (17,null,'fa-concierge-bell''      ','Serviço de quarto','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (18,null,'fa-wifi','Wifi','Conveniências');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (19,null,'fa-cc-amex','Cartão Amex','Pagamentos');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (20,null,'fa-cc-diners-club','Cartão Diners','Pagamentos');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (21,null,'fa-cc-mastercard','Cartão Master','Pagamentos');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (22,null,'fa-cc-visa','Cartão Visa','Pagamentos');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (23,null,'fa-money-check','Outros Cartões','Pagamentos');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (24,null,'fa-dollar-sign','Dinheiro','Pagamentos');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (25,null,'fa-facebook-square'' ','Facebook','Redes Sociais');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (26,null,'fa-instagram'' ','Instagram','Redes Sociais');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (27,null,'fa-globe'' ','Site','Redes Sociais');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (28,null,'fa-star','Estrelas','Referência');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (29,null,'fa-dollar-sign','Cifrão','Referência');
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (30,null,'fa-thumbs-up','Positivo','Referência');
+INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES ('1', NULL, 'fa-wheelchair', 'Cadeirante', 'Acessibilidade'), ('2', NULL, 'fa-deaf', 'Def.Auditivo', 'Acessibilidade'), ('3',NULL,'fa-blind','Def.Visual','Acessibilidade'), ('4',NULL,'fa-wine-bottle','Adega de Vinho','Alimentação'), ('5',NULL,'fa-cocktail','Bar','Alimentação'), ('6',NULL,'fa-coffee','Café da manhã incluso','Alimentação'), ('7',NULL,'fa-utensils','Restaurante','Alimentação'), ('8',NULL,'fa-paw','Aceita-se pets','Conveniências'), ('9',NULL,'fa-snowflake','Ar-condicionado','Conveniências'), ('10',NULL,'fa-luggage-cart','Carregador de malas','Conveniências'), ('11',NULL,'fa-spa','Espaço saúde','Conveniências'), ('12',NULL,'fa-parking','Estacionamento','Conveniências'), ('13',NULL,'fa-refrigerator','Frigobar','Conveniências'), ('14',NULL,'fa-smoking-ban','Não fumante','Conveniências'), ('15',NULL,'fa-swimming-pool','Piscina','Conveniências'), ('16',NULL,'fa-dumbbell','Salão fitness','Conveniências'), ('17',NULL,'fa-concierge-bell','Serviço de quarto','Conveniências'), ('18',NULL,'fa-wifi','Wifi','Conveniências'), ('19',NULL,'fa-cc-amex','Cartão Amex','Pagamentos'), ('20',NULL,'fa-cc-diners-club','Cartão Diners','Pagamentos'), ('21',NULL,'fa-cc-mastercard','Cartão Master','Pagamentos'), ('22',NULL,'fa-cc-visa','Cartão Visa','Pagamentos'), ('23',NULL,'fa-money-check','Outros Cartões','Pagamentos'), ('24',NULL,'fa-dollar-sign','Dinheiro','Pagamentos'), ('25',NULL,'fa-facebook-square','Facebook','Redes Sociais'), ('26',NULL,'fa-instagram','Instagram','Redes Sociais'), ('27',NULL,'fa-globe','Site','Redes Sociais'), ('28',NULL,'fa-star','Estrelas','Referência'), ('29',NULL,'fa-dollar-sign','Cifrão','Referência'), ('30',NULL,'fa-thumbs-up','Positivo','Referência')
 
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (4, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (5, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (6, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (7, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (10, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (11, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (13, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (14, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (15, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (16, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (17, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (23, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (24, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 2);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (28, 2);
+INSERT INTO `servico_subcategoria` (`id_servico`, `id_subcategoria`) VALUES ('1', '2'), ('2', '2'), ('3', '2'), ('4', '2'), ('5', '2'), ('6', '2'), ('7', '2'), ('8', '2'), ('9', '2'), ('10', '2'), ('11', '2'), ('12', '2'), ('13', '2'), ('14', '2'), ('15', '2'), ('16', '2'), ('17', '2'), ('18', '2'), ('19', '2'), ('20', '2'), ('21', '2'), ('22', '2'), ('23', '2'), ('24', '2'), ('25', '2'), ('26', '2'), ('27', '2'), ('28', '2')
 
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (4, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 1);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (29, 1
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 1), (2, 1), (3, 1), (4, 1), (8, 1), (9, 1), (12, 1), (18, 1), (19, 1), (20, 1), (21, 1), (22, 1), (25, 1), (26, 1), (27, 1), (29, 1
 
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (5, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (7, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 3);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (30, 3);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 3), (2, 3), (3, 3), (5, 3), (7, 3), (8, 3), (9, 3), (12, 3), (18, 3), (19, 3), (20, 3), (21, 3), (22, 3), (25, 3), (26, 3), (27, 3), (30, 3);
 
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (3, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (5, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (7, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (8, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (9, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (12, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (18, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (19, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (20, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (21, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (22, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (25, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (26, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (27, 4);
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (30, 4);
+INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 4), (2, 4), (3, 4), (5, 4), (7, 4), (8, 4), (9, 4), (12, 4), (18, 4), (19, 4), (20, 4), (21, 4), (22, 4), (25, 4), (26, 4), (27, 4), (30, 4);
 
 
 [...]
@@ -356,40 +252,40 @@ INSERT INTO categoria VALUES
 ======================================================================
 //INSERT NA TABELA SERVICO - OK
 INSERT INTO servico VALUES 
-(null , 'ACESSIBILIDADE:', 'Cadeirante', 'fa-wheelchair') ,
-(null , 'ACESSIBILIDADE:', 'Def.Visual', 'fa-blind') ,
-(null , 'ACESSIBILIDADE:', 'Def.Auditivo', 'fa-deaf') ,
-(null , 'ACEITA CARTÕES:', 'Amex', 'fa-cc-amex') ,
-(null , 'ACEITA CARTÕES:', 'Visa', 'fa-cc-visa') ,
-(null , 'ACEITA CARTÕES:', 'Diners', 'fa-cc-diners-club') ,
-(null , 'ACEITA CARTÕES:', 'MasterCard', 'fa-cc-mastercard') ,
-(null , 'ALIMENTAÇÃO:', 'Adega de Vinho', 'fa-wine-bottle') ,
-(null , 'ALIMENTAÇÃO:', 'Bar', 'fa-cocktail') ,
-(null , 'ALIMENTAÇÃO:', 'Restaurante', 'fa-utensils') ,
-(null , 'ALIMENTAÇÃO:', 'Café Manha Incluso', 'fa-coffee') ,
-(null , 'CONVENIÊNCIAS:', 'Aceita-se pets', 'fa-paw') ,
-(null , 'CONVENIÊNCIAS:', 'Estacionamento', 'fa-parking') ,
-(null , 'CONVENIÊNCIAS:', 'Ar-condicionado', 'fa-snowflake') ,
-(null , 'CONVENIÊNCIAS:', 'Wifi', 'fa-wifi') ,
-(null , 'CONVENIÊNCIAS:', 'Carregador Malas', 'fa-luggage-cart') ,
-(null , 'CONVENIÊNCIAS:', 'Espaço Saúde', 'fa-spa') ,
-(null , 'CONVENIÊNCIAS:', 'Frigobar', 'fa-refrigerator') ,
-(null , 'CONVENIÊNCIAS:', 'Não Fumante', 'fa-smoking-ban') ,
-(null , 'CONVENIÊNCIAS:', 'Piscina', 'fa-swimming-pool') ,
-(null , 'CONVENIÊNCIAS:', 'Salão fitness', 'fa-dumbbell') ,
-(null , 'CONVENIÊNCIAS:', 'Serviço de Quarto', 'fa-concierge-bell') ,
-(null , 'REDES SOCIAIS:', 'Facebook', 'fa-facebook-square') ,
-(null , 'REDES SOCIAIS:', 'Instagram', 'fa-Instagram') ,
-(null , 'REDES SOCIAIS:', 'Site', 'fa-globe') ,
-(null , 'REFERÊNCIA:', 'Estrelas', 'fa-star') ,
-(null , 'REFERÊNCIA:', 'Positivo', 'fa-thumbs-up')
-(null , 'REFERÊNCIA:',	'$$$ Cifrão' ,'fa-dollar-sign') ;
+(NULL , 'ACESSIBILIDADE:', 'Cadeirante', 'fa-wheelchair') ,
+(NULL , 'ACESSIBILIDADE:', 'Def.Visual', 'fa-blind') ,
+(NULL , 'ACESSIBILIDADE:', 'Def.Auditivo', 'fa-deaf') ,
+(NULL , 'ACEITA CARTÕES:', 'Amex', 'fa-cc-amex') ,
+(NULL , 'ACEITA CARTÕES:', 'Visa', 'fa-cc-visa') ,
+(NULL , 'ACEITA CARTÕES:', 'Diners', 'fa-cc-diners-club') ,
+(NULL , 'ACEITA CARTÕES:', 'MasterCard', 'fa-cc-mastercard') ,
+(NULL , 'ALIMENTAÇÃO:', 'Adega de Vinho', 'fa-wine-bottle') ,
+(NULL , 'ALIMENTAÇÃO:', 'Bar', 'fa-cocktail') ,
+(NULL , 'ALIMENTAÇÃO:', 'Restaurante', 'fa-utensils') ,
+(NULL , 'ALIMENTAÇÃO:', 'Café Manha Incluso', 'fa-coffee') ,
+(NULL , 'CONVENIÊNCIAS:', 'Aceita-se pets', 'fa-paw') ,
+(NULL , 'CONVENIÊNCIAS:', 'Estacionamento', 'fa-parking') ,
+(NULL , 'CONVENIÊNCIAS:', 'Ar-condicionado', 'fa-snowflake') ,
+(NULL , 'CONVENIÊNCIAS:', 'Wifi', 'fa-wifi') ,
+(NULL , 'CONVENIÊNCIAS:', 'Carregador Malas', 'fa-luggage-cart') ,
+(NULL , 'CONVENIÊNCIAS:', 'Espaço Saúde', 'fa-spa') ,
+(NULL , 'CONVENIÊNCIAS:', 'Frigobar', 'fa-refrigerator') ,
+(NULL , 'CONVENIÊNCIAS:', 'Não Fumante', 'fa-smoking-ban') ,
+(NULL , 'CONVENIÊNCIAS:', 'Piscina', 'fa-swimming-pool') ,
+(NULL , 'CONVENIÊNCIAS:', 'Salão fitness', 'fa-dumbbell') ,
+(NULL , 'CONVENIÊNCIAS:', 'Serviço de Quarto', 'fa-concierge-bell') ,
+(NULL , 'REDES SOCIAIS:', 'Facebook', 'fa-facebook-square') ,
+(NULL , 'REDES SOCIAIS:', 'Instagram', 'fa-Instagram') ,
+(NULL , 'REDES SOCIAIS:', 'Site', 'fa-globe') ,
+(NULL , 'REFERÊNCIA:', 'Estrelas', 'fa-star') ,
+(NULL , 'REFERÊNCIA:', 'Positivo', 'fa-thumbs-up')
+(NULL , 'REFERÊNCIA:',	'$$$ Cifrão' ,'fa-dollar-sign') ;
 ======================================================================
 
 INSERT INTO estabelecimento 
 (`idEstab`, `foto`, `categoria`   , `subCat`        , `responsavel`, `status`   , `razaoSocial`, `cnpj`, `nomeFantasia`, `email`, `site`, `telFixo`, `telCel`, `descrNegocio`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `mapa`, `referencia`, `horarioFunc`, `fotoLogomarca`, `dataCadastro`) VALUES
 
-  (null    ,   1   , 'Gastronomia' , 'Bares/Lanches' , 1           , 'pendente' , '[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','[value-16]','[value-17]','[value-18]','[value-19]','[value-20]','[value-21]','[value-22]','[value-23]','[value-24]','[value-25]','[value-26]')
+  (NULL    ,   1   , 'Gastronomia' , 'Bares/Lanches' , 1           , 'pendente' , '[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','[value-16]','[value-17]','[value-18]','[value-19]','[value-20]','[value-21]','[value-22]','[value-23]','[value-24]','[value-25]','[value-26]')
 
 
 INSERT estabelecimento
@@ -406,30 +302,30 @@ INSERT INTO foto VALUESINSERT estabelecimento
 4 - Passeio de barco                
 
 INSERT INTO foto VALUES
-( null , 1 , './assets/imagensq/1d-1/caesar salad.jpg caesar salad', 'Uma bem servida porção da versão calabresa da famosa Caesar Salad, com um  potinho de maionese no centro do prato.
+( NULL , 1 , './assets/imagensq/1d-1/caesar salad.jpg caesar salad', 'Uma bem servida porção da versão calabresa da famosa Caesar Salad, com um  potinho de maionese no centro do prato.
 ' ) ,
-( null , 1 , './assets/imagens/1d-1/calabresa aperitivo.jpg', 'Saborosa porção de calabresa fatiada com anéis de cebolas e dois copos de choppe bem gelados.' ) ,
-( null , 1 , './assets/imagens/1d-1/hot dog de calabresa.jpg', 'Uma baguete recehada com molho vinagrete, purê de batatas e uma linguiçabem assada.' ) ,
-( null , 1 , './assets/imagens/1d-1/monte seu lanche.jpg', 'Um grande sanduiche de calabresa com queijo chedar, salada, azeitonas verdes, tomates e alface.' ) ,
-( null , 1 , './assets/imagens/1d-1/strogonof de calabresa.jpg', 'Um prato com estrogonofe de calabresa, batatas palito e arroz, delicadamente decorado com manjerição.' ) ,
+( NULL , 1 , './assets/imagens/1d-1/calabresa aperitivo.jpg', 'Saborosa porção de calabresa fatiada com anéis de cebolas e dois copos de choppe bem gelados.' ) ,
+( NULL , 1 , './assets/imagens/1d-1/hot dog de calabresa.jpg', 'Uma baguete recehada com molho vinagrete, purê de batatas e uma linguiçabem assada.' ) ,
+( NULL , 1 , './assets/imagens/1d-1/monte seu lanche.jpg', 'Um grande sanduiche de calabresa com queijo chedar, salada, azeitonas verdes, tomates e alface.' ) ,
+( NULL , 1 , './assets/imagens/1d-1/strogonof de calabresa.jpg', 'Um prato com estrogonofe de calabresa, batatas palito e arroz, delicadamente decorado com manjerição.' ) ,
 
-( null , 2 , './assets/imagens/id-2/chalé com lareira.jpg', 'Em um ambiente integrado, o primeiro plano mostra uma sala com um aparador de madeira, uma lareira, uma tv plana na parede e uma pequena escada 
+( NULL , 2 , './assets/imagens/id-2/chalé com lareira.jpg', 'Em um ambiente integrado, o primeiro plano mostra uma sala com um aparador de madeira, uma lareira, uma tv plana na parede e uma pequena escada 
 que dá acesso a cama de casal.' ) ,
-( null , 2 , './assets/imagens/id-2/champgne.jpg', 'No gramado ao lado da piscina, um balde de gelo com duas taças e uma garrafa de champagne, esperaos hóspedes para um brinde.' ) ,
-( null , 2 , './assets/imagens/id-2/espreguiçadeiras.jpg', 'Em piso de tábuas corridas, destacam-se duas confortáveis espreguiçadeiras e, ao fundo, uma porta balcão dá acesso a sala de estar do chalé' ) ,
-( null , 2 , './assets/imagens/id-2/piscina de dia.jpg', 'Foto da piscina com a sede e restaurante do hotel, ao fundo. ' ) ,
-( null , 2 , './assets/imagens/id-2/quarto com armário.jpg', Aconchegante suíte com cama de casal, armário de madeira e entrada para o banho.' ) ,
-( null , 2 , './assets/imagens/id-2/sala com sofá e puff.jpg', 'Ambiente amplo com confortáveis sofá, poltrona e puff. Ao fundo, separado apenas pela altura do piso (dois degraus), vê-se um amplo espaço com cama de casal, aparador e abajur.' ) ,
+( NULL , 2 , './assets/imagens/id-2/champgne.jpg', 'No gramado ao lado da piscina, um balde de gelo com duas taças e uma garrafa de champagne, esperaos hóspedes para um brinde.' ) ,
+( NULL , 2 , './assets/imagens/id-2/espreguiçadeiras.jpg', 'Em piso de tábuas corridas, destacam-se duas confortáveis espreguiçadeiras e, ao fundo, uma porta balcão dá acesso a sala de estar do chalé' ) ,
+( NULL , 2 , './assets/imagens/id-2/piscina de dia.jpg', 'Foto da piscina com a sede e restaurante do hotel, ao fundo. ' ) ,
+( NULL , 2 , './assets/imagens/id-2/quarto com armário.jpg', Aconchegante suíte com cama de casal, armário de madeira e entrada para o banho.' ) ,
+( NULL , 2 , './assets/imagens/id-2/sala com sofá e puff.jpg', 'Ambiente amplo com confortáveis sofá, poltrona e puff. Ao fundo, separado apenas pela altura do piso (dois degraus), vê-se um amplo espaço com cama de casal, aparador e abajur.' ) ,
 
-( null , 3 , './assets/imagens/id-3/Artesanato Indígena.jpg', 'Em um amplo espaço, indígenas apresentam seus trabalhos manuais com diversos, produzidos com variados tipos de materiais naturais, como Cocares, arcos e flexas, caçcambas e colares entre muitos outros ítens' ) ,
-( null , 3 , './assets/imagens/id-3/Barraca de lustres.jpg', 'Lustres, arandelas e uma série de pequenos enfeites feitos em vidro, são a especialidade desta artesã.' ) ,
-( null , 3 , './assets/imagens/id-3/Barraca de pratos .jpg', 'Seja para bolo, aperitivos, salgados ou para uso diário, a variedade de desenhos e motivos da decoração, vão aprimorar dar um up na apresentação!' ) ,
-( null , 3 , './assets/imagens/id-3/Barraca de toalhas de mesa.jpg', 'Uma infinidade de modelos de toalhas e caminhos de mesa, com diferentes formatos, texturas e tamanhos.' ) ,
-( null , 3 , './assets/imagens/id-3/Barraca de trabalhos em madeira.jpg', 'Magníficos trabalhos em madeira! Entalhes, cortes e texturas dão vida a pedaços de madeira.' ) ,
+( NULL , 3 , './assets/imagens/id-3/Artesanato Indígena.jpg', 'Em um amplo espaço, indígenas apresentam seus trabalhos manuais com diversos, produzidos com variados tipos de materiais naturais, como Cocares, arcos e flexas, caçcambas e colares entre muitos outros ítens' ) ,
+( NULL , 3 , './assets/imagens/id-3/Barraca de lustres.jpg', 'Lustres, arandelas e uma série de pequenos enfeites feitos em vidro, são a especialidade desta artesã.' ) ,
+( NULL , 3 , './assets/imagens/id-3/Barraca de pratos .jpg', 'Seja para bolo, aperitivos, salgados ou para uso diário, a variedade de desenhos e motivos da decoração, vão aprimorar dar um up na apresentação!' ) ,
+( NULL , 3 , './assets/imagens/id-3/Barraca de toalhas de mesa.jpg', 'Uma infinidade de modelos de toalhas e caminhos de mesa, com diferentes formatos, texturas e tamanhos.' ) ,
+( NULL , 3 , './assets/imagens/id-3/Barraca de trabalhos em madeira.jpg', 'Magníficos trabalhos em madeira! Entalhes, cortes e texturas dão vida a pedaços de madeira.' ) ,
 
-( null , 4 , './assets/imagens/id-4/barcos na praia.jpg', 'Diversos barcos de turismo ancorados, para que seus ocupantes possam desfrutar de um delicioso banho de mar em águas transparentes.' ) ,
-( null , 4 , './assets/imagens/id-4/casal na escuna.jpg', 'Sentados na murada da embarcação, um casal de turistas acena para a camera. Ao fundo, vê-se uma praia de areias brancas e águas azuis, mais ao fundo, uma densa mata completa a natureza' ) ,
-( null , 4 , './assets/imagens/id-4/debaixo dágua.jpg', 'A linha dágua divide a imagem em duas visões: abaixo da linha, três amigos acenam para a camera e, acima dessa mesma linha, vê-se a escuna de inde mergulharam.' ) ;
-( null , 4 , './assets/imagens/id-4/moça com escunas.jpg', 'Uma moça de biquini anda pela praia. Ao fundo, cinco escunas de passeios ancoradas na praia de uma linda ilha coberta por mata nativa.' ) ;
-( null , 4 , './assets/imagens/id-4/Na proa do barco.jpg', Na proa do barco, uma mulher de maiô, com os braços levantados, curte a velocidade e o vento.' ) ;
-( null , 4 , './assets/imagens/id-4/turistas nadando .jpg', 'Turista nada em água transparente, próximo a escuna de passeios.' ) ;
+( NULL , 4 , './assets/imagens/id-4/barcos na praia.jpg', 'Diversos barcos de turismo ancorados, para que seus ocupantes possam desfrutar de um delicioso banho de mar em águas transparentes.' ) ,
+( NULL , 4 , './assets/imagens/id-4/casal na escuna.jpg', 'Sentados na murada da embarcação, um casal de turistas acena para a camera. Ao fundo, vê-se uma praia de areias brancas e águas azuis, mais ao fundo, uma densa mata completa a natureza' ) ,
+( NULL , 4 , './assets/imagens/id-4/debaixo dágua.jpg', 'A linha dágua divide a imagem em duas visões: abaixo da linha, três amigos acenam para a camera e, acima dessa mesma linha, vê-se a escuna de inde mergulharam.' ) ;
+( NULL , 4 , './assets/imagens/id-4/moça com escunas.jpg', 'Uma moça de biquini anda pela praia. Ao fundo, cinco escunas de passeios ancoradas na praia de uma linda ilha coberta por mata nativa.' ) ;
+( NULL , 4 , './assets/imagens/id-4/Na proa do barco.jpg', Na proa do barco, uma mulher de maiô, com os braços levantados, curte a velocidade e o vento.' ) ;
+( NULL , 4 , './assets/imagens/id-4/turistas nadando .jpg', 'Turista nada em água transparente, próximo a escuna de passeios.' ) ;

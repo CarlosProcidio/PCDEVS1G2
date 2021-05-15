@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class EstabelecimentoService {
-  url = "http://localhost:3000/estabelecimentos";
+  url = "http://localhost:8080/estabelecimentos";
 
   constructor(private http: HttpClient) { }
   listar(){

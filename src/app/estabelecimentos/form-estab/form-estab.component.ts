@@ -1,3 +1,4 @@
+import { CategoriaService } from './../../categoria.service';
 import { EstabelecimentoService } from '../estabelecimento.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -66,12 +67,13 @@ export class FormEstabComponent implements OnInit {
   categorias: any;
   operacao: boolean = true;
   arrayServico: any[] = []; // array de serviços para carga na tabela de serviços
-  grupoCategoria: SelectItemGroup[];
+  grupoCategoria: any[];
   status: any [] = [];
 
 
   constructor(
     private service: EstabelecimentoService,
+    private categoriaService: CategoriaService,
     private messageService: MessageService,
     private route: ActivatedRoute,
     private title: Title,
@@ -84,6 +86,7 @@ export class FormEstabComponent implements OnInit {
       {label: "Pendente", value:"Pendente"},
       {label: "Aprovado", value:"Aprovado"}
     ]
+
     this.grupoCategoria = [
       {
         label: 'GASTRONOMIA', value: 'gastronomia',
@@ -170,7 +173,18 @@ export class FormEstabComponent implements OnInit {
     if (this.codigoEstabelecimento) {
       this.operacao = false;
       this.carregarEstabelecimento(this.codigoEstabelecimento);
-    }
+     }
+     this.categoriaService.listar().subscribe(resposta => {
+       this.grupoCategoria = <any>resposta;
+
+       this.grupoCategoria.forEach(categoria => {
+         categoria.items = categoria.subcats.map(segmento => ({
+           label: segmento.nome_subcat , value: segmento.id_subcat
+         }))
+         
+       });
+
+     })
   }
 
   carregarEstabelecimento(codigoEstabelecimento: number) {

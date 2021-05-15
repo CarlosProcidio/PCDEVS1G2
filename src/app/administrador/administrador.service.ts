@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AdministradorService {
-  url = "http://localhost:3000/administradores";
+  url = "http://localhost:8080/estabelecimentos";
 
 
   constructor(private http: HttpClient) { }
@@ -19,15 +19,15 @@ export class AdministradorService {
   }
 
   salvar(administradorGeral: any){
-    return this.http.post(`${environment.url}`+'/administradores', administradorGeral);
+    return this.http.post(`${environment.url}`+'/estabelecimentos', administradorGeral);
   }
 
   atualizar(administradorGeral: any) {
-    return this.http.put(`${environment.url}`+'/administradores/'+administradorGeral.id, administradorGeral);
+    return this.http.put(`${environment.url}`+'/estabelecimentos/'+administradorGeral.id, administradorGeral);
   }
 
   excluir(id: number) {
-    return this.http.delete(`${environment.url}`+'/administradores/'+id);
+    return this.http.delete(`${environment.url}`+'/estabelecimentos/'+id);
   }
  
 }

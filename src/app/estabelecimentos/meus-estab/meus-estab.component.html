@@ -45,13 +45,13 @@
                 <th pSortableColumn="mapa"  class="th-mapa">Mapa <p-sortIcon field="mapa"></p-sortIcon></th>
                 <th pSortableColumn="referencia"  class="th-referencia">Referencia<p-sortIcon field="Referencia"></p-sortIcon></th>
                 <th pSortableColumn="horario"  class="th-horario">Horario<p-sortIcon field="horario"></p-sortIcon></th>
-                <th pSortableColumn="status"  class="th-status">Status<p-sortIcon field="status"></p-sortIcon></th>
-                <th class="deletar-atualizar"></th> -->
+                <th pSortableColumn="status"  class="th-status">Status<p-sortIcon field="status"></p-sortIcon></th>-->
+                <th class="deletar-atualizar"></th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-estabelecimento>
             <tr>
-                <td class="th-id">{{estabelecimento.id}}</td>
+                <td class="th-id">{{estabelecimento.idEstab}}</td>
                 <td class="th-nomeFantasia">{{estabelecimento.nomeFantasia}}</td>
                 <!-- <td class="th-cnpj">{{estabelecimento.cnpj}}</td>
                 <td class="th-responsavel">{{estabelecimento.responsavel}}</td>
@@ -74,13 +74,13 @@
                 <td class="th-status">{{estabelecimento.status}}</td> -->
                 <td class="deletar-atualizar">
                     <p-button 
-                        routerLink="/meus-estab/cadastro/{{estabelecimento.id}}" 
+                        routerLink="/meus-estab/cadastro/{{estabelecimento.idEstab}}" 
                         class="espaco" 
                         [title] = "'Editar Estabelecimento' + estabelecimento.nomeFantasia" 
                         icon="pi pi-pencil"></p-button>
 
                     <p-button class="p-button-danger"
-                        (click)="excluir(estabelecimento.id)" 
+                        (click)="excluir(estabelecimento.idEstab)" 
                         type="button"
                         [title] = "'Excluir Estabelecimento ' + estabelecimento.nomeFantasia" 
                         icon="pi pi-trash"></p-button>

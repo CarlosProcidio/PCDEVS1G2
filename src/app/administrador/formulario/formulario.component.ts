@@ -93,7 +93,7 @@ export class FormularioComponent implements OnInit {
           { label: 'Cafés/Docerias', value: 'Cafés/Docerias' },
           { label: 'Cozinha Brasileira', value: 'Cozinha Brasileira' },
           { label: 'Cozinha Internacional', value: 'Cozinha Internacional' },
-          { label: 'Pizzarias', value: 'Pizzarias  ' },
+          { label: 'Pizzarias', value: 'Pizzarias' },
           { label: 'Quiosques', value: 'Quiosques' },
           { label: 'Demais Segmentos', value: 'Demais Segmentos' }
         ]
@@ -292,7 +292,7 @@ export class FormularioComponent implements OnInit {
         { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Ar-condicionado', icone: 'fa-snowflake' },
         { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Wifi', icone: 'fa-wifi' },
         { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Carregador Malas', icone: 'fa-luggage-cart' },
-        { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'espaço saúde', icone: 'fa-spa' },
+        { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Espaço Saúde', icone: 'fa-spa' },
         { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Frigobar', icone: 'fa-refrigerator' },
         { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Não Fumante', icone: 'fa-smoking-ban' },
         { cate: 'hospedagem', subCat: 'CONVENIÊNCIAS:', nome: 'Piscina', icone: 'fa-swimming-pool' },
@@ -334,7 +334,7 @@ export class FormularioComponent implements OnInit {
         { cate: 'gastronomia', subCat: 'REDES SOCIAIS:', nome: 'Facebook', icone: 'fa-facebook-square' },
         { cate: 'gastronomia', subCat: 'REDES SOCIAIS:', nome: 'Instagram', icone: 'fa-Instagram' },
         { cate: 'gastronomia', subCat: 'REDES SOCIAIS:', nome: 'Site', icone: 'fa-globe' },
-        { cate: 'gastronomia', subCat: 'REFERÊNCIA:', nome: '$$$ Cifrão', icone: 'fa-dillar-sign' }
+        { cate: 'gastronomia', subCat: 'REFERÊNCIA:', nome: '$$$ Cifrão', icone: 'fa-dollar-sign' }
       ];
 
     if (segmento == 'Compras'

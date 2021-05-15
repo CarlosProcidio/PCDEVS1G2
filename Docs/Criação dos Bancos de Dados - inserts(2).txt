@@ -176,25 +176,37 @@ INSERT estabelecimento
 4 - Passeio de barco
 
 
-INSERT INTO foto VALUES
-( null , 1 , 'http???  foto1..', 'descricaofoto 1' ) ,
-( null , 1 , 'http???  foto2..', 'descricaofoto 2' ) ,
-( null , 1 , 'http???  foto3..', 'descricaofoto 3' ) ,
-( null , 1 , 'http???  foto4..', 'descricaofoto 4' ) ,
-( null , 1 , 'http???  foto5..', 'descricaofoto 5' ) ,
-( null , 2 , 'http???  foto1..', 'descricaofoto 1' ) ,
-( null , 2 , 'http???  foto2..', 'descricaofoto 2' ) ,
-( null , 2 , 'http???  foto3..', 'descricaofoto 3' ) ,
-( null , 2 , 'http???  foto4..', 'descricaofoto 4' ) ,
-( null , 2 , 'http???  foto5..', 'descricaofoto 5' ) ,
-( null , 3 , 'http???  foto1..', 'descricaofoto 1' ) ,
-( null , 3 , 'http???  foto2..', 'descricaofoto 2' ) ,
-( null , 3 , 'http???  foto3..', 'descricaofoto 3' ) ,
-( null , 3 , 'http???  foto4..', 'descricaofoto 4' ) ,
-( null , 3 , 'http???  foto5..', 'descricaofoto 5' ) ,
-( null , 4 , 'http???  foto1..', 'descricaofoto 1' ) ,
-( null , 4 , 'http???  foto2..', 'descricaofoto 2' ) ,
-( null , 4 , 'http???  foto3..', 'descricaofoto 3' ) ,
-( null , 4 , 'http???  foto4..', 'descricaofoto 4' ) ,
-( null , 4 , 'http???  foto5..', 'descricaofoto 5' ) ;
+INSERT INTO foto VALUESINSERT estabelecimento
+1 - Bar
+2 - Hotél
+3 - Feira Artesato
+4 - Passeio de barco                
 
+INSERT INTO foto VALUES
+( null , 1 , './assets/imagensq/1d-1/caesar salad.jpg caesar salad', 'Uma bem servida porção da versão calabresa da famosa Caesar Salad, com um  potinho de maionese no centro do prato.' ) ,
+( null , 1 , './assets/imagens/1d-1/calabresa aperitivo.jpg', 'Saborosa porção de calabresa fatiada com anéis de cebolas e dois copos de choppe bem gelados.' ) ,
+( null , 1 , './assets/imagens/1d-1/hot dog de calabresa.jpg', 'Uma baguete recehada com molho vinagrete, purê de batatas e uma linguiçabem assada.' ) ,
+( null , 1 , './assets/imagens/1d-1/monte seu lanche.jpg', 'Um grande sanduiche de calabresa com queijo chedar, salada, azeitonas verdes, tomates e alface.' ) ,
+( null , 1 , './assets/imagens/1d-1/strogonof de calabresa.jpg', 'Um prato com estrogonofe de calabresa, batatas palito e arroz, delicadamente decorado com manjerição.' ) ,
+( null , 2 , './assets/imagens/id-2/chalé com lareira.jpg', 'Em um ambiente integrado, o primeiro plano mostra uma sala com um aparador de madeira, uma lareira, uma tv plana na parede e uma pequena escada 
+que dá acesso a cama de casal.' ) ,
+( null , 2 , './assets/imagens/id-2/champgne.jpg', 'No gramado ao lado da piscina, um balde de gelo com duas taças e uma garrafa de champagne, esperaos hóspedes para um brinde.' ) ,
+( null , 2 , './assets/imagens/id-2/espreguiçadeiras.jpg', 'Em piso de tábuas corridas, destacam-se duas confortáveis espreguiçadeiras e, ao fundo, uma porta balcão dá acesso a sala de estar do chalé' ) ,
+( null , 2 , './assets/imagens/id-2/piscina de dia.jpg', 'Foto da piscina com a sede e restaurante do hotel, ao fundo. ' ) ,
+( null , 2 , './assets/imagens/id-2/quarto com armário.jpg', 'Aconchegante suíte com cama de casal, armário de madeira e entrada para o banho.' ) ,
+( null , 2 , './assets/imagens/id-2/sala com sofá e puff.jpg', 'Ambiente amplo com confortáveis sofá, poltrona e puff. Ao fundo, separado apenas pela altura do piso (dois degraus), vê-se um amplo espaço com cama de casal, aparador e abajur.' ) ,
+( null , 3 , './assets/imagens/id-3/Artesanato Indígena.jpg', 'Em um amplo espaço, indígenas apresentam seus trabalhos manuais com diversos, produzidos com variados tipos de materiais naturais, como Cocares, arcos e flexas, caçcambas e colares entre muitos outros ítens' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de lustres.jpg', 'Lustres, arandelas e uma série de pequenos enfeites feitos em vidro, são a especialidade desta artesã.' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de pratos .jpg', 'Seja para bolo, aperitivos, salgados ou para uso diário, a variedade de desenhos e motivos da decoração, vão aprimorar dar um up na apresentação!' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de toalhas de mesa.jpg', 'Uma infinidade de modelos de toalhas e caminhos de mesa, com diferentes formatos, texturas e tamanhos.' ) ,
+( null , 3 , './assets/imagens/id-3/Barraca de trabalhos em madeira.jpg', 'Magníficos trabalhos em madeira! Entalhes, cortes e texturas dão vida a pedaços de madeira.' ) ,
+( null , 4 , './assets/imagens/id-4/barcos na praia.jpg', 'Diversos barcos de turismo ancorados, para que seus ocupantes possam desfrutar de um delicioso banho de mar em águas transparentes.' ) ,contros
+( null , 4 , './assets/imagens/id-4/casal na escuna.jpg', 'Sentados na murada da embarcação, um casal de turistas acena para a camera. Ao fundo, vê-se uma praia de areias brancas e águas azuis, mais ao fundo, uma densa mata completa a natureza' ) ,
+( null , 4 , './assets/imagens/id-4/debaixo dágua.jpg', 'A linha dágua divide a imagem em duas visões: abaixo da linha, três amigos acenam para a camera e, acima dessa mesma linha, vê-se a escuna de inde mergulharam.' ) ;
+( null , 4 , './assets/imagens/id-4/moça com escunas.jpg', 'Uma moça de biquini anda pela praia. Ao fundo, cinco escunas de passeios ancoradas na praia de uma linda ilha coberta por mata nativa.' ) ;
+( null , 4 , './assets/imagens/id-4/Na proa do barco.jpg', Na proa do barco, uma mulher de maiô, com os braços levantados, curte a velocidade e o vento.' ) ;
+( null , 4 , './assets/imagens/id-4/turistas nadando .jpg', 'Turista nada em água transparente, próximo a escuna de passeios.' ) ;
+
+
+INSERT INTO `estabelecimento`(`id_estab`, `cnpj`             , `data_criacao`, `descr_negocio`  , `email`                    , `bairro`    , `cep`      , `cidade` , `complemento` , `estado`, `logradouro` , `mapa`, `numero`, `referencia`             , `foto_logomarca`, `horario_func`            , `nome_fantasia`, `razao_social`   , `site`                            , `status`, `tel_cel`        , `tel_fixo`      , `responsavel`, `id_subcat`) 
+     VALUES                  (null      , '12345678/0001-20' , null          , 'Encontro´s Bar' , 'encontrosbar@bugmail.com' , 'Juquitiba' , '03166001' , 'Piribá' , '           ' ,	'SP' , 'Rua Sossego' ,' '   , '900'   , 'Atrás da Igreja Matriz' , ' '             , 'Abre as 10hs todos dias' , 'EncontrosBar' , 'Encontro´s Bar' , 'http://wwww.encontrosbar.com.br' , '1'     , '(18)99876-1155' , '(18)2112-3344' , '10'         , '10')

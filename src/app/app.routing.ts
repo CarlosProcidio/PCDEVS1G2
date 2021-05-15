@@ -1,5 +1,4 @@
 /* import { CreateAccountComponent } from './account/create-account/create-account.component';
-import { LoginComponent } from './account/login/login.component';
 import { AuthenticationComponent } from './account/authentication/authentication.component';
 import { AuthGuard } from './account/shared/auth.guard';
 import { HotelComponent } from './hotel/hotel.component'; */

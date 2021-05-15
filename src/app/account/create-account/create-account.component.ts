@@ -1,3 +1,4 @@
+import { CreateAccountService } from './create-account.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,14 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent implements OnInit {
-  account = {
-    name: '',
+  user = {
+    id_user: '',
+    nome: '',
     email: '',
-    password: '',
+    senha: '',
     tel_cel: ''
   };
+  operacao = true;
+  constructor(private createAccountService: CreateAccountService ) {
 
-  constructor() { }
+  }
+  
+  adicionar() {
+    this.createAccountService.salvar(this.user).subscribe(resposta => console.log(resposta))
+  }
+
+  atualizar() {
+
+  }
 
   ngOnInit() {
   }

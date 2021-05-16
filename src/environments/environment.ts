@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   url: 'http://localhost:3000',
-  urlback: 'http://localhost:8080'
+  urlback: 'http://localhost:8080/'
 };
 
 /*

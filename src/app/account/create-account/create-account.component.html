@@ -24,12 +24,17 @@
           class="btn btn-primary btn-block"
           (click)="adicionar()"
           [disabled]="form.form.invalid">
-          Criar sua conta
-        </button> 
-    </div>  
-    <div>
-        <button type="submit" (click)="atualizar()">Atualizar conta</button> 
+          {{ operacao ? "Cadastrar": "Atualizar" }}
+        </button>
+        <!--
+        <button type="button"
+          class="btn btn-secondary btn-block"
+          (click)="atualizar()">
+          Atualizar sua conta
+        </button>
+        -->
     </div>
-
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+    <p-toast position="bottom-center" key="toast"></p-toast>
   </form>
 </div>

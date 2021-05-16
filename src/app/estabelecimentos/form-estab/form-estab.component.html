@@ -276,8 +276,10 @@
             </div>
         </div> 
     </div>        
-            <button type="submit" class="btn" [class]="operacao ? 'btn-primary' : 'btn-success'"
-            >{{ operacao ? "Cadastrar": "Atualizar" }}
+            <button type="submit"
+            class="btn"
+            [class]="operacao ? 'btn-primary' : 'btn-success'">
+            {{ operacao ? "Cadastrar": "Atualizar" }}
             </button>
             <br><br>
             <a routerLink="/meus-estab">Voltar para a lista.</a>

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent implements OnInit {
-  account = {
+  user = {
     id: '',
     nome: '',
     email: '',
@@ -28,11 +28,11 @@ export class CreateAccountComponent implements OnInit {
   }
 
   cadastrar() {
-    this.accountService.salvar(this.account).subscribe(resposta => console.log(resposta))
+    this.accountService.salvar(this.user).subscribe(resposta => console.log(resposta))
   }
 
   atualizar() {
-    this.accountService.atualizar(this.account).subscribe(resposta => console.log(resposta))
+    this.accountService.atualizar(this.user).subscribe(resposta => console.log(resposta))
   }
 
   ngOnInit() {

@@ -1,19 +1,26 @@
+import { environment } from './../../../environments/environment';
 import { UserDTO } from './../dto/user-dto';
 import { UserModel } from './../model/user-model';
 import { Observable } from 'rxjs';
-import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+//import * as jwt_decode from 'jwt-decode';
+import jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class AccountService {
+
+  url: string = environment.urlback+'users';
+  /* url: string = environment.url+'/users'; */
 
   constructor(private http: HttpClient) { }
 
   buscar(): Observable<UserModel[]>{
-    return this.http.get(this.urlback)
+    return this.http.get(this.url)
         .pipe( map( resposta => <UserModel[]> resposta) );
   }
 
@@ -27,7 +34,6 @@ export class AccountService {
     .pipe( map(resposta => <UserModel> resposta) );
   }
 
-
   async login(user: UserModel) {
     const resposta = await this.http.post<any>(`${environment.api}/auth/login`, user).toPromise();
     if (resposta && resposta.access_token) {
@@ -38,10 +44,12 @@ export class AccountService {
     return false;
   }
 
-  //async createAccount(account: any) {
-  //  const result = await this.http.post<any>(`${environment.api}/users`, account).toPromise();
-  //  return result;
-  //}
+  /*
+  async createAccount(account: any) {
+    const result = await this.http.post<any>(`${environment.api}/users`, account).toPromise();
+    return result;
+  }
+  */
 
   getAuthorizationToken() {
     const token = window.localStorage.getItem('token');

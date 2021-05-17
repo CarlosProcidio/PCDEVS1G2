@@ -1,3 +1,4 @@
+import { AccountModule } from './account/account.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 import { EstabelecimentosModule } from './estabelecimentos/estabelecimentos.module';
@@ -32,10 +33,7 @@ import { NgModule } from '@angular/core';
     AppComponent,
     PrefeituraComponent,
     HotelComponent,
-    ClienteComponent,
-    LoginComponent,
-    AuthenticationComponent,
-    CreateAccountComponent
+    ClienteComponent
   ],
   imports: [
     SharedModule,
@@ -57,7 +55,8 @@ import { NgModule } from '@angular/core';
     GalleriaModule,
     FontAwesomeModule,
     ConfirmDialogModule,
-    EstabelecimentosModule
+    EstabelecimentosModule,
+    AccountModule
   ],
   providers: [
     Title

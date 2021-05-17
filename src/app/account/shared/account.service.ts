@@ -21,17 +21,21 @@ export class AccountService {
 
   buscar(): Observable<UserModel[]>{
     return this.http.get(this.url)
-        .pipe( map( resposta => <UserModel[]> resposta) );
+    .pipe( map( resposta => <UserModel[]> resposta) );
   }
 
   salvar(user: UserDTO): Observable<UserModel>{
     return this.http.post(this.url, user)
-          .pipe( map(resposta => <UserModel> resposta) );
+    .pipe( map(resposta => <UserModel> resposta) );
   }
 
   atualizar(user: UserDTO){
     return this.http.put(this.url+'/'+user.id, user)
     .pipe( map(resposta => <UserModel> resposta) );
+  }
+
+  excluir(user: UserDTO) {
+    return this.http.delete(this.url+'/'+user.id);
   }
 
   login(user: any) {

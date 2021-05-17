@@ -1,4 +1,4 @@
-import { CreateAccountService } from './create-account.service';
+import { AccountService } from './../shared/account.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,12 +15,12 @@ export class CreateAccountComponent implements OnInit {
     tel_cel: ''
   };
   operacao = true;
-  constructor(private createAccountService: CreateAccountService ) {
+  constructor(private accountService: AccountService ) {
 
   }
   
   adicionar() {
-    this.createAccountService.salvar(this.user).subscribe(resposta => console.log(resposta))
+    this.accountService.salvar(this.user).subscribe(resposta => console.log(resposta))
   }
 
   atualizar() {
@@ -28,6 +28,9 @@ export class CreateAccountComponent implements OnInit {
   }
 
   ngOnInit() {
+    //fazer um IF pra verificar se tem o ID
+    //se existe id, manda req e busca somente 1 usuário
+    
   }
 
   onSubmit() {

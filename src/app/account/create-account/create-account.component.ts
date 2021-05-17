@@ -1,4 +1,4 @@
-import { AccountService } from './../shared/account.service';
+import { CreateAccountService } from './create-account.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,31 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountComponent implements OnInit {
   user = {
-    id: '',
+    id_user: '',
     nome: '',
     email: '',
     senha: '',
     tel_cel: ''
   };
-
   operacao = true;
-  
-  constructor( private accountService: AccountService ) { }
+  constructor(private createAccountService: CreateAccountService ) {
 
-  cadastrarOuAtualizar() {
-    if (this.operacao) {
-      this.cadastrar();
-    } else {
-      this.atualizar();
-    }
   }
-
-  cadastrar() {
-    this.accountService.salvar(this.user).subscribe(resposta => console.log(resposta))
+  
+  adicionar() {
+    this.createAccountService.salvar(this.user).subscribe(resposta => console.log(resposta))
   }
 
   atualizar() {
-    this.accountService.atualizar(this.user).subscribe(resposta => console.log(resposta))
+
   }
 
   ngOnInit() {

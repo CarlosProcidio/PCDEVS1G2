@@ -2,26 +2,27 @@
 
 <div class="container mt-2 mb-5 pt-5">
   <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <!-- <input type="hidden" [(ngModel)]="user.user_id"> -->
     <div class="form-group">
-      <label>Nome</label>
-      <input class="form-control" type="text" name="email" id="email" [(ngModel)]="user.nome" required />
+      <label for="">Nome</label>
+      <input class="form-control" type="text" [(ngModel)]="user.nome" name="nome" required />
     </div>
     <div class="form-group">
-      <label>E-mail</label>
-      <input class="form-control" type="email" name="email" id="email" [(ngModel)]="user.email" required />
+      <label for="">E-mail</label>
+      <input class="form-control" type="email" [(ngModel)]="user.email" name="email" required />
     </div>
     <div class="form-group">
-      <label>Senha</label>
-      <input class="form-control" type="password" name="senha" id="senha" [(ngModel)]="user.senha" required />
+      <label for="">Senha</label>
+      <input class="form-control" type="password" [(ngModel)]="user.senha" name="senha" required />
     </div>
     <div class="form-group">
       <label for="">Contato (Celular)</label>
-      <input class="form-control" type="text" name="tel_cel" [(ngModel)]="user.tel_cel" required />
+      <input class="form-control" type="text" [(ngModel)]="user.tel_cel" name="tel_cel" required />
     </div>
     <div>
         <button type="submit"
           class="btn btn-primary btn-block"
-          (click)="cadastrarOuAtualizar()"
+          (click)="adicionar()"
           [disabled]="form.form.invalid">
           {{ operacao ? "Cadastrar": "Atualizar" }}
         </button>

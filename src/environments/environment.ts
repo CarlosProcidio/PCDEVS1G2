@@ -9,6 +9,9 @@ export const environment = {
 =======
   url: 'http://localhost:3000',
   urlback: 'http://localhost:8080/'
+<<<<<<< HEAD
+>>>>>>> d7ab02ebd58b401bdf22dde099d3ad6575c6fd61
+=======
 >>>>>>> d7ab02ebd58b401bdf22dde099d3ad6575c6fd61
 };
 

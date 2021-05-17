@@ -15,10 +15,25 @@
       <input class="form-control" type="password" name="password" id="password" [(ngModel)]="account.password" required />
     </div>
     <div class="form-group">
-      <label>Contato (Celular)</label>
-      <input class="form-control" type="text" name="tel_cel" id="tel_cel" [(ngModel)]="account.tel_cel" required />
+      <label for="">Contato (Celular)</label>
+      <input class="form-control" type="text" [(ngModel)]="user.tel_cel" name="tel_cel" required />
     </div>
-
-    <button type="submit" class="btn btn-primary btn-block" [disabled]="form.form.invalid">Criar sua conta</button>
+    <div>
+        <button type="submit"
+          class="btn btn-primary btn-block"
+          (click)="adicionar()"
+          [disabled]="form.form.invalid">
+          {{ operacao ? "Cadastrar": "Atualizar" }}
+        </button>
+        <!--
+        <button type="button"
+          class="btn btn-secondary btn-block"
+          (click)="atualizar()">
+          Atualizar sua conta
+        </button>
+        -->
+    </div>
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+    <p-toast position="bottom-center" key="toast"></p-toast>
   </form>
 </div>

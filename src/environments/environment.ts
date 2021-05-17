@@ -4,7 +4,12 @@
 
 export const environment = {
   production: false,
+<<<<<<< HEAD
   url: 'http://localhost:8080'
+=======
+  url: 'http://localhost:3000',
+  urlback: 'http://localhost:8080/'
+>>>>>>> d7ab02ebd58b401bdf22dde099d3ad6575c6fd61
 };
 
 /*

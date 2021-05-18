@@ -1,34 +1,7 @@
-INSERT INTO `user`(`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL,NULL,'rafael@dh.com.br','Rafael','123456','78 5698-9856')
+====================================================================
+Carga corrigida em 2021-05-18
 
-INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (1,NULL,'Gastronomia')
-INSERT INTO `categoria`(`id_categoria`, `data_criacao`, `nome_cat`) VALUES (2,NULL,'Hospedagem')
-
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (1,NULL,'Hotel',2)
-INSERT INTO `subcategoria`(`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (2,NULL,'Resort',2)
-
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (1,NULL,'fa-wifi','Wi-Fi','Conveniência')
-INSERT INTO `servico`(`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`) VALUES (2,NULL,'fa-wifi','Estacionamento','Conveniência')
-
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (1, 1)
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 1)
-INSERT INTO `servico_subcategoria`(`id_servico`, `id_subcategoria`) VALUES (2, 2)
-
-INSERT INTO `estabelecimento`(`id_estab`, `cnpj`, `data_criacao`, `descr_negocio`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `nome_fantasia`, `razao_social`, `site`, `status`, `tel_cel`, `tel_fixo`, `responsavel`, `id_subcat`) VALUES (1, '69.802.375/0001-20', NULL,'Hotel com infraestrutura para: cozinha, cozinha,  energia elétrica e estacionamento. Único camping pé na areia de Bertioga.','mamo@email.com','Albatroz','11250-216','Bertioga','','SP','Rua João Ramalho','','899','','','Seg-Sab:08:00 as 20:00 Dom::Fechado','Camping Bertioga','Hospedagem e Camping Bertioga ME','minhasite.com',1,'(13) 99999-9999','(13) 1222-2233','1','1')
-INSERT INTO `estabelecimento`(`id_estab`, `cnpj`, `data_criacao`, `descr_negocio`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `nome_fantasia`, `razao_social`, `site`, `status`, `tel_cel`, `tel_fixo`, `responsavel`, `id_subcat`) VALUES (2, '69.802.255/0001-20', NULL,'Resort com infraestrutura para: cozinha, cozinha,  energia elétrica e estacionamento. Único camping pé na areia de Bertioga.','mamona@email.com','Pelicano','11250-218','Maresias','','SP','Rua João Ramalho','','899','','','Seg-Sab:08:00 as 20:00 Dom::Fechado','Camping Bertioga','Hospedagem e Camping Bertioga ME','minhasite.com',1,'(13) 99999-9999','(13) 1222-2233','1','2')
-
-
-INSERT INTO `estabelecimento_servico`(`id_estabelecimento`, `id_servico`) VALUES (1,1)
-INSERT INTO `estabelecimento_servico`(`id_estabelecimento`, `id_servico`) VALUES (2,1)
-INSERT INTO `estabelecimento_servico`(`id_estabelecimento`, `id_servico`) VALUES (2,2)
-
-==================================================================
-
-2021-05-12 [Flagner] - INSERTs com base nos modelos de ontem:
-
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'rafael@dh.com.br', 'Rafael', '123456', '78 5698-9856')
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'carlos@sttm.com', 'Carlos', '12345678', '11-999995501')
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'fernando@sttm.com', 'Fernando', '12345678', '11-999995502')
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'flagner@sttm.com', 'Flagner', '12345678', '41-999995503')
+INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (1, NULL, 'carlos@sttm.com', 'Carlos', '12345678', '11-999995501'), (2, NULL, 'fernando@sttm.com', 'Fernando', '12345678', '11-999995502'), (3, NULL, 'flagner@sttm.com', 'Flagner', '12345678', '41-999995503'), (4, NULL, 'rafael@dh.com.br', 'Rafael', '123456', '78 5698-9856'), (5, NULL, 'ian@dh.com.br', 'Ian', '123456', '78 5698-9899');
 
 INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES ('1', NULL, 'Gastronomia'), ('2', NULL, 'Hospedagem'), ('3', NULL, 'O que fazer'), ('4', NULL, 'Roteiros')
 
@@ -38,81 +11,18 @@ INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servi
 
 INSERT INTO `servico_subcategoria` (`id_servico`, `id_subcategoria`) VALUES ('1', '2'), ('2', '2'), ('3', '2'), ('4', '2'), ('5', '2'), ('6', '2'), ('7', '2'), ('8', '2'), ('9', '2'), ('10', '2'), ('11', '2'), ('12', '2'), ('13', '2'), ('14', '2'), ('15', '2'), ('16', '2'), ('17', '2'), ('18', '2'), ('19', '2'), ('20', '2'), ('21', '2'), ('22', '2'), ('23', '2'), ('24', '2'), ('25', '2'), ('26', '2'), ('27', '2'), ('28', '2'), ('1', '1'), ('2', '1'), ('3', '1'), ('4', '1'), ('8', '1'), ('9', '1'), ('12', '1'), ('18', '1'), ('19', '1'), ('20', '1'), ('21', '1'), ('22', '1'), ('25', '1'), ('26', '1'), ('27', '1'), ('29', '1'), ('1', '3'), ('2', '3'), ('3', '3'), ('5', '3'), ('7', '3'), ('8', '3'), ('9', '3'), ('12', '3'), ('18', '3'), ('19', '3'), ('20', '3'), ('21', '3'), ('22', '3'), ('25', '3'), ('26', '3'), ('27', '3'), ('30', '3'), ('1', '4'), ('2', '4'), ('3', '4'), ('5', '4'), ('7', '4'), ('8', '4'), ('9', '4'), ('12', '4'), ('18', '4'), ('19', '4'), ('20', '4'), ('21', '4'), ('22', '4'), ('25', '4'), ('26', '4'), ('27', '4'), ('30', '4')
 
-INSERT INTO `estabelecimento` (`id_estab`, `cnpj`, `data_criacao`, `descr_negocio`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `nome_fantasia`, `razao_social`, `site`, `status`, `tel_cel`, `tel_fixo`, `responsavel`, `id_subcat`) VALUES (NULL, '69.802.375/0001-20', NULL, 'Balneario do Nordeste de São Paulo', 'secrtur@buritama.sp.gov.br', 'Centro', '15290-000', 'Buritama', 'BLoco A', 'SP', 'Avenida Principal', 'https://buritama.sp.gov.br/site2/', '2978', 'em frente ao Forum', 'https://buritama.sp.gov.br/site2/', 'Segunda a Sexta: das 08hs até 17hs', 'Cidade de Buritama', 'prefeitura Municipal de Buritama', 'https://buritama.sp.gov.br/site2/', b'1', '(18) 5764-4411', '(18) 97865-4123', '4', '4'), (NULL, '69.802.375/0001-20', NULL, 'Hotel no Balneario do Nordeste de São Paulo', 'secrtur22@buritama.sp.gov.br', 'Centro', '15290-000', 'Buritama', 'BLoco A', 'SP', 'Avenida Principal', 'https://buritama.sp.gov.br/site2/', '2978', 'em frente ao Forum', 'https://buritama.sp.gov.br/site2/', 'Segunda a Sexta: das 08hs até 17hs', 'Cidade de Buritama', 'prefeitura Municipal de Buritama', 'https://buritama.sp.gov.br/site2/', b'0', '(18) 5764-4411', '(18) 97865-4123', '4', '8'), 
+INSERT INTO `estabelecimento` (`id_estab`, `cnpj`, `data_criacao`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `descr_negocio`, `nome_fantasia`, `razao_social`, `site`, `status`, `telefone_cel`, `telefone_fixo`, `id_user`, `id_subcat`) VALUES (1, '69.805.372/0001-29', NULL, 'ze@bar.com.br', 'Indaiá', '15290-010', 'Bertioga', NULL, 'SP', 'Avenida Beira Ressaca', NULL, '5151', 'em frente ao balde de torersmo', 'https://bardoze.com.br/', 'Segunda a Sexta: das 16hs até o último cliente', 'comércio de felicidade engarrafada com porcões de torresmo pra balancear', 'Bar do Zé', 'Comércio de bebidas ME', 'https://bardoze.com.br/', b'1', '(13) 98765-5151', '(13) 4321-5151', 1, 1), (2, '69.802.375/0001-20', NULL, 'dono@rainhadapraia.com.br', 'Indaiá', '15290-000', 'Bertioga', NULL, 'SP', 'Avenida Beira Mar', NULL, '2978', 'em frente ao Forum', 'https://buritama.sp.gov.br/site2/', 'Segunda a Sexta: das 08hs até 17hs', 'comércio de felicidade engarrafada', 'Hotel Rainha da Praia', 'Hospedagem Rainha da Praia', 'https://hotelrainhadapraia.com.br/', b'1', '(13) 98765-4321', '(13) 4321-7654', 2, 8), (3, '69.802.375/0001-20', NULL, 'artesao@artesanato.com.br', 'Indaiá', '15290-000', 'Bertioga', NULL, 'SP', 'Avenida João Ramalho', NULL, '3374', 'em frente ao Museu', 'https://artesanato.com.br/site2/', 'Segunda a Sexta: das 08hs até 17hs', 'Um lugar charmoso para você comprar artesanato regional.', 'Feira de Artesanato', 'Artesão Autônomo ME.', 'https://artesanato.com.br', b'0', '(13) 95764-4411', '(13) 7865-4123', 3, 14), (4, '09.098.776/0001-87', NULL, 'passeio@litoranea.com.br', 'Praia mansa', '11250-438', 'Bertioga', NULL, 'SP', 'Rua Elias Nehme', NULL, '1000', 'Próximo ao trapiche', NULL, '', 'Passeio por todo o litoral com segurança e diversão.', 'Passeios Litorânea', 'Serviços de Turismo ME', 'http://www.litoraneapasseios.com.br', b'1', '(13) 98765-6543', '(11) 4321-9871', 4, 22), (5, '69.802.375/0001-20', NULL, 'contato@pousadasj.com.br', 'Indaiá', '15290-000', 'Bertioga', NULL, 'SP', 'Avenida João Ramalho', NULL, '3374', 'em frente ao Museu', 'https://buritama.sp.gov.br/site2/', 'Segunda a Sexta: das 08hs até 17hs', 'Um lugar gostoso e charmoso para você descansar e curtir a natureza. Apartamentos com ar-condicionado, TV e cozinha para sua comodidade.', 'Pousada SJ', 'Pousada e Restaurante  São Judas Ltda.', 'https://pousadasj.com.br', b'0', '(13) 95764-4411', '(13) 7865-4123', 3, 11), (6, '00.120.098/0001-12', NULL, 'contato@hotel29.com.br', 'Vila da Maré', NULL, 'Bertioga', NULL, 'SP', 'Avenida Beira Mar', NULL, NULL, 'Próximo ao centro', NULL, '', 'O mais tradicional hotel da cidade. Apartamentos com total infraestrutura de acomodação e lazer para você e sua família.', 'Hotel 29', 'Hotel e Serviços de Hospedagem 29 Ltda.', 'http://www.hotel29.com.br', b'0', '(13) 99132-2345', '(13) 4321-9876', 2, 8), (7, '09.098.776/0001-87', NULL, 'contato@litoranea.com.br', 'Centro', '11250-438', 'Bertioga', NULL, 'SP', 'Rua Elias Nehme', NULL, '1000', 'Próximo ao centro de Bertioga', NULL, '', 'Apartamentos amplos e serviços completos para lazer e convenções. Parque aquático e total infraestrutura para eventos corporativos.', 'Litorânea Pousada', 'Serviços de Hospedagem Litorânea ME', 'http://www.litoraneahotel.com.br', b'1', '(13) 98765-6543', '(11) 4321-9871', 3, 11);
 
-(NULL, '69.802.376/0001-21', NULL,'Hotel com infraestrutura para: cozinha, cozinha,  energia elétrica e estacionamento. Único camping pé na areia de Bertioga.','mamo@email.com','Albatroz','11250-216','Bertioga','','SP','Rua João Ramalho','','899','','','Seg-Sab:08:00 as 20:00 Dom::Fechado','Camping Bertioga','Hospedagem e Camping Bertioga ME','minhasite.com',1,'(13) 99999-9999','(13) 1222-2233','1','1')
-INSERT INTO `estabelecimento`(`id_estab`, `cnpj`, `data_criacao`, `descr_negocio`, `email`, `bairro`, `cep`, `cidade`, `complemento`, `estado`, `logradouro`, `mapa`, `numero`, `referencia`, `foto_logomarca`, `horario_func`, `nome_fantasia`, `razao_social`, `site`, `status`, `tel_cel`, `tel_fixo`, `responsavel`, `id_subcat`) VALUES (2, '69.802.255/0001-20', NULL,'Resort com infraestrutura para: cozinha, cozinha,  energia elétrica e estacionamento. Único camping pé na areia de Bertioga.','mamona@email.com','Pelicano','11250-218','Maresias','','SP','Rua João Ramalho','','899','','','Seg-Sab:08:00 as 20:00 Dom::Fechado','Camping Bertioga','Hospedagem e Camping Bertioga ME','minhasite.com',1,'(13) 99999-9999','(13) 1222-2233','1','2')
+INSERT INTO `foto` (`id_foto`, `data_criacao`, `url_foto`, `id_estab`) VALUES (NULL, NULL, './assets/imagens/id-1/caesar salad.jpg', 1), (NULL, NULL, './assets/imagens/id-1/calabresa aperitivo.jpg', 1), (NULL, NULL, './assets/imagens/id-1/hot dog de calabresa.jpg', 1), (NULL, NULL, './assets/imagens/id-1/monte seu lanche.jpg', 1), (NULL, NULL, './assets/imagens/id-1/strogonof de calabresa.jpg', 1), (NULL, NULL, './assets/imagens/id-1/x-calabresa.jpg', 1), (NULL, NULL, './assets/imagens/id-2/chalé com lareira.jpg', 2), (NULL, NULL, './assets/imagens/id-2/champgne.jpg', 2), (NULL, NULL, './assets/imagens/id-2/espreguiçadeiras.jpg', 2), (NULL, NULL, './assets/imagens/id-2/piscina de dia.jpg', 2), (NULL, NULL, './assets/imagens/id-2/quarto com armário.jpg', 2), (NULL, NULL, './assets/imagens/id-2/sala com sofá e puff.jpg', 2), (NULL, NULL, './assets/imagens/id-3/Artesanato Indígena.jpg', 3), (NULL, NULL, './assets/imagens/id-3/Barraca de lustres.jpg', 3), (NULL, NULL, './assets/imagens/id-3/Barraca de pratos .jpg', 3), (NULL, NULL, './assets/imagens/id-3/Barraca de toalhas de mesa.jpg', 3), (NULL, NULL, './assets/imagens/id-3/Barraca de trabalhos em madeira.jpg', 3), (NULL, NULL, './assets/imagens/id-3/Feira de artesanato.jpg', 3), (NULL, NULL, './assets/imagens/id-4/barcos na praia.jpg', 4), (NULL, NULL, './assets/imagens/id-4/casal na escuna.jpg', 4), (NULL, NULL, './assets/imagens/id-4/debaixo dágua.jpg', 4), (NULL, NULL, './assets/imagens/id-4/moça com escunas.jpg', 4), (NULL, NULL, './assets/imagens/id-4/Na proa do barco.jpg', 4), (NULL, NULL, './assets/imagens/id-4/turistas nadando .jpg', 4);
 
 
-==========================================================================
+====================================================================
 
-2021-05-11 [Flagner] ** deu erro
-Cargas no BD => import.sql
 
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'fernando@casa.com', 'Fernando', '12345678', '11999994545');
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'carlos@casa.com', 'Carlos', '12345678', '11987654396');
-INSERT INTO `user` (`id_user`, `data_criacao`, `email`, `nome`, `senha`, `tel_cel`) VALUES (NULL, NULL, 'flagner@casa.com', 'Flagner', '12345678', '41987654396');
+====================================================================
 
-INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Gastronomia');
-INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Hospedagem');
-INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Passeios');
-INSERT INTO `categoria` (`id_categoria`, `data_criacao`, `nome_cat`) VALUES (NULL, NULL, 'Roteiros');
 
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Bares/Lanches', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cafés/Docerias', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cozinha Brasileira', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cozinha Internacional', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Pizzarias', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Quiosques', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Demais segmentos', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Hotéis', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Hotéis Fazenda', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Motéis', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Pousadas', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Resorts', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Campings', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Compras', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Cultura', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Lazer', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Agências de Turismo', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Aventuras', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Destilarias', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Equestres', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Flores e Frutas', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Pesqueiros', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Religiosos', '');
-INSERT INTO `sub_cat` (`id_subcat`, `data_criacao`, `nome_sub_cat`, `id_categoria`) VALUES (NULL, NULL, 'Rural', '');
-
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-wheelchair', 'Cadeirante', 'Acessibilidade', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-blind', 'Def.Visual', 'Acessibilidade', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-deaf', 'Def.Auditivo', 'Acessibilidade', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-amex', 'Amex', 'Aceita Cartões', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-visa', 'Visa', 'Aceita Cartões', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-diners', 'Diners', 'Aceita Cartões', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cc-mastercard', 'Mastercard', 'Aceita Cartões', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-wine-bottle', 'Adega de Vinho', 'Alimentação', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-cocktail', 'Bar', 'Alimentação', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-utensils', 'Restaurante', 'Alimentação', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-coffee', 'Café Manhã Incluso', 'Alimentação', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-paw', 'Aceita Pets', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-parking', 'Estacionamento', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-snowflake', 'Ar Condicionado', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-wifi', 'Wifi', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-luggage-cart', 'Carregador de malas', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-spa', 'Espaço Saúde', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-refrigerator', 'Frigobar', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-smoking-ban', 'Não Fumante', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-swimming-pool', 'Piscina', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-dumbbell', 'Salão fitness', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-concierge-bell', 'Serviço de Quarto', 'Conveniência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-facebook-square', 'Facebook', 'Redes Sociais', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-Instagram', 'Instagram', 'Redes Sociais', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-globe', 'Site', 'Redes Sociais', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-star', 'Estrelas', 'Referência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-thumbs-up', 'Positivo', 'Referência', '');
-INSERT INTO `servico` (`id_servico`, `data_criacao`, `icon_servico`, `nome_servico`, `tipo_servico`, `id_sub_cat`) VALUES (NULL, NULL, 'fa-dollar-sign', '$$$ Cifrão', 'Referência', '');
-
-======================================================================
+====================================================================
 
 [Fernando]
 //NÃO CONSEGUI FAZER A FOREIGN KEY subCat
@@ -150,7 +60,6 @@ CREATE TABLE estabelecimento (
 	FOREIGN KEY (categoria) references categoria(idCategoria),
 	FOREIGN KEY (subCat) references categoria(idSubCat) )
 	ENGINE = InnoDB ;
-======================================================================
 
 ======================================================================
 // OK
@@ -164,7 +73,6 @@ CREATE TABLE user (
 	ENGINE = InnoDB ;
 ======================================================================
 
-======================================================================
 // OK
 CREATE TABLE foto (
 	idFoto INT NOT NULL AUTO_INCREMENT ,
@@ -175,7 +83,6 @@ CREATE TABLE foto (
 	ENGINE = InnoDB ;
 ======================================================================
 
-======================================================================
 // OK
 CREATE TABLE servico (
 	idServico INT NOT NULL AUTO_INCREMENT ,
@@ -186,7 +93,6 @@ CREATE TABLE servico (
 	ENGINE = InnoDB ;
 ======================================================================
 
-======================================================================
 // OK
 CREATE TABLE categoria (
 	idCategoria VARCHAR(50) NOT NULL ,
@@ -279,12 +185,6 @@ INSERT INTO servico VALUES
 (NULL , 'REFERÊNCIA:',	'$$$ Cifrão' ,'fa-dollar-sign') ;
 ======================================================================
 
-INSERT INTO estabelecimento 
-(`idEstab`, `foto`, `categoria`   , `subCat`        , `responsavel`, `status`   , `razaoSocial`, `cnpj`, `nomeFantasia`, `email`, `site`, `telFixo`, `telCel`, `descrNegocio`, `cep`, `logradouro`, `numero`, `complemento`, `bairro`, `cidade`, `estado`, `mapa`, `referencia`, `horarioFunc`, `fotoLogomarca`, `dataCadastro`) VALUES
-
-  (NULL    ,   1   , 'Gastronomia' , 'Bares/Lanches' , 1           , 'pendente' , '[value-2]','[value-3]','[value-4]','[value-5]','[value-6]','[value-7]','[value-8]','[value-9]','[value-10]','[value-11]','[value-12]','[value-13]','[value-14]','[value-15]','[value-16]','[value-17]','[value-18]','[value-19]','[value-20]','[value-21]','[value-22]','[value-23]','[value-24]','[value-25]','[value-26]')
-
-
 INSERT estabelecimento
 1 - Bar
 2 - Hotél
@@ -294,9 +194,12 @@ INSERT estabelecimento
 
 INSERT INTO foto VALUESINSERT estabelecimento
 1 - Bar
-2 - Hotél
+2 - Hotel
 3 - Feira Artesato
 4 - Passeio de barco                
+
+
+INSERT INTO `foto` (`id_foto`, `data_criacao`, `url_foto`, `id_estab`) VALUES (NULL, NULL, './assets/imagensq/1d-1/caesar salad.jpg', 1), (NULL, NULL, './assets/imagens/1d-1/calabresa aperitivo.jpg', 1), (NULL, NULL, './assets/imagens/1d-1/monte seu lanche.jpg', 1), (NULL, NULL, './assets/imagens/1d-1/strogonof de calabresa.jpg', 1);
 
 INSERT INTO foto VALUES
 ( NULL , 1 , './assets/imagensq/1d-1/caesar salad.jpg caesar salad', 'Uma bem servida porção da versão calabresa da famosa Caesar Salad, com um  potinho de maionese no centro do prato.

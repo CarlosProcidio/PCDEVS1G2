@@ -1,7 +1,7 @@
+import { SubcategoriaService } from './../subcategoria.service';
 import { Component, OnInit } from '@angular/core';
 import { Title } from "@angular/platform-browser";
-import { ConfirmationService, MessageService } from "primeng/api";
-import { EstabelecimentoService } from '../estabelecimento.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-consulta-estab',
@@ -10,13 +10,13 @@ import { EstabelecimentoService } from '../estabelecimento.service';
 })
 export class ConsultaEstabComponent implements OnInit {
 
+  subcategoria:any = {};
   estabelecimentos: any = [];
   loading: boolean = true;
 
   constructor(
-    private service: EstabelecimentoService,
-    private confirmarService: ConfirmationService,
-    private messageService: MessageService,
+    private subcategoriaService: SubcategoriaService,
+    private route: ActivatedRoute,
     private title: Title) { }
 
   ngOnInit() {
@@ -24,30 +24,16 @@ export class ConsultaEstabComponent implements OnInit {
     this.carregar();  
   }
 
-  carregar(){
+  carregar() {
     this.title.setTitle('Lista de estabelecimentos');
     this.estabelecimentos = [];
 
-    this.service.listar().subscribe(resposta => {
-      this.estabelecimentos = resposta;
-      this.loading = false;         
-    });  
+    let id = this.route.snapshot.params['id'];
+    this.subcategoriaService.buscaPorId(id).subscribe( subcategoria => {
+      this.subcategoria = subcategoria;
+      this.estabelecimentos =  subcategoria.estabelecimentos;
+    });
+
   }
-  excluir(id: number){
-    this.confirmarService.confirm({
-      message: 'Tem certeza que deseja excluir este estabelecimento?',
-      accept: () => {
-        this.service.excluir(id).subscribe( resposta => {
-          this.messageService.add(
-            {
-              key: 'toast',
-              severity: 'success',
-              summary: 'Estabelecimento',
-              detail: 'excluído com sucesso!'
-            });   
-            this.carregar();
-        });    
-      }
-  });
-  }
+ 
 }

@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: "form-estab", component: FormEstabComponent },
   { path: "meus-estab/cadastro" , component:FormEstabComponent },
   { path: "meus-estab/cadastro/:id" , component:FormEstabComponent },
-  { path: "consulta-estab", component: ConsultaEstabComponent },
+  { path: "consulta-estab/:id", component: ConsultaEstabComponent },
 ];
 
 export const EstabelecimentoRoutes = RouterModule.forChild(routes);

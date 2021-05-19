@@ -10,6 +10,7 @@ describe('MeusEstabComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ MeusEstabComponent ]
     })
+    
     .compileComponents();
   });
 

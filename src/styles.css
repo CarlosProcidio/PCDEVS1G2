@@ -6,17 +6,12 @@ html, body {
     color: rgb(0, 0, 0);
     background: rgb(109, 160, 170);
 }
-/*
-background-image: url("src/assets/imagens/background-praia.jpg");
-    background-repeat: repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: contain;
+
+.p-galleria-thumbnail-item {
+    overflow-x: hidden;
 }
-*/
 
 /*
-
 código para expandir carousel
 
 .p-carousel-prev.p-link.p-ripple {

@@ -48,6 +48,6 @@ export class HotelComponent implements OnInit {
   ngOnInit() {
     let estabelecimentoId = this.route.snapshot.params['id'];
     this.service.buscarById(estabelecimentoId).subscribe(resposta => this.estabelecimento = resposta);
-    //  this.photoService.getImages().then(images => this.images = images);
+    // this.photoService.getImages().then(images => this.images = images);
   }
 }

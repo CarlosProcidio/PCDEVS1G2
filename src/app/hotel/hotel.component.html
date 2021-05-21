@@ -12,14 +12,14 @@
 </div>
 <div class="galinha row">
     <div class="galeria col-md-6">
-        <p-galleria [value]="images" [numVisible]="5" [containerStyle]="{'max-width': '640px'} " [circular]="true"
+        <p-galleria [value]="estabelecimento.fotos" [numVisible]="5" [containerStyle]="{'max-width': '640px'} " [circular]="true"
             [autoPlay]="true" [transitionInterval]="4000">
-            <ng-template pTemplate="item" let-item>
-                <img [src]="item" width="100%" />
+            <ng-template pTemplate="item" let-foto>
+                <img [src]="foto.url_foto" width="100%" />
             </ng-template>
-            <ng-template pTemplate="thumbnail" let-item>
-                <div class="p-grid p-nogutter p-justify-center">
-                    <img [src]="item" width="150px" height="50px" />
+            <ng-template pTemplate="thumbnail" let-foto>
+                <div class="p-grid p-nogutter p-justify-center" style="overflow-x: hidden;">
+                    <img [src]="foto.url_foto" width="150px" height="50px" />
                 </div>
             </ng-template>
         </p-galleria>

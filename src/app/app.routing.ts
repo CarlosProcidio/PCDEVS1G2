@@ -9,7 +9,7 @@ import { HotelComponent } from './hotel/hotel.component';
 
 const routes: Routes = [
   {path:"hotel",component:HotelComponent},
-  {path:"hotel/:id",component:HotelComponent},
+  {path:"estabelecimentos/:id",component:HotelComponent},
   {path:"login",component:LoginComponent},
   {path:"create-account",component:CreateAccountComponent},
 ]

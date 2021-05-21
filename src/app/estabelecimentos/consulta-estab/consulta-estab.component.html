@@ -1,5 +1,5 @@
 <div class="container mt-5 mb-5">
-    <h4>Lista de Estabelecimentos de {{subcategoria.nome}} - {{subcategoria.categoria.nome}}</h4>
+    <h4>Lista de Estabelecimentos de {{subcategoria?.nome}}</h4>
     <div class="p-grid">
         <div class="p-col-6" *ngFor="let estabelecimento of estabelecimentos">
             <p-card>
@@ -12,7 +12,8 @@
                 </ng-template>
                 <ng-template pTemplate="footer">
                     <button pButton type="button" label="Veja mais..."
-                        routerLink="/hotel/{{estabelecimento.id}}"></button>
+                        routerLink="/estabelecimentos/{{estabelecimento.idEstab}}">
+                    </button>
                 </ng-template>
             </p-card>
         </div>

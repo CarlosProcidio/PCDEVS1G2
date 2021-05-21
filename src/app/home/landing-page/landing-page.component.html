@@ -40,110 +40,15 @@
 <h1>Vejam nossos destaques:</h1>
 
 <div class="row">
-    <div class="cols-3">
-        <div class="card1" style="width: 18rem;">
+    <div class="cols-3" *ngFor="let estabelecimento of estabelecimentos">
+        <div class="card">
             <div class="card-head">
-                <img src="assets/imagens/Mergulho.jpg" class="card-img-top" alt="">
+                <img src={{estabelecimento.foto_logomarca}} class="card-img-top" alt="Logomarca do Estabelecimento">
             </div>
             <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-    <div class="cols-3">
-        <div class="card2" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/Vision Praia Hotel.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-    <div class="cols-3">
-        <div class="card3" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/passeio de escuna.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-    <div class="cols-3">
-        <div class="card4" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/Recanto da Maré.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="cols-3">
-        <div class="card5" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/Praia dos Coqueiros.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-    <div class="cols-3">
-        <div class="card6" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/Escuna pequena.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-    <div class="cols-3">
-        <div class="card7" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/festival de camarão.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
-            </div>
-        </div>
-    </div>
-    <div class="cols-3">
-        <div class="card8" style="width: 18rem;">
-            <div class="card-head">
-                <img src="assets/imagens/Peixes e tartaruga.jpg" class="card-img-top" alt="">
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">Lorem ipsum dolor</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis in
-                    laboriosam, esse laudantium dolorum.</p>
-                <a href="#" class="btn btn-primary">Ver mais...</a>
+                <h5 class="card-title">{{estabelecimento.nomeFantasia}}</h5>
+                <p class="card-text">{{estabelecimento.negocio}}</p>
+                <a routerLink="/estabelecimentos/{{estabelecimento.idEstab}}" class="btn btn-primary">Ver mais...</a>
             </div>
         </div>
     </div>

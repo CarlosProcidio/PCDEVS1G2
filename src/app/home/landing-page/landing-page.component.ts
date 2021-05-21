@@ -1,14 +1,23 @@
-import { PrimeNGConfig } from 'primeng/api';
+import { EstabelecimentoService } from './../../estabelecimentos/estabelecimento.service';
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig, ConfirmationService, MessageService } from "primeng/api";
 
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  styleUrls: ['./landing-page.component.css'],
+  providers: [ConfirmationService,MessageService]
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private primengConfig: PrimeNGConfig) {}
+  estabelecimentos: any = [];
+  loading: boolean = true;
+
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private service: EstabelecimentoService,
+    private confirmarService: ConfirmationService,
+    private messageService: MessageService) { }
   imagens = [
     {
       url: "assets/imagens/Escuna pequena.jpg", discription: "barco no mar", 
@@ -27,7 +36,19 @@ export class LandingPageComponent implements OnInit {
       alt: "Delícias do mar!"
     },
   ]
+
   ngOnInit() {
     this.primengConfig.ripple = true;
+    this.loading = true;
+    this.carregar();
+  }
+
+  carregar(){
+    this.estabelecimentos = [];
+
+    this.service.listar().subscribe(resposta => {
+      this.estabelecimentos = resposta;
+      this.loading = false;         
+    });  
   }
 }

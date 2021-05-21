@@ -11,95 +11,19 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!--
-        <ul class="navbar-nav mr-sm-2">
-            <li class="nav-item dropdown">
-                <a class="navbar-brand" href="/">
-                    <button pButton
-                        class="p-button-rounded"
-                        icon="pi pi-home"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                    </button>
-                    <br>
-                    <span style="font-size:small;">Home</span>                
-                </a>
-            </li>
-        </ul>
-        -->
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item" data-toggle="collapse" data-target=".nav-collapse.in">
-                <a class="nav-link active" >Home</a>
-            </li>
             <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
+                <a class="nav-link active" [routerLink]="['/']" >Home</a>
+            </li>
+            <li *ngFor = "let categoria of categorias" class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
                 <a class="nav-link active"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Gastronomia
+                {{categoria.nome}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" routerLink="/consulta-estab/1" >Bares / Lanches</a>
-                <a class="dropdown-item" >Cafés / Docerias</a>
-                <a class="dropdown-item" >Cozinha Brasileira</a>
-                <a class="dropdown-item" >Cozinha Internacional</a>
-                <a class="dropdown-item" >Pizzarias</a>
-                <a class="dropdown-item" >Quiosques</a>
-                <a class="dropdown-item" >Demais Segmentos</a>
-                <!-- <div class="dropdown-divider"></div>
-                <a class="dropdown-item" >Something else here</a> -->
-                </div>
-            </li>
-            <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
-                <a class="nav-link active"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Hospedagem
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" >Hotéis</a>
-                <a class="dropdown-item" >Hotéis Fazenda</a>
-                <a class="dropdown-item" >Motéis</a>
-                <a class="dropdown-item" >Pousadas</a>
-                <a class="dropdown-item" >Resorts</a>
-                <a class="dropdown-item" >Campings</a>
-                <a class="dropdown-item" >Demais Acomodações</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
-                <a class="nav-link active"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                O Que Fazer
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" >Compras</a>
-                <a class="dropdown-item" >Cultura</a>
-                <a class="dropdown-item" >Lazer</a>
-                <a class="dropdown-item" >Agências De Turismo</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
-                <a class="nav-link active"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Roteiros
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" >Aventuras</a>
-                <a class="dropdown-item" >Destilarias</a>
-                <a class="dropdown-item" >Equestres</a>
-                <a class="dropdown-item" >Flores e Frutas</a>
-                <a class="dropdown-item" >Pesqueiros</a>
-                <a class="dropdown-item" >Religioso</a>
-                <a class="dropdown-item" >Rural</a>
+                    <a *ngFor = "let subcat of categoria.subcats" class="dropdown-item" routerLink="/consulta-estab/{{subcat.id_subcat}}">{{subcat.nome}}</a>
                 </div>
             </li>
             <!--
-            <li class="nav-item">
-                <a class="nav-link active" >Sobre</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" >Contato</a>
-            </li>
-            -->
             <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
                 <a class="nav-link active dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Carlos
@@ -107,18 +31,18 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" routerLink="clientes/cadastro">Cadastro de Clientes</a>
                     <a class="dropdown-item" routerLink="clientes">Tabela de Clientes</a>
-                    <!-- <a class="dropdown-item" href="/clentes/cadastro">Cadastro de Clientes</a>
-                    <a class="dropdown-item" href="/clientes">Tabela de Clientes</a> -->
                 </div>
             </li>
+            -->
             <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">
                 <a class="nav-link active dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cadastrador
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <!-- 
                     <a class="dropdown-item" routerLink="consulta-estab">Consulta Estabelecimento</a>
+                    -->
                     <a class="dropdown-item" routerLink="meus-estab">Lista Meus Estabelecimentos</a>
-                    <a class="dropdown-item" routerLink="hotel">Detalhes do Estabelecimento</a>
                 </div>
             </li>
             <li class="nav-item dropdown" data-toggle="collapse" data-target=".nav-collapse.in">

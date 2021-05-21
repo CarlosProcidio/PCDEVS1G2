@@ -1,6 +1,6 @@
 <div class="row linha">
     <div>
-        <img src="assets/imagens/Mar hotel.png" alt="logo do hotel" width="200px">
+        <img src={{estabelecimento.foto_logomarca}} alt="logo do bar" width="200px">
     </div>
     <div>
         <h2>{{estabelecimento.nomeFantasia}}</h2>
@@ -32,8 +32,7 @@
         </div>
         <div class="icon">
             <p class="descritivo">
-                <!-- Av. Tomé de Souza, 1.250, Vila Clais - Bertioga/SP -->
-                {{estabelecimento.logradouro +', ' + estabelecimento.numero + ', ' + estabelecimento.bairro }}
+                {{estabelecimento.logradouro +', ' + estabelecimento.numero + ', ' + estabelecimento.bairro}}
             </p>
             <p>Acessibilidade:
                 <fa-icon [icon]="faWeelchair"></fa-icon>&nbsp;
@@ -68,29 +67,16 @@
 </div>
 <div class="row">
     <span class="p-buttonset col-md-6">
-        <button pButton type="button" label="LIGAR" icon="pi pi-phone" class="p-button-sm" class="ligar"></button>
-        <button pButton type="button" label="SITE" icon="pi pi-globe" class="p-button-sm" class="site"></button>
-        <button pButton type="button" label="FACEBOOK" icon="pi pi-facebook" class="p-button-sm"
-            class="facebook"></button>
-        <button pButton type="button" label="INSTAGRAM" icon="pi pi-photo" class="p-button-sm" class="ligar"
-            instagram></button>
+        <button pButton type="button" label="LIGAR" icon="pi pi-phone" class="p-button-sm botao"></button>
+        <button pButton type="button" label="SITE" icon="pi pi-globe" class="p-button-sm botao"></button>
+        <button pButton type="button" label="FACEBOOK" icon="pi pi-facebook" class="p-button-sm botao"></button>
+        <button pButton type="button" label="INSTAGRAM" icon="pi pi-book" class="p-button-sm botao"></button>
     </span>
 </div>
-
 <div class="row">
     <div class="col-md-11">
         <p class="descritivo">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae magnam illum accusantium
-            voluptatum
-            officiis error minus quo voluptas aliquid minima, quis dolores, eveniet, in magni rerum!
-            Asperiores
-            nostrum rerum optio ad labore debitis.
-            <br>
-            <br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nam explicabo blanditiis eaque
-            itaque id
-            facilis delectus incidunt minus, aliquid corrupti! Quo ipsum quos vero possimus ad labore
-            debitis totam!
+            {{estabelecimento.negocio}}
         </p>
     </div>
 </div>

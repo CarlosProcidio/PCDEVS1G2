@@ -11,67 +11,12 @@ h1 {
   text-align: center;
   padding-bottom: 30px;
 }
-.card1 {
-  position: relative;
-  display: inline-block;
-  text-align: justify;
-  margin-left: 4.5em;
-  margin-bottom: 3.5em;
-  background: #fff;
-}
-
-.card2 {
-  position: relative;
-  display: inline-block;
-  margin-left: 2em;
-  text-align: justify;
-  background: #fff;
-}
-
-.card3{
+.card {
+  width: 18rem;
   position: relative;
   display: inline-block;
   text-align: justify;
   margin-left: 2em;
+  margin-bottom: 1.5em;
   background: #fff;
 }
-.card4 {
-  position: relative;
-  display: inline-block;
-  text-align: justify;
-  margin-left: 2em;
-  background: #fff;
-}
-
-.card5 {
-  position: relative;
-  display: inline-block;
-  text-align: justify;
-  margin-left: 4.5em;
-  margin-right: 2em;
-  margin-bottom: 3.5em;
-  background: #fff;
-}
-
-.card6 {
-  position: relative;
-  display: inline-block;
-  text-align: justify;
-  background: #fff;
-}
-
-.card7{
-  position: relative;
-  display: inline-block;
-  text-align: justify;
-  margin-left: 2em;
-  background: #fff;
-}
-.card8 {
-  position: relative;
-  display: inline-block;
-  text-align: justify;
-  margin-left: 2em;
-  background: #fff;
-}
-

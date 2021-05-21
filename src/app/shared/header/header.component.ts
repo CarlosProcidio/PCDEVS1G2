@@ -1,3 +1,4 @@
+import { CategoriaService } from './../../categoria.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  categorias: any = [];
+  constructor(
+    private categoriaService: CategoriaService
+  ) {
+    
+   }
 
   ngOnInit() {
+    this.categoriaService.listar().subscribe(resposta => this.categorias = resposta)
   }
 
 }

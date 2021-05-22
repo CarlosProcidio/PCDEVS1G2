@@ -27,24 +27,23 @@
                 <th pSortableColumn="nome" class="th-nome">Nome<p-sortIcon field="nome"></p-sortIcon></th>
                 <th pSortableColumn="tel_cel"  class="th-tel_cel">Celular<p-sortIcon field="tel_cel"></p-sortIcon></th>
                 <th pSortableColumn="email" class="th-email">E-mail <p-sortIcon field="email"></p-sortIcon></th>
-                <th></th>
+                <th class="th-botoes"></th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-user>
             <tr>
-                <td class="th-id">{{user.id}}</td>
+                <td class="th-id">{{user.id_user}}</td>
                 <td class="th-nome">{{user.nome}}</td>
                 <td class="th-tel_cel">{{user.tel_cel}}</td>
-                <td class="th-email">{{user.email}}</td>
-                <td class="deletar-atualizar">
+                <td class="th-email">{{user.email}}</td>               <td class="deletar-atualizar">
                     <p-button
-                        routerLink="/create-account/{{user.id}}" 
+                        routerLink="/create-account/{{user.id_user}}" 
                         class="espaco"
                         [title] = "'Editar usuário' + user.nome" 
                         icon="pi pi-pencil"></p-button>
 
                     <p-button class="p-button-danger"
-                        (click)="excluir(user.id)" 
+                        (click)="excluir(user.id_user)"
                         type="button"
                         [title] = "'Excluir usuário ' + user.nome" 
                         icon="pi pi-trash"></p-button>

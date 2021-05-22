@@ -1,8 +1,8 @@
 .galinha {
-    margin-top: 20px;
+    margin: 20px;
 }
 .galeria {
-    margin-left: 50px;
+    margin-left: 15px;
 }
 .h2 {
     vertical-align: middle;
@@ -21,12 +21,11 @@
   }
 
 .p-buttonset {
-    margin-top: 20px;
     margin-left: 60px;
     border-radius: 5px;
 }
 .botao {
-    margin: 0 25px;
+    margin: 0 15px;
 }
 .descritivo {
     text-align: justify;

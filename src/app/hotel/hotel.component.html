@@ -2,7 +2,7 @@
     <div>
         <img src={{estabelecimento.foto_logomarca}} alt="logo do bar" width="200px">
     </div>
-    <div>
+    <div class="galinha">
         <h2>{{estabelecimento.nomeFantasia}}</h2>
         <div class="estrela">
             <fa-icon [icon]="faStar" ></fa-icon>&nbsp;<fa-icon [icon]="faStar"></fa-icon>&nbsp;<fa-icon [icon]="faStar">
@@ -12,8 +12,13 @@
 </div>
 <div class="galinha row">
     <div class="galeria col-md-6">
-        <p-galleria [value]="estabelecimento.fotos" [numVisible]="5" [containerStyle]="{'max-width': '640px'} " [circular]="true"
-            [autoPlay]="true" [transitionInterval]="4000">
+        <p-galleria
+            [value]="estabelecimento.fotos"
+            [numVisible]="5"
+            [containerStyle]="{'max-width': '630px'}"
+            [circular]="true"
+            [autoPlay]="true"
+            [transitionInterval]="4000">
             <ng-template pTemplate="item" let-foto>
                 <img [src]="foto.url_foto" width="100%" />
             </ng-template>

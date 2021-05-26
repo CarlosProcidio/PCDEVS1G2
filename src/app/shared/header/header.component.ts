@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   categorias: any = [];
+  isCollapsed: boolean = true;
   constructor(
     private categoriaService: CategoriaService
   ) {

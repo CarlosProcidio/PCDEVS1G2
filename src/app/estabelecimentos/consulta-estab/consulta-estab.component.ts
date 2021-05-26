@@ -17,9 +17,14 @@ export class ConsultaEstabComponent implements OnInit {
   constructor(
     private subcategoriaService: SubcategoriaService,
     private route: ActivatedRoute,
-    private title: Title) { }
+    private title: Title) {
+      this.route.paramMap.subscribe(param => {
+        this.ngOnInit();
+      });
+     }
 
   ngOnInit() {
+    console.log("Teste");
     this.loading = true;
     this.carregar();  
   }
@@ -29,6 +34,7 @@ export class ConsultaEstabComponent implements OnInit {
     this.estabelecimentos = [];
 
     let id = this.route.snapshot.params['id'];
+    debugger;
     this.subcategoriaService.buscaPorId(id).subscribe( subcategoria => {
       this.subcategoria = subcategoria;
       this.estabelecimentos =  subcategoria.estabelecimentos;
